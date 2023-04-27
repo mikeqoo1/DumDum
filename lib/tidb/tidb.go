@@ -23,7 +23,7 @@ type TiDB struct {
 	Passwd   string
 }
 
-//NewTiDB 產生一個DB實例
+// NewTiDB 產生一個DB實例
 func NewTiDB(ip string) *TiDB {
 	//初始化
 	tidb := &TiDB{

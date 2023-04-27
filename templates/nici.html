@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{.title}}</title>
+</head>
+
+<body>
+    <a href="/">回首頁</a><br>
+    <h3>總共{{.record}}筆</h3>
+    <table border=1 id="data"></table>
+    <script>
+        var a = {{.data }}
+        // console.log(a)
+        str = "<table border=1><tr><td>ID</td><td>名稱</td><td>血型</td><td>星座</td><td>系列</td></tr>";
+        for (var i = 0; i < a.length; i++) {
+            str += "<tr><td>" + a[i].Id;
+            str += "</td><td>" + a[i].Name;
+            str += "</td><td>" + a[i].Blood;
+            str += "</td><td>" + a[i].Starsign;
+            str += "</td><td>" + a[i].Series;
+            str += "</td></tr>";
+        }
+        document.getElementById("data").innerHTML = str;
+        str += "</table>";
+    </script>
+</body>
+
+</html>

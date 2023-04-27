@@ -1,42 +1,122 @@
 package main
 
 import (
+	nici "DumDum/lib/nici"
 	tidb "DumDum/lib/tidb"
 	"fmt"
+	"net/http"
+	"os"
+
+	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
 )
 
-type Nici struct {
-	Id       int    `gorm:"primaryKey;type:int(11) NOT NULL auto_increment ;column:id"`
-	Name     string `gorm:"primaryKey;type:varchar(50) NOT NULL;column:name"`
-	Blood    string `gorm:"type:varchar(10) NOT NULL;column NOT NULL:blood"`
-	Starsign string `gorm:"type:varchar(20) NOT NULL;column:starsign"`
-	Series   string `gorm:"type:varchar(50) NOT NULL;column:series"`
-}
+var (
+	conn    *gorm.DB
+	niciobj []nici.Nici
+)
 
-func (Nici) TableName() string {
-	return "nici"
-}
-
-func main() {
+func init() {
+	var errdb error
 	mydb := tidb.NewTiDB("192.168.199.235")
 	mydb.Database = "sea"
 	mydb.User = "mike"
 	mydb.Passwd = "110084"
 	mydb.Ip = "192.168.199.235"
-	conn, err := mydb.GetDB()
-	if err != nil {
-		fmt.Println("DB連線失敗->" + err.Error())
+	conn, errdb = mydb.GetDB()
+	if errdb != nil {
+		fmt.Println("DB連線失敗->" + errdb.Error())
+		os.Exit(0)
 	}
 
-	var niciobj []Nici
+}
 
-	//First=> SELECT * FROM `nici` ORDER BY `nici`.`id` LIMIT 1
-	result := conn.First(&niciobj)
-	fmt.Println(result.RowsAffected) // 找到的筆數
-	fmt.Println(niciobj[0].Name)
+// crosHandler 處理跨域問題
+func crosHandler() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		method := c.Request.Method
+		origin := c.Request.Header.Get("Origin") //請求頭部
+		if origin != "" {
+			//接收客戶端傳送的origin (重要)
+			c.Writer.Header().Set("Access-Control-Allow-Origin", origin)
+			//伺服器支援的所有跨域請求的方法
+			c.Header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE, UPDATE")
+			//允許跨域設定可以返回其他子段，可以自定義欄位
+			c.Header("Access-Control-Allow-Headers", "Authorization, Content-Length, X-CSRF-Token, Token,session, "+
+				"X_Requested_With,Accept, Origin, Host, Connection, Accept-Encoding, Accept-Language,DNT, "+
+				"X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, "+
+				"Content-Type, Pragma, token, openid, opentoken")
+			//允許瀏覽器(客戶端)可以解析的頭部 (重要)
+			c.Header("Access-Control-Expose-Headers", "Content-Length, Access-Control-Allow-Origin, "+
+				"Access-Control-Allow-Headers, Cache-Control, Content-Language, Content-Type, "+
+				"Expires, Last-Modified, Pragma, FooBar")
+			//設定快取時間
+			c.Header("Access-Control-Max-Age", "172800")
+			//允許客戶端傳遞校驗資訊比如 cookie (重要)
+			c.Header("Access-Control-Allow-Credentials", "true")
+		}
 
+		//允許型別校驗
+		if method == "OPTIONS" {
+			c.JSON(http.StatusOK, "ok!")
+		}
+
+		c.Next()
+	}
+}
+
+func love(c *gin.Context) {
 	//Find=> SELECT * FROM `nici`
 	results := conn.Find(&niciobj)
-	fmt.Println(results.RowsAffected)
-	fmt.Println(niciobj[10].Name)
+	title := "Nici好夥伴"
+	c.HTML(http.StatusOK, "nici.html", gin.H{
+		"title":  title,
+		"record": results.RowsAffected,
+		"data":   niciobj,
+	})
+}
+
+func destiny(c *gin.Context) {
+	title := "Nici好夥伴"
+	c.HTML(http.StatusOK, "destiny.html", gin.H{
+		"title":  title,
+	})
+}
+
+func conform(c *gin.Context) {
+
+}
+
+func main() {
+	addr := fmt.Sprintf("%s:%d", "127.0.0.1", 6620)
+	router := gin.Default()
+	router.Use(crosHandler())
+
+	// 設置模板路徑
+	router.LoadHTMLGlob("templates/*.html")
+
+	// 首頁
+	router.GET("/", func(c *gin.Context) {
+		// 定義模板變量
+		title := "Nici家族"
+		message := "歡迎來到Nici家族"
+
+		// 注入模板變量，並渲染模板
+		c.HTML(http.StatusOK, "index.html", gin.H{
+			"title":   title,
+			"message": message,
+		})
+	})
+
+	niciRouter := router.Group("/nici")
+	{
+		niciRouter.GET("/", love)           //列出所有
+		niciRouter.GET("/destiny", destiny) //顯示輸入畫面
+		niciRouter.POST("/conform", conform)
+	}
+
+	err := router.Run(addr)
+	if err != nil {
+		fmt.Println("Nici網頁啟動失敗" + err.Error())
+	}
 }
