@@ -79,12 +79,33 @@ func love(c *gin.Context) {
 func destiny(c *gin.Context) {
 	title := "Nici好夥伴"
 	c.HTML(http.StatusOK, "destiny.html", gin.H{
-		"title":  title,
+		"title": title,
 	})
 }
 
 func conform(c *gin.Context) {
-
+	blood := c.PostForm("blood")
+	star := c.PostForm("star")
+	fmt.Println(blood)
+	fmt.Println(star)
+	var sqlstr string
+	var results *gorm.DB
+	if blood == "" || len(blood) == 0 {
+		sqlstr = "starsign = ?"
+		results = conn.Where(sqlstr, star).Find(&niciobj)
+	} else if star == "" || len(star) == 0 {
+		sqlstr = "blood = ?"
+		results = conn.Where(sqlstr, blood).Find(&niciobj)
+	} else {
+		sqlstr = "starsign = ? AND blood = ?"
+		results = conn.Where(sqlstr, blood, star).Find(&niciobj)
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"blood":   blood,
+		"star":    star,
+		"record":  results.RowsAffected,
+		"results": niciobj,
+	})
 }
 
 func main() {
