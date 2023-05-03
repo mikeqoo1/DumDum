@@ -115,6 +115,12 @@ func main() {
 
 	// 設置模板路徑
 	router.LoadHTMLGlob("templates/*.html")
+	// 載入靜態文件
+	router.Static("/static", "./static")
+	router.StaticFile("/favicon.ico", "./static/favicon.ico")
+
+	//載入靜態資源 一般是上傳的資源 例如上傳的圖檔還是文件
+	router.StaticFS("/upload", http.Dir("upload"))
 
 	// 首頁
 	router.GET("/", func(c *gin.Context) {

@@ -2,13 +2,25 @@
 <html>
 
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="bookmark" href="/static/favicon.ico" />
     <title>{{.title}}</title>
 </head>
 
-<body>
-    <h1>{{.message}}</h1>
-    <a href="/nici">看看所有的Nici好朋友</a><br>
-    <a href="/nici/destiny">選出命中註定的小夥伴</a><br>
+<body class="home">
+    <h1 class="text-center">{{.message}}</h1>
+    <h2 class="text-center"><a class="link-info" href="/nici">看看所有的Nici好朋友</a></h2>
+    <h2 class="text-center"><a class="link-info" href="/nici/destiny">選出命中註定的小夥伴</a></h2>
+    <img src="/static/img/dragon6.jpg" class="rounded float-start">
+    <img src="/static/img/dragon2.jpg" class="rounded float-end">
 </body>
 
 </html>
