@@ -24,14 +24,15 @@
         <script>
             var a = {{.data }}
             // console.log(a)
-            str = "<thead><tr><th scope=\"col\">ID</th><th scope=\"col\">名稱</th><th scope=\"col\">血型</th><th scope=\"col\">星座</th><th scope=\"col\">系列</th></tr></thead><tbody>";
+            // str = "<thead><tr><th scope=\"col\">ID</th><th scope=\"col\">名稱</th><th scope=\"col\">血型</th><th scope=\"col\">星座</th><th scope=\"col\">系列</th></tr></thead><tbody>";
+            str = "<thead><tr><th scope=\"col\">名稱</th><th scope=\"col\">血型</th><th scope=\"col\">星座</th><th scope=\"col\">系列</th></tr></thead><tbody>";
             for (var i = 0; i < a.length; i++) {
                 str += "<tr>";
-                str += "<th scope=\"row\">" + a[i].Id + "</th>"
-                str += "<td>" + a[i].Name + "</td>"
-                str += "<td>" + a[i].Blood + "</td>"
-                str += "<td>" + a[i].Starsign + "</td>"
-                str += "<td>" + a[i].Series + "</td>"
+                // str += "<th scope=\"row\">" + a[i].Id + "</th>"
+                str += "<th scope=\"row\">" + a[i].Name + "</th>"
+                str += "<th scope=\"row\">" + a[i].Blood + "</th>"
+                str += "<th scope=\"row\">" + a[i].Starsign + "</th>"
+                str += "<th scope=\"row\">" + a[i].Series + "</th>"
                 str += "</tr>";
             }
             str += "</tbody>";
