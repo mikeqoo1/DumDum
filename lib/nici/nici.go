@@ -6,9 +6,9 @@ type Nici struct {
 	Blood    string `gorm:"type:varchar(10) NOT NULL;column NOT NULL:blood"`
 	Starsign string `gorm:"type:varchar(20) NOT NULL;column:starsign"`
 	Series   string `gorm:"type:varchar(50) NOT NULL;column:series"`
+	Img      string `gorm:"type:varchar(50) NOT NULL;column:img"`
 }
 
 func (Nici) TableName() string {
 	return "nici"
 }
-

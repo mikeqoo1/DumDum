@@ -66,8 +66,8 @@ func crosHandler() gin.HandlerFunc {
 }
 
 func love(c *gin.Context) {
-	//Find=> SELECT * FROM `nici`
-	results := conn.Find(&niciobj)
+	//Find=> SELECT * FROM `nici ORDER BY series desc`
+	results := conn.Order("series desc").Find(&niciobj)
 	title := "Nici好夥伴"
 	c.HTML(http.StatusOK, "nici.html", gin.H{
 		"title":  title,
@@ -84,6 +84,7 @@ func destiny(c *gin.Context) {
 }
 
 func conform(c *gin.Context) {
+	title := "Nici好夥伴"
 	blood := c.PostForm("blood")
 	star := c.PostForm("star")
 	fmt.Println(blood)
@@ -100,11 +101,17 @@ func conform(c *gin.Context) {
 		sqlstr = "starsign = ? AND blood = ?"
 		results = conn.Where(sqlstr, blood, star).Find(&niciobj)
 	}
-	c.JSON(http.StatusOK, gin.H{
-		"blood":   blood,
-		"star":    star,
-		"record":  results.RowsAffected,
-		"results": niciobj,
+	// c.JSON(http.StatusOK, gin.H{
+	// 	"blood":   blood,
+	// 	"star":    star,
+	// 	"record":  results.RowsAffected,
+	// 	"results": niciobj,
+	// })
+
+	c.HTML(http.StatusOK, "only.html", gin.H{
+		"title":  title,
+		"record": results.RowsAffected,
+		"data":   niciobj,
 	})
 }
 
