@@ -87,19 +87,20 @@ func conform(c *gin.Context) {
 	title := "Nici好夥伴"
 	blood := c.PostForm("blood")
 	star := c.PostForm("star")
-	fmt.Println(blood)
-	fmt.Println(star)
 	var sqlstr string
 	var results *gorm.DB
 	if blood == "" || len(blood) == 0 {
+		fmt.Println("進入星座", star)
 		sqlstr = "starsign = ?"
 		results = conn.Where(sqlstr, star).Find(&niciobj)
 	} else if star == "" || len(star) == 0 {
+		fmt.Println("進入血型", blood)
 		sqlstr = "blood = ?"
 		results = conn.Where(sqlstr, blood).Find(&niciobj)
 	} else {
+		fmt.Println("都進", star, blood)
 		sqlstr = "starsign = ? AND blood = ?"
-		results = conn.Where(sqlstr, blood, star).Find(&niciobj)
+		results = conn.Where(sqlstr, star, blood).Find(&niciobj)
 	}
 	// c.JSON(http.StatusOK, gin.H{
 	// 	"blood":   blood,
@@ -108,11 +109,27 @@ func conform(c *gin.Context) {
 	// 	"results": niciobj,
 	// })
 
-	c.HTML(http.StatusOK, "only.html", gin.H{
-		"title":  title,
-		"record": results.RowsAffected,
-		"data":   niciobj,
-	})
+	if results.RowsAffected == 0 {
+		notfound := nici.Nici{
+			Name:     "查無資料",
+			Blood:    blood,
+			Starsign: star,
+			Series:   "未知",
+			Img:      "NotFound.jpg",
+		}
+		niciobj = append(niciobj, notfound)
+		c.HTML(http.StatusOK, "only.html", gin.H{
+			"title":  title,
+			"record": results.RowsAffected,
+			"data":   niciobj,
+		})
+	} else {
+		c.HTML(http.StatusOK, "only.html", gin.H{
+			"title":  title,
+			"record": results.RowsAffected,
+			"data":   niciobj,
+		})
+	}
 }
 
 func main() {

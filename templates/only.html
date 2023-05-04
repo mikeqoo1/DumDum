@@ -30,10 +30,10 @@
         for (var i = 0; i < a.length; i++) {
             var img = "<img src=\"/static/img/" + a[i].Img + "\" width = \"400\" height = \"400\"/>"
             str += img
-            str += "<li>" + a[i].Name + "</li>"
-            str += "<li>" + a[i].Blood + "</li>"
-            str += "<li>" + a[i].Starsign + "</li>"
-            str += "<li>" + a[i].Series + "</li>"
+            str += "<li>名稱:" + a[i].Name + "</li>"
+            str += "<li>血型:" + a[i].Blood + "</li>"
+            str += "<li>星座:" + a[i].Starsign + "</li>"
+            str += "<li>系列:" + a[i].Series + "</li>"
         }
         divv.innerHTML = str;
     </script>

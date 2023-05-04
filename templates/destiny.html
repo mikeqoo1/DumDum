@@ -21,12 +21,39 @@
         <form action="/nici/conform" method="POST">
             <p class="fw-bold">
             <h1 class="text-primary">
-                請輸入資料(可以只填1個但是不能不填)<br>
-                血型:<input name="blood" type="text"></p><br>
-                星座:<input name="star" type="text"><br>
+                請選條件(可以只選1個但是不能不選)<br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <input class="form-control" list="bloodlist" placeholder="選取血型" name="blood" type="text">
+                <datalist id="bloodlist">
+                    <option value="O">
+                    <option value="A">
+                    <option value="B">
+                    <option value="AB">
+                </datalist>
+                <input class="form-control" list="datalistOptions" placeholder="選取星座" name="star" type="text">
+                <datalist id="datalistOptions">
+                    <option value="牡羊座">
+                    <option value="金牛座">
+                    <option value="雙子座">
+                    <option value="巨蟹座">
+                    <option value="獅子座">
+                    <option value="處女座">
+                    <option value="天秤座">
+                    <option value="天蠍座">
+                    <option value="射手座">
+                    <option value="摩羯座">
+                    <option value="水瓶座">
+                    <option value="雙魚座">
+                    <option value="遠古龍族之飛龍星座">
+                    <option value="遠古龍族之雷龍星座">
+                    <option value="遠古龍族之火龍星座">
+                </datalist>
                 <input type="submit">
-            </h2>
-            </p>
+                </h2>
+                </p>
         </form>
     </div>
 </body>
