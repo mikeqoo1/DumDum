@@ -20,8 +20,10 @@ func init() {
 	var errdb error
 	mydb := tidb.NewTiDB("127.0.0.1")
 	mydb.Database = "sea"
-	mydb.User = "mike"
-	mydb.Passwd = "110084"
+	// mydb.User = "mike"
+	// mydb.Passwd = "110084"
+	mydb.User = "root"
+	mydb.Passwd = ""
 	mydb.Ip = "127.0.0.1"
 	conn, errdb = mydb.GetDB()
 	if errdb != nil {
