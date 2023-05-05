@@ -133,7 +133,8 @@ func conform(c *gin.Context) {
 }
 
 func main() {
-	addr := fmt.Sprintf("%s:%d", "127.0.0.1", 6620)
+	// addr := fmt.Sprintf("%s:%d", "127.0.0.1", 6620)
+	addr := fmt.Sprintf("%s:%d", "0.0.0.0", 6620)
 	router := gin.Default()
 	router.Use(crosHandler())
 
