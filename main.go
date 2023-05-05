@@ -18,11 +18,11 @@ var (
 
 func init() {
 	var errdb error
-	mydb := tidb.NewTiDB("192.168.199.235")
+	mydb := tidb.NewTiDB("127.0.0.1")
 	mydb.Database = "sea"
 	mydb.User = "mike"
 	mydb.Passwd = "110084"
-	mydb.Ip = "192.168.199.235"
+	mydb.Ip = "127.0.0.1"
 	conn, errdb = mydb.GetDB()
 	if errdb != nil {
 		fmt.Println("DB連線失敗->" + errdb.Error())
