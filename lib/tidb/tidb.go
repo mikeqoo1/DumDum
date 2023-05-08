@@ -27,7 +27,7 @@ type TiDB struct {
 }
 
 // NewTiDB 產生一個DB實例
-func NewTiDB(ip string) *TiDB {
+func NewTiDB() *TiDB {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
 	err := viper.ReadInConfig()   // 根據以上定讀取文件

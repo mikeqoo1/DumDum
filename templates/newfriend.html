@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="bookmark" href="/static/favicon.ico" />
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <title>{{.title}}</title>
+</head>
+
+<body class="page5">
+    <div class="text-center">
+        <h1><a href="/" class="link-info">回首頁</a></h1><br>
+        <form name="form0" id="form0" action="/nici/update" method="POST" enctype="multipart/form-data">
+            輸入名稱:<input type="text" name="name" id="name" /><br>
+            <input class="form-control" list="bloodlist" placeholder="選取血型" name="blood" type="text">
+            <datalist id="bloodlist">
+                <option value="O">
+                <option value="A">
+                <option value="B">
+                <option value="AB">
+            </datalist>
+            <input class="form-control" list="datalistOptions" placeholder="選取星座" name="star" type="text">
+            <datalist id="datalistOptions">
+                <option value="牡羊座">
+                <option value="金牛座">
+                <option value="雙子座">
+                <option value="巨蟹座">
+                <option value="獅子座">
+                <option value="處女座">
+                <option value="天秤座">
+                <option value="天蠍座">
+                <option value="射手座">
+                <option value="摩羯座">
+                <option value="水瓶座">
+                <option value="雙魚座">
+                <option value="遠古龍族之飛龍星座">
+                <option value="遠古龍族之雷龍星座">
+                <option value="遠古龍族之火龍星座">
+            </datalist>
+            <input class="form-control" list="serieslist" placeholder="選取系列" name="series" type="text">
+            <datalist id="serieslist">
+                <option value="動物好夥伴">
+                <option value="恐龍時代">
+                <option value="獨角精靈">
+            </datalist>
+            請上傳圖片:<input type="file" name="file0" id="file0" multiple="multiple" /><br>
+            <img src="" id="img0">
+            <input type="submit">
+        </form>
+    </div>
+    <script>
+        /**
+         * 使用HTML5 File API, 來即時預覽image
+         */
+        $("#file0").change(function () {
+            var objUrl = getObjectURL(this.files[0]);
+            console.log("objUrl = " + objUrl);
+            if (objUrl) {
+                $("#img0").attr("src", objUrl);
+            }
+        });
+
+        /**
+         * 建立一個可存取到該file的url
+         * PS: 瀏覽器必須支援HTML5 File API
+         */
+        function getObjectURL(file) {
+            var url = null;
+            if (window.createObjectURL != undefined) { // basic
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+            console.log(url)
+        }
+    </script>
+</body>
+
+</html>

@@ -81,7 +81,7 @@ func LoggerToFile() gin.HandlerFunc {
 
 func init() {
 	var errdb error
-	mydb := tidb.NewTiDB("127.0.0.1")
+	mydb := tidb.NewTiDB()
 	conn, errdb = mydb.GetDB()
 	if errdb != nil {
 		fmt.Println("DB連線失敗->" + errdb.Error())
@@ -188,6 +188,33 @@ func conform(c *gin.Context) {
 	}
 }
 
+func newfriend(c *gin.Context) {
+	title := "Nici好夥伴"
+	c.HTML(http.StatusOK, "newfriend.html", gin.H{
+		"title": title,
+	})
+}
+
+func update(c *gin.Context) {
+	name := c.PostForm("name")
+	blood := c.PostForm("blood")
+	star := c.PostForm("star")
+	series := c.PostForm("series")
+	file, _ := c.FormFile("file0") // get file from form input name 'file0'
+
+	c.SaveUploadedFile(file, "static/img/"+file.Filename) // save file to tmp folder in current directory
+	new := nici.Nici{
+		Name:     name,
+		Blood:    blood,
+		Starsign: star,
+		Series:   series,
+		Img:      file.Filename,
+	}
+	conn.Save(&new)
+
+	c.String(http.StatusOK, "更新成功")
+}
+
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
@@ -230,6 +257,8 @@ func main() {
 		niciRouter.GET("/", love)           //列出所有
 		niciRouter.GET("/destiny", destiny) //顯示輸入畫面
 		niciRouter.POST("/conform", conform)
+		niciRouter.GET("/newfriend", newfriend)
+		niciRouter.POST("/update", update)
 	}
 
 	err = router.Run(addr)
