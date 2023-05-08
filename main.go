@@ -8,6 +8,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/viper"
 	"gorm.io/gorm"
 )
 
@@ -18,17 +19,12 @@ var (
 
 func init() {
 	var errdb error
-	mydb := tidb.NewTiDB("192.168.199.235")
-	mydb.Database = "sea"
-	mydb.User = "mike"
-	mydb.Passwd = "110084"
-	mydb.Ip = "192.168.199.235"
+	mydb := tidb.NewTiDB("127.0.0.1")
 	conn, errdb = mydb.GetDB()
 	if errdb != nil {
 		fmt.Println("DB連線失敗->" + errdb.Error())
 		os.Exit(0)
 	}
-
 }
 
 // crosHandler 處理跨域問題
@@ -133,8 +129,16 @@ func conform(c *gin.Context) {
 }
 
 func main() {
-	// addr := fmt.Sprintf("%s:%d", "127.0.0.1", 6620)
-	addr := fmt.Sprintf("%s:%d", "0.0.0.0", 6620)
+	viper.SetConfigName("config") // 指定文件的名稱
+	viper.AddConfigPath("config") // 配置文件和執行檔目錄
+	err := viper.ReadInConfig()   // 根據以上定讀取文件
+	if err != nil {
+		fmt.Println("Fatal error config file" + err.Error())
+		os.Exit(0)
+	}
+	host := viper.GetString("Server.ip")
+	port := viper.GetInt("Server.port")
+	addr := fmt.Sprintf("%s:%d", host, port)
 	router := gin.Default()
 	router.Use(crosHandler())
 
@@ -167,7 +171,7 @@ func main() {
 		niciRouter.POST("/conform", conform)
 	}
 
-	err := router.Run(addr)
+	err = router.Run(addr)
 	if err != nil {
 		fmt.Println("Nici網頁啟動失敗" + err.Error())
 	}

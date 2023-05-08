@@ -3,14 +3,16 @@ package tidb
 import (
 	"database/sql"
 	"fmt"
+	"os"
 	"time"
+
+	viper "github.com/spf13/viper"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
 const (
-	Port         int = 4000
 	MaxLifetime  int = 10
 	MaxOpenConns int = 10
 	MaxIdleConns int = 10
@@ -18,6 +20,7 @@ const (
 
 type TiDB struct {
 	Ip       string
+	Port     int
 	Database string
 	User     string
 	Passwd   string
@@ -25,12 +28,25 @@ type TiDB struct {
 
 // NewTiDB 產生一個DB實例
 func NewTiDB(ip string) *TiDB {
+	viper.SetConfigName("config") // 指定文件的名稱
+	viper.AddConfigPath("config") // 配置文件和執行檔目錄
+	err := viper.ReadInConfig()   // 根據以上定讀取文件
+	if err != nil {
+		fmt.Println("Fatal error config file" + err.Error())
+		os.Exit(0)
+	}
+	host := viper.GetString("DB.host")
+	port := viper.GetInt("DB.port")
+	user := viper.GetString("DB.user")
+	pw := viper.GetString("DB.password")
+	db := viper.GetString("DB.database")
 	//初始化
 	tidb := &TiDB{
-		Ip:       ip,
-		Database: " ",
-		User:     " ",
-		Passwd:   " ",
+		Ip:       host,
+		Port:     port,
+		Database: db,
+		User:     user,
+		Passwd:   pw,
 	}
 	return tidb
 }
@@ -40,7 +56,7 @@ func (tidb *TiDB) GetDB() (*gorm.DB, error) {
 	var conn *gorm.DB
 	var db *sql.DB
 	//組合sql連線字串
-	addr := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True", tidb.User, tidb.Passwd, tidb.Ip, Port, tidb.Database)
+	addr := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True", tidb.User, tidb.Passwd, tidb.Ip, tidb.Port, tidb.Database)
 
 	// 先開啟
 	conn, err = gorm.Open(mysql.Open(addr), &gorm.Config{})

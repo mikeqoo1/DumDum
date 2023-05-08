@@ -1,0 +1,13 @@
+{
+    "DB": {
+        "host": "127.0.0.1",
+        "port": 4000,
+        "user": "root",
+        "password": "",
+        "database": "sea"
+    },
+    "Server": {
+        "ip": "127.0.0.1",
+        "port": 80
+    }
+}
