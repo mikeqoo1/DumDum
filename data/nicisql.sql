@@ -95,3 +95,17 @@ INSERT INTO sea.nici (name,blood,starsign,series,img) VALUES
 	 ('安妮小妹','A','雙魚座','動物好夥伴','bear8.jpg'),
 	 ('蘿莎粉龍','B','處女座','恐龍時代','dragon30.jpg'),
 	 ('鄰家小蘇咩咩羊','B','雙魚座','動物好夥伴','friend40.jpg');
+INSERT INTO sea.nici (name,blood,starsign,series,img) VALUES
+	 ('奇異鳥','O','水瓶座','動物好夥伴','friend41.jpg'),
+	 ('皮維克小豬','B','天蠍座','動物好夥伴','friend42.jpg'),
+	 ('琳達母雞','A','巨蟹座','動物好夥伴','friend43.jpg'),
+	 ('席米拉小羊','O','金牛座','動物好夥伴','friend44.jpg'),
+	 ('德拉魯伯爵','AB','獅子座','動物好夥伴','friend45.jpg'),
+	 ('莫妮土撥鼠','O','處女座','動物好夥伴','friend46.jpg'),
+	 ('朵拉睡鼠','A','射手座','動物好夥伴','friend47.jpg'),
+	 ('史洛比樹懶','AB','牡羊座','動物好夥伴','friend48.jpg'),
+	 ('凱蒂女孩咩咩羊','B','摩羯座','動物好夥伴','friend49.jpg'),
+	 ('牛仔小馬','AB','獅子座','動物好夥伴','friend50.jpg'),
+	 ('葛萊妮咩咩羊','A','處女座','動物好夥伴','friend51.jpg'),
+	 ('卡卡歐熊','AB','巨蟹座','動物好夥伴','bear9.jpg'),
+	 ('斑紋虎','B','金牛座','動物好夥伴','friend52.jpg');
