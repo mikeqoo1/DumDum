@@ -4,9 +4,14 @@ import (
 	nici "DumDum/lib/nici"
 	tidb "DumDum/lib/tidb"
 	"fmt"
+	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"path"
+	"sort"
+	"strconv"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -77,6 +82,66 @@ func LoggerToFile() gin.HandlerFunc {
 			reqUri,
 		)
 	}
+}
+
+// getFileName 統計不同系列的最大名稱
+func getFileName(series string) string {
+	files, err := ioutil.ReadDir("./static/img")
+	if err != nil {
+		log.Fatal(err)
+	}
+	var friendsort []int
+	var dragonsort []int
+	var bearsort []int
+	var unicornsort []int
+	//先整理排序
+	for _, file := range files {
+		if strings.Contains(file.Name(), "friend") {
+			str := strings.Split(file.Name(), "friend")
+			num := strings.Split(str[1], ".jpg")
+			i, _ := strconv.Atoi(num[0])
+			friendsort = append(friendsort, i)
+		} else if strings.Contains(file.Name(), "dragon") {
+			str := strings.Split(file.Name(), "dragon")
+			num := strings.Split(str[1], ".jpg")
+			i, _ := strconv.Atoi(num[0])
+			dragonsort = append(dragonsort, i)
+		} else if strings.Contains(file.Name(), "bear") {
+			str := strings.Split(file.Name(), "bear")
+			num := strings.Split(str[1], ".jpg")
+			i, _ := strconv.Atoi(num[0])
+			bearsort = append(bearsort, i)
+		} else if strings.Contains(file.Name(), "unicorn") {
+			str := strings.Split(file.Name(), "unicorn")
+			num := strings.Split(str[1], ".jpg")
+			i, _ := strconv.Atoi(num[0])
+			unicornsort = append(unicornsort, i)
+		}
+	}
+
+	fileName := ""
+	if series == "動物好夥伴" {
+		sort.Ints(friendsort)
+		max := friendsort[len(friendsort)-1]
+		s := strconv.Itoa(max + 1)
+		fileName = "friend" + s + ".jpg"
+	} else if series == "恐龍時代" {
+		sort.Ints(dragonsort)
+		max := dragonsort[len(dragonsort)-1]
+		s := strconv.Itoa(max + 1)
+		fileName = "dragon" + s + ".jpg"
+	} else if series == "熊熊家族" {
+		sort.Ints(bearsort)
+		max := bearsort[len(bearsort)-1]
+		s := strconv.Itoa(max + 1)
+		fileName = "bear" + s + ".jpg"
+	} else if series == "獨角精靈" {
+		sort.Ints(unicornsort)
+		max := unicornsort[len(unicornsort)-1]
+		s := strconv.Itoa(max + 1)
+		fileName = "unicorn" + s + ".jpg"
+	}
+	return fileName
 }
 
 func init() {
@@ -201,7 +266,8 @@ func update(c *gin.Context) {
 	star := c.PostForm("star")
 	series := c.PostForm("series")
 	file, _ := c.FormFile("file0") // get file from form input name 'file0'
-
+	filename := getFileName(series)
+	file.Filename = filename
 	c.SaveUploadedFile(file, "static/img/"+file.Filename) // save file to tmp folder in current directory
 	new := nici.Nici{
 		Name:     name,
@@ -212,7 +278,12 @@ func update(c *gin.Context) {
 	}
 	conn.Save(&new)
 
-	c.String(http.StatusOK, "更新成功")
+	title := "Nici家族"
+	message := "歡迎來到Nici家族"
+	c.HTML(http.StatusOK, "index.html", gin.H{
+		"title":   title,
+		"message": message,
+	})
 }
 
 func main() {
