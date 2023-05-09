@@ -59,7 +59,7 @@ func (tidb *TiDB) GetDB() (*gorm.DB, error) {
 	addr := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True", tidb.User, tidb.Passwd, tidb.Ip, tidb.Port, tidb.Database)
 
 	// 先開啟
-	conn, err = gorm.Open(mysql.Open(addr), &gorm.Config{})
+	conn, err = gorm.Open(mysql.Open(addr), &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
 	if err != nil {
 		return nil, err
 	}
