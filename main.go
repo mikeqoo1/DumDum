@@ -188,6 +188,8 @@ func crosHandler() gin.HandlerFunc {
 	}
 }
 
+/*Nici區*/
+
 func love(c *gin.Context) {
 	//Find=> SELECT * FROM `nici ORDER BY series desc`
 	results := conn.Order("series desc").Find(&niciobj)
@@ -286,6 +288,12 @@ func update(c *gin.Context) {
 	})
 }
 
+/*其他區*/
+
+func other(c *gin.Context) {
+	c.HTML(http.StatusOK, "other.html", gin.H{})
+}
+
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
@@ -330,6 +338,11 @@ func main() {
 		niciRouter.POST("/conform", conform)
 		niciRouter.GET("/newfriend", newfriend)
 		niciRouter.POST("/update", update)
+	}
+
+	otherRouter := router.Group("/other")
+	{
+		otherRouter.GET("/", other)
 	}
 
 	err = router.Run(addr)
