@@ -18,12 +18,17 @@
 <body class="ig">
     <div class="text-center">
         <h1><a class="btn btn-secondary btn-lg" role="button" href="/">回首頁</a></h1>
-        <img src="/static/img/雜七雜八015.png" width="200" height="200">
-        <h1><a class="btn btn-secondary btn-lg" role="button" href="/other/pig">海豬語翻譯區</a></h1>
-        <img src="/static/img/雜七雜八010.png" width="200" height="200">
-        <h1><a class="btn btn-secondary btn-lg" role="button" href="/other/love">感情問事區</a></h1>
-        <img src="/static/img/雜七雜八004.png" width="200" height="200">
-        <h1><a class="btn btn-secondary btn-lg" role="button" href="/concords">康x緊急區</a></h1>
+    </div>
+    <div class="row">
+        <form action="/other/pig/translate" method="POST" >
+            <div class="col">
+                <div class="mb-3">
+                    <label for="piggg">輸入海豬原文</label>
+                    <textarea type="text" class="form-control" name="piggg" id="piggg" cols="30" rows="10" ></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">翻譯</button>
+        </form>
     </div>
 </body>
 

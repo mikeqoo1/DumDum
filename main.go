@@ -294,6 +294,45 @@ func other(c *gin.Context) {
 	c.HTML(http.StatusOK, "other.html", gin.H{})
 }
 
+func otherPig(c *gin.Context) {
+	c.HTML(http.StatusOK, "otherpig.html", gin.H{})
+}
+
+func pigtranslate(c *gin.Context) {
+	pig := c.PostForm("piggg")
+	Logger().Info("海豬原文", pig)
+	c.JSON(http.StatusOK, gin.H{
+		"old": pig,
+		"new": pig,
+	})
+}
+
+func otherLove(c *gin.Context) {
+	c.HTML(http.StatusOK, "otherlove.html", gin.H{})
+}
+
+/*康x區*/
+
+func concords(c *gin.Context) {
+	c.HTML(http.StatusOK, "coo.html", gin.H{})
+}
+
+func searchconcords(c *gin.Context) {
+	cid := c.PostForm("cid")
+	orderno := c.PostForm("orderno")
+	stock := c.PostForm("stock")
+	bs := c.PostForm("bscode")
+	oederflag := c.PostForm("orderflag")
+	excode := c.PostForm("excode")
+
+	msg := "11=" + cid + "37=" + orderno + "55=" + stock + "54=" + bs + "10000=" + oederflag + "10002=" + excode
+
+	Logger().Info("查詢電文", msg)
+	c.JSON(http.StatusOK, gin.H{
+		"msg": msg,
+	})
+}
+
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
@@ -343,6 +382,15 @@ func main() {
 	otherRouter := router.Group("/other")
 	{
 		otherRouter.GET("/", other)
+		otherRouter.GET("/pig", otherPig)
+		otherRouter.POST("/pig/translate", pigtranslate)
+		otherRouter.GET("/love", otherLove)
+	}
+
+	concordsRouter := router.Group("/concords")
+	{
+		concordsRouter.GET("/", concords)
+		concordsRouter.POST("/search", searchconcords)
 	}
 
 	err = router.Run(addr)
