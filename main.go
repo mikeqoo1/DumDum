@@ -308,9 +308,13 @@ func pigtranslate(c *gin.Context) {
 	newpig = strings.Replace(newpig, "ㄇ", "嗎", -1)
 	newpig = strings.Replace(newpig, "女森", "女生", -1)
 	newpig = strings.Replace(newpig, "仍", "來", -1)
+	newpig = strings.Replace(newpig, "度", "對", -1)
+	newpig = strings.Replace(newpig, "把拔", "爸爸", -1)
+	newpig = strings.Replace(newpig, "迷", "沒", -1)
+	newpig = strings.Replace(newpig, "抗抗", "看看", -1)
 	Logger().Info("翻譯後長:", newpig)
 	c.HTML(http.StatusOK, "otherpig.html", gin.H{
-		"pig": pig,
+		"pig":    pig,
 		"newpig": newpig,
 	})
 }
