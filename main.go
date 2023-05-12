@@ -300,10 +300,18 @@ func otherPig(c *gin.Context) {
 
 func pigtranslate(c *gin.Context) {
 	pig := c.PostForm("piggg")
-	Logger().Info("海豬原文", pig)
-	c.JSON(http.StatusOK, gin.H{
-		"old": pig,
-		"new": pig,
+	Logger().Info("海豬原文:", pig)
+	newpig := strings.Replace(pig, "窩", "我", -1)
+	newpig = strings.Replace(newpig, "惹", "了", -1)
+	newpig = strings.Replace(newpig, "倫", "人", -1)
+	newpig = strings.Replace(newpig, "ㄅ", "不", -1)
+	newpig = strings.Replace(newpig, "ㄇ", "嗎", -1)
+	newpig = strings.Replace(newpig, "女森", "女生", -1)
+	newpig = strings.Replace(newpig, "仍", "來", -1)
+	Logger().Info("翻譯後長:", newpig)
+	c.HTML(http.StatusOK, "otherpig.html", gin.H{
+		"pig": pig,
+		"newpig": newpig,
 	})
 }
 
@@ -387,11 +395,11 @@ func main() {
 		otherRouter.GET("/love", otherLove)
 	}
 
-	concordsRouter := router.Group("/concords")
-	{
-		concordsRouter.GET("/", concords)
-		concordsRouter.POST("/search", searchconcords)
-	}
+	// concordsRouter := router.Group("/concords")
+	// {
+	// 	concordsRouter.GET("/", concords)
+	// 	concordsRouter.POST("/search", searchconcords)
+	// }
 
 	err = router.Run(addr)
 	if err != nil {

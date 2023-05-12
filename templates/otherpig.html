@@ -20,16 +20,18 @@
         <h1><a class="btn btn-secondary btn-lg" role="button" href="/">回首頁</a></h1>
     </div>
     <div class="row">
-        <form action="/other/pig/translate" method="POST" >
+        <form action="/other/pig/translate" method="POST">
             <div class="col">
                 <div class="mb-3">
                     <label for="piggg">輸入海豬原文</label>
-                    <textarea type="text" class="form-control" name="piggg" id="piggg" cols="30" rows="10" ></textarea>
+                    <textarea type="text" class="form-control" name="piggg" id="piggg" cols="30" rows="10"></textarea>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary btn-lg">翻譯</button>
         </form>
     </div>
+    <div>原文內容:[{{.pig}}]</div>
+    <div>翻譯後內容:[{{.newpig}}]</div>
 </body>
 
 </html>
