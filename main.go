@@ -144,6 +144,14 @@ func getFileName(series string) string {
 	return fileName
 }
 
+func checkname(name string) int64 {
+	var sqlstr string
+	var results *gorm.DB
+	sqlstr = "name = ?"
+	results = conn.Where(sqlstr, name).Find(&niciobj)
+	return results.RowsAffected
+}
+
 func init() {
 	var errdb error
 	mydb := tidb.NewTiDB()
@@ -268,24 +276,32 @@ func update(c *gin.Context) {
 	star := c.PostForm("star")
 	series := c.PostForm("series")
 	file, _ := c.FormFile("file0") // get file from form input name 'file0'
-	filename := getFileName(series)
-	file.Filename = filename
-	c.SaveUploadedFile(file, "static/img/"+file.Filename) // save file to tmp folder in current directory
-	new := nici.Nici{
-		Name:     name,
-		Blood:    blood,
-		Starsign: star,
-		Series:   series,
-		Img:      file.Filename,
-	}
-	conn.Save(&new)
+	yesorno := checkname(name)
+	if yesorno > 0 {
+		c.JSON(http.StatusOK, gin.H{
+			"狀態": "新增失敗",
+			"原因": "夥伴已經存在了",
+		})
+	} else {
+		filename := getFileName(series)
+		file.Filename = filename
+		c.SaveUploadedFile(file, "static/img/"+file.Filename) // save file to tmp folder in current directory
+		new := nici.Nici{
+			Name:     name,
+			Blood:    blood,
+			Starsign: star,
+			Series:   series,
+			Img:      file.Filename,
+		}
+		conn.Save(&new)
 
-	title := "Nici家族"
-	message := "歡迎來到Nici家族"
-	c.HTML(http.StatusOK, "index.html", gin.H{
-		"title":   title,
-		"message": message,
-	})
+		title := "Nici家族"
+		message := "歡迎來到Nici家族"
+		c.HTML(http.StatusOK, "index.html", gin.H{
+			"title":   title,
+			"message": message,
+		})
+	}
 }
 
 /*其他區*/
@@ -319,6 +335,7 @@ func pigtranslate(c *gin.Context) {
 	newpig = strings.Replace(newpig, "迷", "沒", -1)
 	newpig = strings.Replace(newpig, "抗", "看", -1)
 	newpig = strings.Replace(newpig, "奏", "揍", -1)
+	newpig = strings.Replace(newpig, "牙", "阿", -1)
 	Logger().Info("翻譯後長:", newpig)
 	c.HTML(http.StatusOK, "otherpig.html", gin.H{
 		"pig":    pig,
