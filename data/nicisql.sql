@@ -166,4 +166,7 @@ INSERT INTO sea.nici (name,blood,starsign,series,img) VALUES
 	 ('蒙哥米爾特','A','水瓶座','動物好夥伴','friend101.jpg'),
 	 ('羊駝','B','巨蟹座','動物好夥伴','friend102.jpg'),
 	 ('喬比海豹','A','雙魚座','動物好夥伴','friend103.jpg'),
-	 ('達達鴨','A','金牛座','動物好夥伴','friend104.jpg');	
+	 ('達達鴨','A','金牛座','動物好夥伴','friend104.jpg');
+INSERT INTO sea.nici (name,blood,starsign,series,img) VALUES
+	 ('哈吉斑點鬣狗','O','射手座','動物好夥伴','friend105.jpg'),
+	 ('塔瑞克刺蝟','AB','雙子座','動物好夥伴','friend106.jpg');	

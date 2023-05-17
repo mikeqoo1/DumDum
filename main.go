@@ -472,11 +472,11 @@ func main() {
 		otherRouter.GET("/love", otherLove)
 	}
 
-	concordsRouter := router.Group("/concords")
-	{
-		concordsRouter.GET("/", concords)
-		concordsRouter.POST("/search", searchconcords)
-	}
+	// concordsRouter := router.Group("/concords")
+	// {
+	// 	concordsRouter.GET("/", concords)
+	// 	concordsRouter.POST("/search", searchconcords)
+	// }
 
 	if err := client.Connect("192.168.199.185:7052"); err != nil {
 		fmt.Println("Error connecting:", err)
