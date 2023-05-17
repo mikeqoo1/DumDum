@@ -1,10 +1,14 @@
 NICI=NiciServer.out
 
+ifeq ($(google),6016)
+IsGoogle=NO
+endif
+
 
 .PHONY: build clean install help
 
 build:
-	go build -o bin/${NICI} main.go
+	go build -ldflags="-X main.IsGoogle=${IsGoogle}" -o bin/${NICI} main.go
 
 install:
 	go install

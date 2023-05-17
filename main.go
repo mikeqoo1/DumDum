@@ -23,8 +23,10 @@ import (
 )
 
 var (
-	conn    *gorm.DB
-	niciobj []nici.Nici
+	//Googl雲端版本
+	IsGoogle string
+	conn     *gorm.DB
+	niciobj  []nici.Nici
 	// 產生客戶端物件
 	client = basic.TCPClient{
 		SendCh:    make(chan string, 1024),
@@ -472,23 +474,25 @@ func main() {
 		otherRouter.GET("/love", otherLove)
 	}
 
-	// concordsRouter := router.Group("/concords")
-	// {
-	// 	concordsRouter.GET("/", concords)
-	// 	concordsRouter.POST("/search", searchconcords)
-	// }
+	if IsGoogle == "NO" {
+		concordsRouter := router.Group("/concords")
+		{
+			concordsRouter.GET("/", concords)
+			concordsRouter.POST("/search", searchconcords)
+		}
 
-	if err := client.Connect("192.168.199.185:7052"); err != nil {
-		fmt.Println("Error connecting:", err)
-		return
+		if err := client.Connect("192.168.199.185:7052"); err != nil {
+			fmt.Println("Error connecting:", err)
+			return
+		}
+		defer client.Close()
+
+		message := p.CreateRegisterMsg()
+		client.SendCh <- message
+		go client.SendMessages()
+		go client.ReceiveMessages()
+		go p.ParseMessages(client)
 	}
-	defer client.Close()
-
-	message := p.CreateRegisterMsg()
-	client.SendCh <- message
-	go client.SendMessages()
-	go client.ReceiveMessages()
-	go p.ParseMessages(client)
 
 	err = router.Run(addr)
 	if err != nil {
