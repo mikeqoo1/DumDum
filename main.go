@@ -1,7 +1,9 @@
 package main
 
 import (
+	"DumDum/lib/basic"
 	nici "DumDum/lib/nici"
+	"DumDum/lib/pvc"
 	tidb "DumDum/lib/tidb"
 	"fmt"
 	"io/ioutil"
@@ -23,6 +25,12 @@ import (
 var (
 	conn    *gorm.DB
 	niciobj []nici.Nici
+	// 產生客戶端物件
+	client = basic.TCPClient{
+		SendCh:    make(chan string, 1024),
+		ReceiveCh: make(chan string, 1024),
+	}
+	p = pvc.NewPVC()
 )
 
 func Logger() *logrus.Logger {
@@ -144,12 +152,45 @@ func getFileName(series string) string {
 	return fileName
 }
 
+// checkname 更新小夥伴防呆
 func checkname(name string) int64 {
 	var sqlstr string
 	var results *gorm.DB
 	sqlstr = "name = ?"
 	results = conn.Where(sqlstr, name).Find(&niciobj)
 	return results.RowsAffected
+}
+
+// StrPad
+// input string 原字串
+// padLength int 規定補完後的字串長度
+// padString string 自定義填充字串
+// padType string 填充類型:LEFT(向左填充,自動補齊位數), 默認右側
+func StrPad(input string, padLength int, padString string, padType string) string {
+
+	output := ""
+	inputLen := len(input)
+
+	if inputLen >= padLength {
+		return input
+	}
+
+	padStringLen := len(padString)
+	needFillLen := padLength - inputLen
+
+	if diffLen := padStringLen - needFillLen; diffLen > 0 {
+		padString = padString[diffLen:]
+	}
+
+	for i := 1; i <= needFillLen; i += padStringLen {
+		output += padString
+	}
+	switch padType {
+	case "LEFT":
+		return output + input
+	default:
+		return input + output
+	}
 }
 
 func init() {
@@ -355,14 +396,22 @@ func concords(c *gin.Context) {
 
 func searchconcords(c *gin.Context) {
 	cid := c.PostForm("cid")
+	cid = StrPad(cid, 12, "0", "LEFT")
+	cid = "Q00000000001"
 	orderno := c.PostForm("orderno")
+	orderno = StrPad(orderno, 5, "0", "RIGHT")
 	stock := c.PostForm("stock")
+	stock = StrPad(stock, 6, " ", "RIGHT")
 	bs := c.PostForm("bscode")
 	oederflag := c.PostForm("orderflag")
 	excode := c.PostForm("excode")
-
-	msg := "11=" + cid + "37=" + orderno + "55=" + stock + "54=" + bs + "10000=" + oederflag + "10002=" + excode
-
+	bhno := c.PostForm("bhno")
+	delimiter := "\x01"
+	msg := "11=" + cid + delimiter + "37=" + orderno + delimiter + "55=" + stock + delimiter + "54=" + bs + delimiter + "10000=" + oederflag + delimiter + "10002=" + excode + delimiter
+	p.SetbrokId(bhno)
+	p.SetwtmpId(cid)
+	msg = p.CreateSearchMessages(msg)
+	client.SendCh <- msg
 	Logger().Info("查詢電文", msg)
 	c.JSON(http.StatusOK, gin.H{
 		"msg": msg,
@@ -423,11 +472,23 @@ func main() {
 		otherRouter.GET("/love", otherLove)
 	}
 
-	// concordsRouter := router.Group("/concords")
-	// {
-	// 	concordsRouter.GET("/", concords)
-	// 	concordsRouter.POST("/search", searchconcords)
-	// }
+	concordsRouter := router.Group("/concords")
+	{
+		concordsRouter.GET("/", concords)
+		concordsRouter.POST("/search", searchconcords)
+	}
+
+	if err := client.Connect("192.168.199.185:7052"); err != nil {
+		fmt.Println("Error connecting:", err)
+		return
+	}
+	defer client.Close()
+
+	message := p.CreateRegisterMsg()
+	client.SendCh <- message
+	go client.SendMessages()
+	go client.ReceiveMessages()
+	go p.ParseMessages(client)
 
 	err = router.Run(addr)
 	if err != nil {

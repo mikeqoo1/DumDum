@@ -20,7 +20,7 @@
         <h1><a href="/" class="link-info">回首頁</a></h1><br>
         <form action="/concords/search" method="POST">
             <p class="fw-bold">
-                <label for="cid" class="form-label">唯一識別碼</label>
+                <label for="cid" class="form-label">唯一識別碼(隨便寫)</label>
                 <input class="form-control" id="cid" name="cid" type="text">
                 <label for="orderno" class="form-label">委託書編號</label>
                 <input class="form-control" id="orderno" name="orderno" type="text">
@@ -44,6 +44,26 @@
                 <datalist id="excodelist">
                     <option value="0">
                     <option value="2">
+                </datalist>
+                <input class="form-control" list="bhnolist" placeholder="分公司" name="bhno" type="text">
+                <datalist id="bhnolist">
+                    <option value="8450">
+                    <option value="8451">
+                    <option value="8451">
+                    <option value="8455">
+                    <option value="8456">
+                    <option value="8458">
+                    <option value="8459">
+                    <option value="845A">
+                    <option value="845B">
+                    <option value="845D">
+                    <option value="845E">
+                    <option value="845F">
+                    <option value="845J">
+                    <option value="845R">
+                    <option value="845S">
+                    <option value="845U">
+                    <option value="845X">
                 </datalist>
                 <button type="submit" class="btn btn-primary btn-lg">查詢</button>
                 </h2>

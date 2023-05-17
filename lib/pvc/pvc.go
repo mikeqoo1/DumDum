@@ -1,6 +1,9 @@
 package pvc
 
-import "fmt"
+import (
+	"DumDum/lib/basic"
+	"fmt"
+)
 
 type pvc struct {
 	start string // 封包起始字元  0xAA
@@ -101,18 +104,45 @@ func (pvc *pvc) Getbodydata() string {
 	return pvc.bodydata
 }
 
+func (pvc *pvc) SetbrokId(bhno string) {
+	pvc.brokId = bhno + "\xFF\xFF\xFF\xFF"
+}
+
+func (pvc *pvc) SetwtmpId(wtmpId string) {
+	pvc.wtmpId = wtmpId
+}
+
 func (pvc *pvc) CreateRegisterMsg() string {
 	msg := pvc.start + pvc.bodyId + pvc.exCode + pvc.msgTy + pvc.typeId + pvc.connId + pvc.pvcId + pvc.rtnState + pvc.bodyLen + pvc.brokId + pvc.wtmpId + pvc.bodydata
 	fmt.Println("註冊電文:[" + msg + "]")
 	return msg
 }
 
-func (pvc *pvc) ParseMessages(recvmsg string) {
-	fmt.Println("收到的電文:[" + recvmsg + "]")
-	pvc.msgTy = recvmsg[3:4]
-	pvc.bodydata = recvmsg[32:]
-	if pvc.msgTy == "r" {
-		fmt.Println("註冊成功")
-		fmt.Println("bodydata=" + pvc.bodydata)
+func (pvc *pvc) ParseMessages(c basic.TCPClient) {
+	for {
+		recvmsg := <-c.ReceiveCh
+		fmt.Println("收到的電文:[" + recvmsg + "]")
+		pvc.msgTy = recvmsg[3:4]
+		pvc.bodydata = recvmsg[32:]
+		if pvc.msgTy == "r" {
+			fmt.Println("註冊成功")
+		}
 	}
+}
+
+func (pvc *pvc) CreateSearchMessages(body string) string {
+	pvc.start = "\xAA"
+	pvc.bodyId = "H"
+	pvc.exCode = "0"
+	pvc.msgTy = "T"
+	pvc.typeId = "0"
+	pvc.connId = "Q"
+	pvc.pvcId = "\xFF"
+	pvc.rtnState = "\xFF"
+	str := fmt.Sprintf("%04d", len(body))
+	pvc.bodyLen = str
+	pvc.bodydata = body
+	msg := pvc.start + pvc.bodyId + pvc.exCode + pvc.msgTy + pvc.typeId + pvc.connId + pvc.pvcId + pvc.rtnState + pvc.bodyLen + pvc.brokId + pvc.wtmpId + pvc.bodydata
+	fmt.Println("搜尋電文:[" + msg + "]")
+	return msg
 }

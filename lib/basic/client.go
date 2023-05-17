@@ -30,7 +30,6 @@ func (c *TCPClient) Close() {
 
 // 接收消息
 func (c *TCPClient) ReceiveMessages() {
-	fmt.Println(2)
 	defer close(c.ReceiveCh)
 	scanner := bufio.NewScanner(c.conn)
 	for scanner.Scan() {
@@ -44,26 +43,29 @@ func (c *TCPClient) ReceiveMessages() {
 
 // 發送消息
 func (c *TCPClient) SendMessages() {
-	fmt.Println(1)
-	msgCh := <-c.SendCh
-	fmt.Println("要送的Msg:" + msgCh)
 	writer := bufio.NewWriter(c.conn)
-	scanner := bufio.NewScanner(strings.NewReader(msgCh))
-	for scanner.Scan() {
-		msg := scanner.Text()
-		_, err := fmt.Fprintln(writer, msg)
-		if err != nil {
-			fmt.Println("Error writing:", err)
-			break
+	defer close(c.SendCh)
+	for {
+		msgCh := <-c.SendCh
+		fmt.Println("要送的Msg:" + msgCh)
+		scanner := bufio.NewScanner(strings.NewReader(msgCh))
+		for scanner.Scan() {
+			msg := scanner.Text()
+			_, err := fmt.Fprintln(writer, msg)
+			if err != nil {
+				fmt.Println("Error writing:", err)
+				break
+			}
+			err = writer.Flush()
+			if err != nil {
+				fmt.Println("Error flushing writer:", err)
+				break
+			}
 		}
-		err = writer.Flush()
-		if err != nil {
-			fmt.Println("Error flushing writer:", err)
-			break
-		}
-	}
 
-	if err := scanner.Err(); err != nil {
-		fmt.Println("SendMessages解析scanner錯誤:", err)
+		if err := scanner.Err(); err != nil {
+			fmt.Println("SendMessages解析scanner錯誤:", err)
+			break
+		}
 	}
 }
