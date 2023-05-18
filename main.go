@@ -6,7 +6,6 @@ import (
 	"DumDum/lib/pvc"
 	tidb "DumDum/lib/tidb"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -96,7 +95,7 @@ func LoggerToFile() gin.HandlerFunc {
 
 // getFileName 統計不同系列的最大名稱
 func getFileName(series string) string {
-	files, err := ioutil.ReadDir("./static/img")
+	files, err := os.ReadDir("./static/img")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -397,9 +396,9 @@ func concords(c *gin.Context) {
 }
 
 func searchconcords(c *gin.Context) {
-	cid := c.PostForm("cid")
-	cid = StrPad(cid, 12, "0", "LEFT")
-	cid = "Q00000000001"
+	// cid := c.PostForm("cid")
+	// cid = StrPad(cid, 12, "0", "LEFT")
+	cid := "Q00000000001"
 	orderno := c.PostForm("orderno")
 	orderno = StrPad(orderno, 5, "0", "RIGHT")
 	stock := c.PostForm("stock")
