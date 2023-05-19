@@ -414,8 +414,11 @@ func searchconcords(c *gin.Context) {
 	msg = p.CreateSearchMessages(msg)
 	client.SendCh <- msg
 	Logger().Info("查詢電文", msg)
+	myreport := <-p.FixReportCh
+	reportmsg := myreport.Account + myreport.OrderID
 	c.JSON(http.StatusOK, gin.H{
-		"msg": msg,
+		"OrderMsg":  msg,
+		"ReportMsg": reportmsg,
 	})
 }
 
