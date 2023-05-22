@@ -12,39 +12,16 @@
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="shortcut icon" href="/static/favicon.ico" />
     <link rel="bookmark" href="/static/favicon.ico" />
-    <title>康x大雜燴(上市櫃)</title>
+    <title>康x大雜燴(興櫃)</title>
 </head>
 
 <body class="ig">
     <div class="text-center">
         <h1><a href="/" class="link-info">回首頁</a></h1><br>
-        <form action="/concords/search" method="POST">
+        <form action="/concords/searchEM" method="POST">
             <p class="fw-bold">
-                <label for="cid" class="form-label">唯一識別碼(隨便寫)</label>
-                <input class="form-control" id="cid" name="cid" type="text">
-                <label for="orderno" class="form-label">委託書編號</label>
-                <input class="form-control" id="orderno" name="orderno" type="text">
                 <label for="stock" class="form-label">股票代號</label>
                 <input class="form-control" id="stock" name="stock" type="text" maxlength="6">
-                <input class="form-control" list="bslist" placeholder="買=1 賣=2" name="bscode" type="text">
-                <datalist id="bslist">
-                    <option value="1">
-                    <option value="2">
-                </datalist>
-                <input class="form-control" list="orderflaglist" placeholder="委託管道" name="orderflag" type="text">
-                <datalist id="orderflaglist">
-                    <option value="1">
-                    <option value="2">
-                    <option value="3">
-                    <option value="4">
-                    <option value="5">
-                    <option value="6">
-                </datalist>
-                <input class="form-control" list="excodelist" placeholder="一般/定價=0 零股=2" name="excode" type="text">
-                <datalist id="excodelist">
-                    <option value="0">
-                    <option value="2">
-                </datalist>
                 <input class="form-control" list="bhnolist" placeholder="分公司" name="bhno" type="text">
                 <datalist id="bhnolist">
                     <option value="8450">
@@ -70,8 +47,6 @@
             </p>
         </form>
     </div>
-    <img src="/static/img/規格.png" width="600" height="600">
-    <img src="/static/img/規格2.png" width="600" height="600">
 </body>
 
 </html>

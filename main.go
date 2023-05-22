@@ -413,7 +413,32 @@ func searchconcords(c *gin.Context) {
 	p.SetwtmpId(cid)
 	msg = p.CreateSearchMessages(msg)
 	client.SendCh <- msg
-	Logger().Info("查詢電文", msg)
+	Logger().Info("上市櫃查詢電文", msg)
+	myreport := <-p.FixReportCh
+	reportmsg := myreport.Account + myreport.OrderID
+	c.JSON(http.StatusOK, gin.H{
+		"OrderMsg":  msg,
+		"ReportMsg": reportmsg,
+	})
+}
+
+func concordsEM(c *gin.Context) {
+	c.HTML(http.StatusOK, "coo2.html", gin.H{})
+}
+
+func searchconcordsEM(c *gin.Context) {
+	ct := time.Now()
+	HHMMSS := ct.Format("150405")
+	stock := c.PostForm("stock")
+	stock = StrPad(stock, 6, " ", "RIGHT")
+	bhno := c.PostForm("bhno")
+	delimiter := "\x01"
+	msg := "80001=03" + delimiter + "80002=05" + delimiter + "80003=03" + delimiter + "80004=0000" + delimiter + "81005=000" + delimiter + "55=" + stock + delimiter + "80024=" + HHMMSS + delimiter + "80014=Q0000001" + delimiter
+	p.SetbrokId(bhno)
+	p.SetwtmpId("Q0000001")
+	msg = p.CreateSearchMessages(msg)
+	client.SendCh <- msg
+	Logger().Info("興櫃查詢電文", msg)
 	myreport := <-p.FixReportCh
 	reportmsg := myreport.Account + myreport.OrderID
 	c.JSON(http.StatusOK, gin.H{
@@ -480,7 +505,9 @@ func main() {
 		concordsRouter := router.Group("/concords")
 		{
 			concordsRouter.GET("/", concords)
+			concordsRouter.GET("/EM", concordsEM)
 			concordsRouter.POST("/search", searchconcords)
+			concordsRouter.POST("/searchEM", searchconcordsEM)
 		}
 
 		if err := client.Connect("192.168.199.185:7052"); err != nil {
