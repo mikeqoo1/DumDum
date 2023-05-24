@@ -26,12 +26,18 @@ var (
 	IsGoogle string
 	conn     *gorm.DB
 	niciobj  []nici.Nici
-	// 產生客戶端物件
+	// 產生上市櫃客戶端物件
 	client = basic.TCPClient{
 		SendCh:    make(chan string, 1024),
 		ReceiveCh: make(chan string, 1024),
 	}
-	p = pvc.NewPVC()
+	// 產生興櫃客戶端物件
+	clientEM = basic.TCPClient{
+		SendCh:    make(chan string, 1024),
+		ReceiveCh: make(chan string, 1024),
+	}
+	p   = pvc.NewPVC()
+	pem = pvc.NewPVC()
 )
 
 func Logger() *logrus.Logger {
@@ -346,6 +352,25 @@ func update(c *gin.Context) {
 	}
 }
 
+/*Nici API區*/
+
+func getallnici(c *gin.Context) {
+	results := conn.Order("series desc").Find(&niciobj)
+	c.JSON(http.StatusOK, gin.H{
+		"record": results.RowsAffected,
+		"data":   niciobj,
+	})
+}
+
+func shoppingcar(c *gin.Context) {
+	name := c.PostForm("name")
+	size := c.PostForm("size")
+	price := c.PostForm("price")
+	//Hevisaurus
+	//Wind Rose
+	//Dragon Force
+}
+
 /*其他區*/
 
 func other(c *gin.Context) {
@@ -434,12 +459,12 @@ func searchconcordsEM(c *gin.Context) {
 	bhno := c.PostForm("bhno")
 	delimiter := "\x01"
 	msg := "80001=03" + delimiter + "80002=05" + delimiter + "80003=03" + delimiter + "80004=0000" + delimiter + "81005=000" + delimiter + "55=" + stock + delimiter + "80024=" + HHMMSS + delimiter + "80014=Q0000001" + delimiter
-	p.SetbrokId(bhno)
-	p.SetwtmpId("Q0000001")
-	msg = p.CreateSearchMessages(msg)
-	client.SendCh <- msg
+	pem.SetbrokId(bhno)
+	pem.SetwtmpId("Q0000001")
+	clientEM.SendCh <- msg
+	msg = p.CreateSearchMessagesEM(msg)
 	Logger().Info("興櫃查詢電文", msg)
-	myreport := <-p.FixReportCh
+	myreport := <-pem.FixReportCh
 	reportmsg := myreport.Account + myreport.OrderID
 	c.JSON(http.StatusOK, gin.H{
 		"OrderMsg":  msg,
@@ -491,6 +516,7 @@ func main() {
 		niciRouter.POST("/conform", conform)
 		niciRouter.GET("/newfriend", newfriend)
 		niciRouter.POST("/update", update)
+		niciRouter.GET("/api/all", getallnici)
 	}
 
 	otherRouter := router.Group("/other")
@@ -511,16 +537,28 @@ func main() {
 		}
 
 		if err := client.Connect("192.168.199.185:7052"); err != nil {
-			fmt.Println("Error connecting:", err)
+			fmt.Println("Error connecting TWSE/OTC:", err)
 			return
 		}
 		defer client.Close()
+
+		if err := clientEM.Connect("192.168.199.250:7080"); err != nil {
+			fmt.Println("Error connecting EM:", err)
+			return
+		}
+		defer clientEM.Close()
 
 		message := p.CreateRegisterMsg()
 		client.SendCh <- message
 		go client.SendMessages()
 		go client.ReceiveMessages()
 		go p.ParseMessages(client)
+
+		emmsg := pem.CreateRegisterMsg()
+		clientEM.SendCh <- emmsg
+		go clientEM.SendMessages()
+		go clientEM.ReceiveMessages()
+		go pem.ParseMessages(clientEM)
 	}
 
 	err = router.Run(addr)

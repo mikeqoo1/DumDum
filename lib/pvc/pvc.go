@@ -165,24 +165,43 @@ func (pvc *pvc) CreateSearchMessages(body string) string {
 	pvc.bodyLen = str
 	pvc.bodydata = body
 	msg := pvc.start + pvc.bodyId + pvc.exCode + pvc.msgTy + pvc.typeId + pvc.connId + pvc.pvcId + pvc.rtnState + pvc.bodyLen + pvc.brokId + pvc.wtmpId + pvc.bodydata
-	fmt.Println("搜尋電文:[" + msg + "]")
+	fmt.Println("上市櫃搜尋電文:[" + msg + "]")
+	return msg
+}
+
+func (pvc *pvc) CreateSearchMessagesEM(body string) string {
+	pvc.start = "\xAA"
+	pvc.bodyId = "H"
+	pvc.exCode = "0"
+	pvc.msgTy = "T"
+	pvc.typeId = "0"
+	pvc.connId = "Q"
+	pvc.pvcId = "\xFF"
+	pvc.rtnState = "\xFF"
+	str := fmt.Sprintf("%04d", len(body))
+	pvc.bodyLen = str
+	pvc.bodydata = body
+	msg := pvc.start + pvc.bodyId + pvc.exCode + pvc.msgTy + pvc.typeId + pvc.connId + pvc.pvcId + pvc.rtnState + pvc.bodyLen + pvc.brokId + pvc.wtmpId + pvc.bodydata
+	fmt.Println("興櫃搜尋電文:[" + msg + "]")
 	return msg
 }
 
 func (pvc *pvc) ParseMessages(c basic.TCPClient) {
 	for {
 		recvmsg := <-c.ReceiveCh
-		fmt.Println("收到的電文:[" + recvmsg + "]")
-		pvc.msgTy = recvmsg[3:4]
-		pvc.bodyId = recvmsg[1:2]
-		pvc.bodydata = recvmsg[32:]
-		if pvc.msgTy == "r" {
-			fmt.Println("註冊成功")
-		} else if pvc.bodyId == "8" {
-			fmt.Println("查詢回報")
-			//�80T0Q�01808450����������������50=057=845037=B000111=Q0000000000117=000000000000150=839=8103=9955=2266  54=160=20230517-08:20:31.80332=0151=014=06=031=0.000058=0020-STOCK-NO ERROR10002=010=215
-			fixobj := SetTagValue(pvc.bodydata)
-			pvc.FixReportCh <- fixobj
+		if recvmsg != "" {
+			fmt.Println("收到的電文:[" + recvmsg + "]")
+			pvc.msgTy = recvmsg[3:4]
+			pvc.bodyId = recvmsg[1:2]
+			pvc.bodydata = recvmsg[32:]
+			if pvc.msgTy == "r" {
+				fmt.Println("註冊成功")
+			} else if pvc.bodyId == "8" {
+				fmt.Println("查詢回報")
+				//�80T0Q�01808450����������������50=057=845037=B000111=Q0000000000117=000000000000150=839=8103=9955=2266  54=160=20230517-08:20:31.80332=0151=014=06=031=0.000058=0020-STOCK-NO ERROR10002=010=215
+				fixobj := SetTagValue(pvc.bodydata)
+				pvc.FixReportCh <- fixobj
+			}
 		}
 	}
 }
