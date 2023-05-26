@@ -352,6 +352,72 @@ func update(c *gin.Context) {
 	}
 }
 
+func price(c *gin.Context) {
+	title := "Nici好夥伴"
+	c.HTML(http.StatusOK, "price.html", gin.H{
+		"title": title,
+	})
+}
+
+func priceee(c *gin.Context) {
+	//Hevisaurus
+	//Wind Rose
+	//Dragon Force
+	typeee := c.PostForm("typeee")
+	size := c.PostForm("size")
+	fmt.Println(typeee)
+	fmt.Println(size)
+	price_str := ""
+	newprice_str := ""
+	price1 := 0.0
+	price2 := 0.0
+	if typeee == "鑰匙圈" {
+		price_str = "340~590"
+		price1 = 340 * 0.9 * 0.95
+		price2 = 590 * 0.9 * 0.95
+	} else if typeee == "杯套" {
+		price_str = "420~650"
+		price1 = 420 * 0.9 * 0.95
+		price2 = 650 * 0.9 * 0.95
+	} else if typeee == "玩偶" {
+		if size == "29" {
+			price_str = "840~1090"
+			price1 = 840 * 0.9 * 0.95
+			price2 = 1090 * 0.9 * 0.95
+		} else if size == "39" {
+			price_str = "840~1600"
+			price1 = 840 * 0.9 * 0.95
+			price2 = 1600 * 0.9 * 0.95
+		} else if size == "49" {
+			price_str = "1290~1890"
+			price1 = 1290 * 0.9 * 0.95
+			price2 = 1890 * 0.9 * 0.95
+		} else if size == "59" {
+			price_str = "1470~2100"
+			price1 = 1470 * 0.9 * 0.95
+			price2 = 2100 * 0.9 * 0.95
+		} else if size == "79" {
+			price_str = "3570起"
+			price1 = 3570 * 0.9 * 0.95
+			price2 = 0
+		} else if size == "100" {
+			price_str = "5840起(誠品沒販售, 不適用估價)"
+			price1 = 5840 * 0.9 * 0.95
+			price2 = 0
+		}
+	}
+	s1 := fmt.Sprintf("%f", price1)
+	s2 := fmt.Sprintf("%f", price2)
+	if s2 == "0" {
+		s2 = "很多的錢錢"
+	}
+	newprice_str = s1 + "~" + s2
+	c.HTML(http.StatusOK, "price.html", gin.H{
+		"OGprice":  price_str,
+		"Newprice": newprice_str,
+	})
+}
+
 /*Nici API區*/
 
 func getallnici(c *gin.Context) {
@@ -360,15 +426,6 @@ func getallnici(c *gin.Context) {
 		"record": results.RowsAffected,
 		"data":   niciobj,
 	})
-}
-
-func shoppingcar(c *gin.Context) {
-	name := c.PostForm("name")
-	size := c.PostForm("size")
-	price := c.PostForm("price")
-	//Hevisaurus
-	//Wind Rose
-	//Dragon Force
 }
 
 /*其他區*/
@@ -513,9 +570,11 @@ func main() {
 	{
 		niciRouter.GET("/", love)           //列出所有
 		niciRouter.GET("/destiny", destiny) //顯示輸入畫面
-		niciRouter.POST("/conform", conform)
 		niciRouter.GET("/newfriend", newfriend)
+		niciRouter.GET("/price", price)
+		niciRouter.POST("/conform", conform)
 		niciRouter.POST("/update", update)
+		niciRouter.POST("/priceee", priceee)
 		niciRouter.GET("/api/all", getallnici)
 	}
 
