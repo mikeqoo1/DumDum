@@ -568,6 +568,12 @@ func hi腦包(c *gin.Context) {
 	})
 }
 
+func hi腦包2(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"msg": "腦包書銘兒, 你的網站想做啥阿?? 方便確認API方向",
+	})
+}
+
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
@@ -626,9 +632,10 @@ func main() {
 		otherRouter.GET("/love", otherLove)
 	}
 
-	shumingyuRouter := router.Group("/yu")
+	shumingyuRouter := router.Group("/shumingyu")
 	{
 		shumingyuRouter.GET("/", hi腦包)
+		shumingyuRouter.GET("/example", hi腦包2)
 	}
 
 	if IsGoogle == "NO" {
