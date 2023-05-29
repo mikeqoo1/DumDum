@@ -560,6 +560,14 @@ func searchconcordsEM(c *gin.Context) {
 	})
 }
 
+/*腦包書銘區*/
+
+func hi腦包(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"msg": "腦包書銘兒, 你好, 晚上峽谷見",
+	})
+}
+
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
@@ -616,6 +624,11 @@ func main() {
 		otherRouter.GET("/pig", otherPig)
 		otherRouter.POST("/pig/translate", pigtranslate)
 		otherRouter.GET("/love", otherLove)
+	}
+
+	shumingyuRouter := router.Group("/yu")
+	{
+		shumingyuRouter.GET("/", hi腦包)
 	}
 
 	if IsGoogle == "NO" {
