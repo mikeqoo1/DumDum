@@ -6,6 +6,7 @@ import (
 	"DumDum/lib/pvc"
 	tidb "DumDum/lib/tidb"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -241,6 +242,36 @@ func crosHandler() gin.HandlerFunc {
 		}
 
 		c.Next()
+	}
+}
+
+// checkIP 解析IP
+func checkIP() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		clientIP := c.ClientIP()
+		url := "https://ip2c.org/" + clientIP
+		res, err := http.Get(url)
+		if err != nil {
+			fmt.Println("解析IP失敗", err.Error())
+			Logger().Error("解析IP失敗", err.Error())
+		}
+		body, _ := io.ReadAll(res.Body)
+		bodystr := string(body)
+		bbb := strings.Split(bodystr, ";")
+		if bbb[0] == "0" {
+			fmt.Println("解析IP的API失敗", url)
+			Logger().Error("解析IP的API失敗", url)
+		} else if bbb[0] == "1" {
+			fmt.Println("Two-letter: " + bbb[1])
+			fmt.Println("Three-letter: " + bbb[2])
+			fmt.Println("Full name: " + bbb[3])
+			Logger().Info("國別碼2碼: ", bbb[1])
+			Logger().Info("國別碼3碼: ", bbb[2])
+			Logger().Info("國家全名: ", bbb[3])
+		} else if bbb[0] == "2" {
+			fmt.Println("解析IP的API失敗(Not found in database)")
+			Logger().Error("解析IP的API失敗(Not found in database)")
+		}
 	}
 }
 
@@ -543,6 +574,7 @@ func main() {
 	router := gin.Default()
 	router.Use(crosHandler())
 	router.Use(LoggerToFile())
+	router.Use(checkIP())
 
 	// 設置模板路徑
 	router.LoadHTMLGlob("templates/*.html")
