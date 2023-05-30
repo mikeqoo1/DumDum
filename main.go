@@ -4,6 +4,7 @@ import (
 	"DumDum/lib/basic"
 	nici "DumDum/lib/nici"
 	"DumDum/lib/pvc"
+	shuming "DumDum/lib/shuming"
 	tidb "DumDum/lib/tidb"
 	"fmt"
 	"io"
@@ -24,9 +25,10 @@ import (
 
 var (
 	//Googl雲端版本
-	IsGoogle string
-	conn     *gorm.DB
-	niciobj  []nici.Nici
+	IsGoogle   string
+	conn       *gorm.DB
+	niciobj    []nici.Nici
+	shumingobj []shuming.Shuming
 	// 產生上市櫃客戶端物件
 	client = basic.TCPClient{
 		SendCh:    make(chan string, 1024),
@@ -562,9 +564,28 @@ func searchconcordsEM(c *gin.Context) {
 
 /*腦包書銘區*/
 
-func hi腦包(c *gin.Context) {
+func hiUser(c *gin.Context) {
+	results := conn.Order("id desc").Find(&shumingobj)
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "腦包書銘兒, 你好, 晚上峽谷見",
+		"record": results.RowsAffected,
+		"data":   shumingobj,
+		"msg":    "腦包書銘兒, 你好, 晚上峽谷見",
+	})
+}
+
+func addUser(c *gin.Context) {
+	account := c.PostForm("account")
+	username := c.PostForm("name")
+	新腦包 := shuming.Shuming{
+		Account:  account,
+		Username: username,
+		Status:   1,
+	}
+	conn.Save(&新腦包)
+
+	c.JSON(http.StatusOK, gin.H{
+		"data": shumingobj,
+		"msg":  "增加新腦包",
 	})
 }
 
@@ -634,8 +655,9 @@ func main() {
 
 	shumingyuRouter := router.Group("/shumingyu")
 	{
-		shumingyuRouter.GET("/", hi腦包)
 		shumingyuRouter.GET("/example", hi腦包2)
+		shumingyuRouter.GET("/", hiUser)
+		shumingyuRouter.POST("/user", addUser)
 	}
 
 	if IsGoogle == "NO" {

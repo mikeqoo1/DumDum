@@ -22,3 +22,9 @@ Dum Dum專案 用TiDB做一些無聊東西
 
 [GORM說明](https://gorm.io/zh_CN/)
 
+
+
+腦包API:
+GET "/shumingyu/example"
+GET "/shumingyu/" 列出使用者
+POST "/shumingyu/user" 參數: account, name
