@@ -589,6 +589,28 @@ func addUser(c *gin.Context) {
 	})
 }
 
+func disabledUser(c *gin.Context) {
+	account := c.PostForm("account")
+	username := c.PostForm("name")
+	status := c.PostForm("status")
+	s := 0
+	if status == "disabled" {
+		s = 0
+	} else if status == "enabled" {
+		s = 1
+	}
+	新腦包 := shuming.Shuming{
+		Account:  account,
+		Username: username,
+		Status:   s,
+	}
+	conn.Save(&新腦包)
+	c.JSON(http.StatusOK, gin.H{
+		"data": shumingobj,
+		"msg":  "更新腦包狀態",
+	})
+}
+
 func hi腦包2(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "腦包書銘兒, 你的網站想做啥阿?? 方便確認API方向",
@@ -658,6 +680,7 @@ func main() {
 		shumingyuRouter.GET("/example", hi腦包2)
 		shumingyuRouter.GET("/", hiUser)
 		shumingyuRouter.POST("/user", addUser)
+		shumingyuRouter.PUT("/disabled", disabledUser)
 	}
 
 	if IsGoogle == "NO" {
