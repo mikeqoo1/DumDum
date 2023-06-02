@@ -251,7 +251,7 @@ func crosHandler() gin.HandlerFunc {
 func checkIP() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		clientIP := c.ClientIP()
-		url := "https://ip2c.org/" + clientIP
+		url := "http://ip2c.org/" + clientIP
 		res, err := http.Get(url)
 		if err != nil {
 			fmt.Println("解析IP失敗", err.Error())
