@@ -8,11 +8,13 @@ type Shuming struct {
 }
 
 type UserResponse struct {
-	// 定义你的字段...
+	Data   string `json:"data"`
+	Msg    string `json:"msg"`
+	Record int    `json:"record"`
 }
 
 type ErrorResponse struct {
-	// 定义你的字段...
+	Message string `json:"message"`
 }
 
 func (Shuming) TableName() string {

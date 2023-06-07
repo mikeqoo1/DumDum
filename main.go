@@ -603,8 +603,7 @@ func hiUser(c *gin.Context) {
 //	@Tags			Users
 //	@Accept			json
 //	@Produce		json
-//	@Param			account	path		string	true	"帳號"
-//	@Param			name	path		string	true	"使用者名稱"
+//	@Param			account	body		string	true	"帳號"
 //	@Success		200		{object}	shuming.UserResponse
 //	@Failure		400		{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/alluser [post]
@@ -646,6 +645,26 @@ func disabledUser(c *gin.Context) {
 	})
 }
 
+
+//	@title			書銘的API
+//	@version		1.0
+//	@description	This is a sample server celler server.
+//	@termsOfService	http://swagger.io/terms/
+
+//	@contact.name	API Support
+//	@contact.url	http://www.swagger.io/support
+//	@contact.email	support@swagger.io
+
+//	@license.name	Apache 2.0
+//	@license.url	http://www.apache.org/licenses/LICENSE-2.0.html
+
+//	@host		127.0.0.1:6620
+//	@BasePath	/shumingyu
+
+//	@securityDefinitions.basic	BasicAuth
+
+//	@externalDocs.description	OpenAPI
+//	@externalDocs.url			https://swagger.io/resources/open-api/
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
@@ -666,6 +685,7 @@ func main() {
 	router.LoadHTMLGlob("templates/*.html")
 	// 載入靜態文件
 	router.Static("/static", "./static")
+	router.Static("/docs", "./docs")
 	router.StaticFile("/favicon.ico", "./static/favicon.ico")
 
 	//載入靜態資源 一般是上傳的資源 例如上傳的圖檔還是文件
