@@ -17,6 +17,9 @@ import (
 	"strings"
 	"time"
 
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
+
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
@@ -564,6 +567,28 @@ func searchconcordsEM(c *gin.Context) {
 
 /*腦包書銘區*/
 
+//	@Summary		測試
+//	@Description	給書銘測試
+//	@Tags			Users
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/example [get]
+func hi腦包(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"msg": "腦包書銘兒, 你的網站想做啥阿?? 方便確認API方向",
+	})
+}
+
+//	@Summary		取得User資料
+//	@Description	回傳所有User的資料 跟 筆數
+//	@Tags			Users
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/alluser [get]
 func hiUser(c *gin.Context) {
 	results := conn.Order("id desc").Find(&shumingobj)
 	c.JSON(http.StatusOK, gin.H{
@@ -573,6 +598,16 @@ func hiUser(c *gin.Context) {
 	})
 }
 
+//	@Summary		增加User
+//	@Description	增加User的資料
+//	@Tags			Users
+//	@Accept			json
+//	@Produce		json
+//	@Param			account	path		string	true	"帳號"
+//	@Param			name	path		string	true	"使用者名稱"
+//	@Success		200		{object}	shuming.UserResponse
+//	@Failure		400		{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/alluser [post]
 func addUser(c *gin.Context) {
 	account := c.PostForm("account")
 	username := c.PostForm("name")
@@ -611,12 +646,6 @@ func disabledUser(c *gin.Context) {
 	})
 }
 
-func hi腦包2(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "腦包書銘兒, 你的網站想做啥阿?? 方便確認API方向",
-	})
-}
-
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
@@ -642,6 +671,7 @@ func main() {
 	//載入靜態資源 一般是上傳的資源 例如上傳的圖檔還是文件
 	router.StaticFS("/upload", http.Dir("upload"))
 
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	// 首頁
 	router.GET("/", func(c *gin.Context) {
 		// 定義模板變量
@@ -677,8 +707,8 @@ func main() {
 
 	shumingyuRouter := router.Group("/shumingyu")
 	{
-		shumingyuRouter.GET("/example", hi腦包2)
-		shumingyuRouter.GET("/", hiUser)
+		shumingyuRouter.GET("/example", hi腦包)
+		shumingyuRouter.GET("/alluser", hiUser)
 		shumingyuRouter.POST("/user", addUser)
 		shumingyuRouter.PUT("/disabled", disabledUser)
 	}

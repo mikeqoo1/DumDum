@@ -7,6 +7,14 @@ type Shuming struct {
 	Status   int    `gorm:"type:int(2) NOT NULL DEFAULT 1;column:status"`
 }
 
+type UserResponse struct {
+	// 定义你的字段...
+}
+
+type ErrorResponse struct {
+	// 定义你的字段...
+}
+
 func (Shuming) TableName() string {
 	return "userlist"
 }

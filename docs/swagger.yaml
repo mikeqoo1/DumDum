@@ -1,0 +1,76 @@
+definitions:
+  shuming.ErrorResponse:
+    type: object
+  shuming.UserResponse:
+    type: object
+info:
+  contact: {}
+paths:
+  /shumingyu/alluser:
+    get:
+      consumes:
+      - application/json
+      description: 回傳所有User的資料 跟 筆數
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 取得User資料
+      tags:
+      - Users
+    post:
+      consumes:
+      - application/json
+      description: 增加User的資料
+      parameters:
+      - description: 帳號
+        in: path
+        name: account
+        required: true
+        type: string
+      - description: 使用者名稱
+        in: path
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 增加User
+      tags:
+      - Users
+  /shumingyu/example:
+    get:
+      consumes:
+      - application/json
+      description: 給書銘測試
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 測試
+      tags:
+      - Users
+swagger: "2.0"
