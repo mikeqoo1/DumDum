@@ -29,10 +29,14 @@ import (
 
 var (
 	//Googl雲端版本
-	IsGoogle   string
-	conn       *gorm.DB
-	niciobj    []nici.Nici
-	shumingobj []shuming.Shuming
+	IsGoogle string
+	conn     *gorm.DB
+	niciobj  []nici.Nici
+
+	userobj    []shuming.User
+	orderobj   []shuming.Order
+	productobj []shuming.Product
+
 	// 產生上市櫃客戶端物件
 	client = basic.TCPClient{
 		SendCh:    make(chan string, 1024),
@@ -570,7 +574,7 @@ func searchconcordsEM(c *gin.Context) {
 
 //	@Summary		測試
 //	@Description	給書銘測試
-//	@Tags			Users
+//	@Tags			Test
 //	@Accept			json
 //	@Produce		json
 //	@Success		200	{object}	shuming.UserResponse
@@ -589,12 +593,12 @@ func hi腦包(c *gin.Context) {
 //	@Produce		json
 //	@Success		200	{object}	shuming.UserResponse
 //	@Failure		400	{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/alluser [get]
+//	@Router			/shumingyu/user [get]
 func hiUser(c *gin.Context) {
-	results := conn.Order("id desc").Find(&shumingobj)
+	results := conn.Order("id desc").Find(&userobj)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
-		"data":   shumingobj,
+		"data":   userobj,
 		"msg":    "腦包書銘兒, 你好, 晚上峽谷見",
 	})
 }
@@ -604,77 +608,293 @@ func hiUser(c *gin.Context) {
 //	@Tags			Users
 //	@Accept			json
 //	@Produce		json
-//	@Param			account	body		string	true	"帳號"
-//	@Param			name	body		string	true	"使用者名稱"
-//	@Success		200		{object}	shuming.UserResponse
-//	@Failure		400		{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/alluser [post]
+//	@Param			name		body		string	true	"使用者名稱"
+//	@Param			email		body		string	true	"電子信箱"
+//	@Param			password	body		string	true	"密碼"
+//	@Param			address		body		string	true	"住址"
+//	@Success		200			{object}	shuming.UserResponse
+//	@Failure		400			{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/user [post]
 func addUser(c *gin.Context) {
-	account := c.PostForm("account")
 	username := c.PostForm("name")
-	新腦包 := shuming.Shuming{
-		Account:  account,
-		Username: username,
-		Status:   1,
-	}
-	conn.Save(&新腦包)
+	email := c.PostForm("email")
+	pwd := c.PostForm("password")
+	address := c.PostForm("address")
 
-	c.JSON(http.StatusOK, gin.H{
-		"data": shumingobj,
-		"msg":  "增加新腦包",
-	})
+	var result shuming.User
+	conn.First(&result, "username = ?", username)
+	if result.Username == username {
+		fmt.Println("名稱重複了", result)
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "名稱重複了",
+		})
+	} else {
+		新腦包 := shuming.User{
+			Username:     username,
+			Email:        email,
+			Password:     pwd,
+			Address:      address,
+			Payment_info: "付款資訊現在先用假的",
+		}
+		conn.Save(&新腦包)
+
+		c.JSON(http.StatusOK, gin.H{
+			"data": 新腦包,
+			"msg":  "增加腦包客戶",
+		})
+	}
 }
 
-//	@Summary		修改User
-//	@Description	修改User的狀態
+//	@Summary		更新User
+//	@Description	更新User的資料
 //	@Tags			Users
 //	@Accept			json
 //	@Produce		json
-//	@Param			account	body		string	true	"帳號"
-//	@Param			name	body		string	true	"使用者名稱"
-//	@Param			status	body		string	true	"使用者狀態(disabled/enabled)"
-//	@Success		200		{object}	shuming.UserResponse
-//	@Failure		400		{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/disabled [post]
-func disabledUser(c *gin.Context) {
-	account := c.PostForm("account")
+//	@Param			name		body		string	true	"使用者名稱"
+//	@Param			email		body		string	true	"電子信箱"
+//	@Param			password	body		string	true	"密碼"
+//	@Param			address		body		string	true	"住址"
+//	@Success		200			{object}	shuming.UserResponse
+//	@Failure		400			{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/user [put]
+func updateUser(c *gin.Context) {
 	username := c.PostForm("name")
-	status := c.PostForm("status")
-	s := 0
-	if status == "disabled" {
-		s = 0
-	} else if status == "enabled" {
-		s = 1
+	email := c.PostForm("email")
+	pwd := c.PostForm("password")
+	address := c.PostForm("address")
+	腦包 := shuming.User{
+		Username:     username,
+		Email:        email,
+		Password:     pwd,
+		Address:      address,
+		Payment_info: "付款資訊現在先用假的",
 	}
-	新腦包 := shuming.Shuming{
-		Account:  account,
-		Username: username,
-		Status:   s,
-	}
-	conn.Save(&新腦包)
+	conn.Save(&腦包)
 	c.JSON(http.StatusOK, gin.H{
-		"data": shumingobj,
-		"msg":  "更新腦包狀態",
+		"data": 腦包,
+		"msg":  "更新腦包客戶資料",
 	})
 }
 
-//	@title			書銘的API
-//	@version		1.0
-//	@description	This is a sample server celler server.
-//	@termsOfService	http://swagger.io/terms/
+//	@Summary		取得商品資料
+//	@Description	回傳所有商品的資料 跟 筆數
+//	@Tags			Product
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/product [get]
+func hiProduct(c *gin.Context) {
+	results := conn.Order("id desc").Find(&productobj)
+	c.JSON(http.StatusOK, gin.H{
+		"record": results.RowsAffected,
+		"data":   productobj,
+		"msg":    "商品列表列出來",
+	})
+}
 
-//	@contact.name	API Support
-//	@contact.url	http://www.swagger.io/support
-//	@contact.email	support@swagger.io
+//	@Summary		新增商品資料
+//	@Description	新增商品資料
+//	@Tags			Product
+//	@Accept			json
+//	@Produce		json
+//	@Param			name		body		string	true	"商品名稱"
+//	@Param			description	body		string	true	"描述"
+//	@Param			price		body		string	true	"價格"
+//	@Param			stock		body		string	true	"庫存"
+//	@Param			sku			body		string	true	"庫存單位"
+//	@Param			imageURL	body		string	true	"圖片"
+//	@Success		200			{object}	shuming.UserResponse
+//	@Failure		400			{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/product [post]
+func addProduct(c *gin.Context) {
+	name := c.PostForm("name")
+	description := c.PostForm("description")
+	price := c.PostForm("price")
+	stock := c.PostForm("stock")
+	sku := c.PostForm("sku")
+	url := c.PostForm("imageURL")
+	var result shuming.Product
+	conn.First(&result, "name = ?", name)
+	if result.Name == name {
+		fmt.Println("商品名稱重複了", result)
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "商品名稱重複了",
+		})
+	} else {
+		pricefff, err := strconv.ParseFloat(price, 64)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"msg": "商品價格錯誤",
+			})
+		}
+		stockiii, err := strconv.Atoi(stock)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"msg": "商品名稱重複了",
+			})
+		}
+		腦包商品 := shuming.Product{
+			Name:        name,
+			Description: description,
+			Price:       pricefff,
+			Stock:       stockiii,
+			SKU:         sku,
+			ImageURL:    url,
+		}
+		conn.Save(&腦包商品)
 
-//	@license.name	Apache 2.0
-//	@license.url	http://www.apache.org/licenses/LICENSE-2.0.html
+		c.JSON(http.StatusOK, gin.H{
+			"data": 腦包商品,
+			"msg":  "增加腦包商品",
+		})
+	}
+}
 
-//	@host		127.0.0.1:6620
-//	@BasePath	/shumingyu
+//	@Summary		更新商品資料
+//	@Description	更新商品資料
+//	@Tags			Product
+//	@Accept			json
+//	@Produce		json
+//	@Param			name		body		string	true	"商品名稱"
+//	@Param			description	body		string	true	"描述"
+//	@Param			price		body		string	true	"價格"
+//	@Param			stock		body		string	true	"庫存"
+//	@Param			sku			body		string	true	"庫存單位"
+//	@Param			imageURL	body		string	true	"圖片"
+//	@Success		200			{object}	shuming.UserResponse
+//	@Failure		400			{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/product [put]
+func updateProduct(c *gin.Context) {
+	name := c.PostForm("name")
+	description := c.PostForm("description")
+	price := c.PostForm("price")
+	stock := c.PostForm("stock")
+	sku := c.PostForm("sku")
+	url := c.PostForm("imageURL")
+	pricefff, err := strconv.ParseFloat(price, 64)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "商品價格錯誤",
+		})
+	}
+	stockiii, err := strconv.Atoi(stock)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "商品名稱重複了",
+		})
+	}
+	腦包商品 := shuming.Product{
+		Name:        name,
+		Description: description,
+		Price:       pricefff,
+		Stock:       stockiii,
+		SKU:         sku,
+		ImageURL:    url,
+	}
+	conn.Save(&腦包商品)
+	c.JSON(http.StatusOK, gin.H{
+		"data": 腦包商品,
+		"msg":  "增加腦包商品",
+	})
+}
 
+//	@Summary		取得訂單清單
+//	@Description	回傳所有訂單的資料 跟 筆數
+//	@Tags			Order
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/order [get]
+func hiOrder(c *gin.Context) {
+	results := conn.Order("id desc").Find(&orderobj)
+	c.JSON(http.StatusOK, gin.H{
+		"record": results.RowsAffected,
+		"data":   orderobj,
+		"msg":    "訂單通通列出來",
+	})
+}
+
+//	@Summary		新增訂單
+//	@Description	新增訂單
+//	@Tags			Order
+//	@Accept			json
+//	@Produce		json
+//	@Param			user			body		string	true	"用戶名稱"
+//	@Param			total_amount	body		string	true	"訂單總金額"
+//	@Success		200				{object}	shuming.UserResponse
+//	@Failure		400				{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/order [post]
+func addOrder(c *gin.Context) {
+	user := c.PostForm("user")
+	total_amount := c.PostForm("total_amount")
+	var result shuming.User
+	conn.First(&result, "username = ?", user)
+	if result.ID <= 0 {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "查無此人" + user,
+		})
+	}
+
+	total_amountffff, err := strconv.ParseFloat(total_amount, 64)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "訂單總金額錯誤",
+		})
+	}
+	腦包訂單 := shuming.Order{
+		UserID:         result.ID,
+		OrderDate:      time.Now(),
+		PaymentStatus:  "Paid",
+		ShippingStatus: "Shipped",
+		TotalAmount:    total_amountffff,
+	}
+	conn.Create(&腦包訂單)
+	msg := result.Username + "增加腦包訂單"
+	c.JSON(http.StatusOK, gin.H{
+		"data": 腦包訂單,
+		"msg":  msg,
+	})
+}
+
+//	@Summary		更新訂單
+//	@Description	更新訂單
+//	@Tags			Order
+//	@Accept			json
+//	@Produce		json
+//	@Param			user_id	body		string	true	"用戶資訊"
+//	@Success		200		{object}	shuming.UserResponse
+//	@Failure		400		{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/order [put]
+func updateOrder(c *gin.Context) {
+	user_id := c.PostForm("user_id")
+	user_idiii, err := strconv.Atoi(user_id)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "user_id錯誤",
+		})
+	}
+
+	conn.Where("user_id = ?", user_idiii).Find(&orderobj)
+	c.JSON(http.StatusOK, gin.H{
+		"data": orderobj,
+		"msg":  "更新腦包訂單",
+	})
+}
+
+//	@title						書銘的API
+//	@version					1.0
+//	@description				This is a sample server celler server.
+//	@termsOfService				http://swagger.io/terms/
+//	@contact.name				API Support
+//	@contact.url				http://www.swagger.io/support
+//	@contact.email				support@swagger.io
+//	@license.name				Apache 2.0
+//	@license.url				http://www.apache.org/licenses/LICENSE-2.0.html
+//	@host						127.0.0.1:6620
+//	@BasePath					/shumingyu
 //	@securityDefinitions.basic	BasicAuth
-
 //	@externalDocs.description	OpenAPI
 //	@externalDocs.url			https://swagger.io/resources/open-api/
 func main() {
@@ -740,9 +960,18 @@ func main() {
 	shumingyuRouter := router.Group("/shumingyu")
 	{
 		shumingyuRouter.GET("/example", hi腦包)
-		shumingyuRouter.GET("/alluser", hiUser)
+		shumingyuRouter.GET("/user", hiUser)
 		shumingyuRouter.POST("/user", addUser)
-		shumingyuRouter.PUT("/disabled", disabledUser)
+		shumingyuRouter.PUT("/user", updateUser)
+
+		shumingyuRouter.GET("/product", hiProduct)
+		shumingyuRouter.POST("/product", addProduct)
+		shumingyuRouter.PUT("/product", updateProduct)
+
+		shumingyuRouter.GET("/order", hiOrder)
+		shumingyuRouter.POST("/order", addOrder)
+		shumingyuRouter.PUT("/order", updateOrder)
+
 	}
 
 	if IsGoogle == "NO" {

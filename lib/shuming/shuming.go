@@ -1,10 +1,38 @@
 package shuming
 
-type Shuming struct {
-	Id       int    `gorm:"primaryKey;type:int(11) NOT NULL auto_increment ;column:id"`
-	Account  string `gorm:"primaryKey;type:varchar(50) NOT NULL;column:account"`
-	Username string `gorm:"type:varchar(50) NOT NULL;column NOT NULL:username"`
-	Status   int    `gorm:"type:int(2) NOT NULL DEFAULT 1;column:status"`
+import "time"
+
+// 定義用戶模型結構
+type User struct {
+	ID        uint
+	Username  string
+	Email     string
+	Password  string
+	Address   string
+	Payment_info string
+	CreatedAt time.Time
+}
+
+// 定義訂單模型結構
+type Order struct {
+	ID             uint
+	UserID         uint
+	User           User `gorm:"foreignKey:UserID"`
+	OrderDate      time.Time
+	PaymentStatus  string
+	ShippingStatus string
+	TotalAmount    float64
+}
+
+// 定義產品模型結構
+type Product struct {
+	ID          uint
+	Name        string
+	Description string
+	Price       float64
+	Stock       int
+	SKU         string
+	ImageURL    string
 }
 
 type UserResponse struct {
@@ -17,6 +45,14 @@ type ErrorResponse struct {
 	Message string `json:"message"`
 }
 
-func (Shuming) TableName() string {
-	return "userlist"
+func (User) TableName() string {
+	return "users"
+}
+
+func (Order) TableName() string {
+	return "orders"
+}
+
+func (Product) TableName() string {
+	return "products"
 }
