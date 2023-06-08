@@ -568,28 +568,28 @@ func searchconcordsEM(c *gin.Context) {
 
 /*腦包書銘區*/
 
-// @Summary		測試
-// @Description	給書銘測試
-// @Tags			Users
-// @Accept			json
-// @Produce		json
-// @Success		200	{object}	shuming.UserResponse
-// @Failure		400	{object}	shuming.ErrorResponse
-// @Router			/shumingyu/example [get]
+//	@Summary		測試
+//	@Description	給書銘測試
+//	@Tags			Users
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/example [get]
 func hi腦包(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "腦包書銘兒, 你的網站想做啥阿?? 方便確認API方向",
 	})
 }
 
-// @Summary		取得User資料
-// @Description	回傳所有User的資料 跟 筆數
-// @Tags			Users
-// @Accept			json
-// @Produce		json
-// @Success		200	{object}	shuming.UserResponse
-// @Failure		400	{object}	shuming.ErrorResponse
-// @Router			/shumingyu/alluser [get]
+//	@Summary		取得User資料
+//	@Description	回傳所有User的資料 跟 筆數
+//	@Tags			Users
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/alluser [get]
 func hiUser(c *gin.Context) {
 	results := conn.Order("id desc").Find(&shumingobj)
 	c.JSON(http.StatusOK, gin.H{
@@ -599,15 +599,16 @@ func hiUser(c *gin.Context) {
 	})
 }
 
-// @Summary		增加User
-// @Description	增加User的資料
-// @Tags			Users
-// @Accept			json
-// @Produce		json
-// @Param			account	body		string	true	"帳號"
-// @Success		200		{object}	shuming.UserResponse
-// @Failure		400		{object}	shuming.ErrorResponse
-// @Router			/shumingyu/alluser [post]
+//	@Summary		增加User
+//	@Description	增加User的資料
+//	@Tags			Users
+//	@Accept			json
+//	@Produce		json
+//	@Param			account	body		string	true	"帳號"
+//	@Param			name	body		string	true	"使用者名稱"
+//	@Success		200		{object}	shuming.UserResponse
+//	@Failure		400		{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/alluser [post]
 func addUser(c *gin.Context) {
 	account := c.PostForm("account")
 	username := c.PostForm("name")
@@ -624,6 +625,17 @@ func addUser(c *gin.Context) {
 	})
 }
 
+//	@Summary		修改User
+//	@Description	修改User的狀態
+//	@Tags			Users
+//	@Accept			json
+//	@Produce		json
+//	@Param			account	body		string	true	"帳號"
+//	@Param			name	body		string	true	"使用者名稱"
+//	@Param			status	body		string	true	"使用者狀態(disabled/enabled)"
+//	@Success		200		{object}	shuming.UserResponse
+//	@Failure		400		{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/disabled [post]
 func disabledUser(c *gin.Context) {
 	account := c.PostForm("account")
 	username := c.PostForm("name")
@@ -663,8 +675,8 @@ func disabledUser(c *gin.Context) {
 
 //	@securityDefinitions.basic	BasicAuth
 
-// @externalDocs.description	OpenAPI
-// @externalDocs.url			https://swagger.io/resources/open-api/
+//	@externalDocs.description	OpenAPI
+//	@externalDocs.url			https://swagger.io/resources/open-api/
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
