@@ -8,11 +8,35 @@ CREATE TABLE IF NOT EXISTS `nici` (
     PRIMARY KEY(`id`, `name`)
 ) COMMENT='Nici的身份詳細表';
 
-CREATE TABLE IF NOT EXISTS `userlist` (
-    id int(11) AUTO_INCREMENT NOT NULL COMMENT '流水編號',
-    account varchar(50) NOT NULL COMMENT '使用者帳號',
-    username varchar(50) NOT NULL COMMENT '使用者名稱',
-    status int(2) NOT NULL DEFAULT 1 COMMENT '狀態 0:關閉 1:啟用',
-    PRIMARY KEY(`id`, `account`)
-) COMMENT='使用者清單';
+-- 建立用戶資料表
+CREATE TABLE IF NOT EXISTS `users` (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL COMMENT '用戶名稱',
+  email VARCHAR(100) NOT NULL COMMENT '電子郵件',
+  password VARCHAR(100) NOT NULL COMMENT '密碼',
+  address TEXT COMMENT '配送地址',
+  payment_info VARCHAR(200) COMMENT '付款資訊',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) COMMENT='用戶資料表';
 
+-- 建立訂單資料表
+CREATE TABLE IF NOT EXISTS `orders` (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL COMMENT '用戶資訊',
+  order_date DATE NOT NULL COMMENT '訂單日期',
+  payment_status ENUM('Pending', 'Paid', 'Cancelled') NOT NULL COMMENT '付款狀態',
+  shipping_status ENUM('Pending', 'Shipped', 'Delivered') NOT NULL COMMENT '配送狀態',
+  total_amount DECIMAL(10, 2) NOT NULL COMMENT '訂單總金額',
+  FOREIGN KEY (user_id) REFERENCES users(id)
+) COMMENT='訂單資料表';
+
+-- 建立產品資料表
+CREATE TABLE IF NOT EXISTS `products` (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL COMMENT '產品名稱',
+  description TEXT COMMENT '描述',
+  price DECIMAL(10, 2) NOT NULL COMMENT '價格',
+  stock INT NOT NULL COMMENT '庫存',
+  sku VARCHAR(50) NOT NULL COMMENT 'SKU(庫存單位)',
+  image_url VARCHAR(200) COMMENT '圖片'
+) COMMENT='產品資料表';
