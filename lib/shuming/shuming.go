@@ -7,6 +7,16 @@ type Shuming struct {
 	Status   int    `gorm:"type:int(2) NOT NULL DEFAULT 1;column:status"`
 }
 
+type UserResponse struct {
+	Data   string `json:"data"`
+	Msg    string `json:"msg"`
+	Record int    `json:"record"`
+}
+
+type ErrorResponse struct {
+	Message string `json:"message"`
+}
+
 func (Shuming) TableName() string {
 	return "userlist"
 }
