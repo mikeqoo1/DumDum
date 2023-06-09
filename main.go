@@ -572,28 +572,28 @@ func searchconcordsEM(c *gin.Context) {
 
 /*腦包書銘區*/
 
-//	@Summary		測試
-//	@Description	給書銘測試
-//	@Tags			Test
-//	@Accept			json
-//	@Produce		json
-//	@Success		200	{object}	shuming.UserResponse
-//	@Failure		400	{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/example [get]
+// @Summary		測試
+// @Description	給書銘測試
+// @Tags			Test
+// @Accept			json
+// @Produce		json
+// @Success		200	{object}	shuming.UserResponse
+// @Failure		400	{object}	shuming.ErrorResponse
+// @Router			/shumingyu/example [get]
 func hi腦包(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "腦包書銘兒, 你的網站想做啥阿?? 方便確認API方向",
 	})
 }
 
-//	@Summary		取得User資料
-//	@Description	回傳所有User的資料 跟 筆數
-//	@Tags			Users
-//	@Accept			json
-//	@Produce		json
-//	@Success		200	{object}	shuming.UserResponse
-//	@Failure		400	{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/user [get]
+// @Summary		取得User資料
+// @Description	回傳所有User的資料 跟 筆數
+// @Tags			Users
+// @Accept			json
+// @Produce		json
+// @Success		200	{object}	shuming.UserResponse
+// @Failure		400	{object}	shuming.ErrorResponse
+// @Router			/shumingyu/user [get]
 func hiUser(c *gin.Context) {
 	results := conn.Order("id desc").Find(&userobj)
 	c.JSON(http.StatusOK, gin.H{
@@ -603,18 +603,18 @@ func hiUser(c *gin.Context) {
 	})
 }
 
-//	@Summary		增加User
-//	@Description	增加User的資料
-//	@Tags			Users
-//	@Accept			json
-//	@Produce		json
-//	@Param			name		body		string	true	"使用者名稱"
-//	@Param			email		body		string	true	"電子信箱"
-//	@Param			password	body		string	true	"密碼"
-//	@Param			address		body		string	true	"住址"
-//	@Success		200			{object}	shuming.UserResponse
-//	@Failure		400			{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/user [post]
+// @Summary		增加User
+// @Description	增加User的資料
+// @Tags			Users
+// @Accept			json
+// @Produce		json
+// @Param			name		body		string	true	"使用者名稱"
+// @Param			email		body		string	true	"電子信箱"
+// @Param			password	body		string	true	"密碼"
+// @Param			address		body		string	true	"住址"
+// @Success		200			{object}	shuming.UserResponse
+// @Failure		400			{object}	shuming.ErrorResponse
+// @Router			/shumingyu/user [post]
 func addUser(c *gin.Context) {
 	username := c.PostForm("name")
 	email := c.PostForm("email")
@@ -628,6 +628,7 @@ func addUser(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "名稱重複了",
 		})
+		return
 	} else {
 		新腦包 := shuming.User{
 			Username:     username,
@@ -645,18 +646,18 @@ func addUser(c *gin.Context) {
 	}
 }
 
-//	@Summary		更新User
-//	@Description	更新User的資料
-//	@Tags			Users
-//	@Accept			json
-//	@Produce		json
-//	@Param			name		body		string	true	"使用者名稱"
-//	@Param			email		body		string	true	"電子信箱"
-//	@Param			password	body		string	true	"密碼"
-//	@Param			address		body		string	true	"住址"
-//	@Success		200			{object}	shuming.UserResponse
-//	@Failure		400			{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/user [put]
+// @Summary		更新User
+// @Description	更新User的資料
+// @Tags			Users
+// @Accept			json
+// @Produce		json
+// @Param			name		body		string	true	"使用者名稱"
+// @Param			email		body		string	true	"電子信箱"
+// @Param			password	body		string	true	"密碼"
+// @Param			address		body		string	true	"住址"
+// @Success		200			{object}	shuming.UserResponse
+// @Failure		400			{object}	shuming.ErrorResponse
+// @Router			/shumingyu/user [put]
 func updateUser(c *gin.Context) {
 	username := c.PostForm("name")
 	email := c.PostForm("email")
@@ -676,14 +677,14 @@ func updateUser(c *gin.Context) {
 	})
 }
 
-//	@Summary		取得商品資料
-//	@Description	回傳所有商品的資料 跟 筆數
-//	@Tags			Product
-//	@Accept			json
-//	@Produce		json
-//	@Success		200	{object}	shuming.UserResponse
-//	@Failure		400	{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/product [get]
+// @Summary		取得商品資料
+// @Description	回傳所有商品的資料 跟 筆數
+// @Tags			Product
+// @Accept			json
+// @Produce		json
+// @Success		200	{object}	shuming.UserResponse
+// @Failure		400	{object}	shuming.ErrorResponse
+// @Router			/shumingyu/product [get]
 func hiProduct(c *gin.Context) {
 	results := conn.Order("id desc").Find(&productobj)
 	c.JSON(http.StatusOK, gin.H{
@@ -693,20 +694,20 @@ func hiProduct(c *gin.Context) {
 	})
 }
 
-//	@Summary		新增商品資料
-//	@Description	新增商品資料
-//	@Tags			Product
-//	@Accept			json
-//	@Produce		json
-//	@Param			name		body		string	true	"商品名稱"
-//	@Param			description	body		string	true	"描述"
-//	@Param			price		body		string	true	"價格"
-//	@Param			stock		body		string	true	"庫存"
-//	@Param			sku			body		string	true	"庫存單位"
-//	@Param			imageURL	body		string	true	"圖片"
-//	@Success		200			{object}	shuming.UserResponse
-//	@Failure		400			{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/product [post]
+// @Summary		新增商品資料
+// @Description	新增商品資料
+// @Tags			Product
+// @Accept			json
+// @Produce		json
+// @Param			name		body		string	true	"商品名稱"
+// @Param			description	body		string	true	"描述"
+// @Param			price		body		string	true	"價格"
+// @Param			stock		body		string	true	"庫存"
+// @Param			sku			body		string	true	"庫存單位"
+// @Param			imageURL	body		string	true	"圖片"
+// @Success		200			{object}	shuming.UserResponse
+// @Failure		400			{object}	shuming.ErrorResponse
+// @Router			/shumingyu/product [post]
 func addProduct(c *gin.Context) {
 	name := c.PostForm("name")
 	description := c.PostForm("description")
@@ -721,18 +722,21 @@ func addProduct(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品名稱重複了",
 		})
+		return
 	} else {
 		pricefff, err := strconv.ParseFloat(price, 64)
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"msg": "商品價格錯誤",
 			})
+			return
 		}
 		stockiii, err := strconv.Atoi(stock)
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
-				"msg": "商品名稱重複了",
+				"msg": "商品庫存錯誤",
 			})
+			return
 		}
 		腦包商品 := shuming.Product{
 			Name:        name,
@@ -751,20 +755,20 @@ func addProduct(c *gin.Context) {
 	}
 }
 
-//	@Summary		更新商品資料
-//	@Description	更新商品資料
-//	@Tags			Product
-//	@Accept			json
-//	@Produce		json
-//	@Param			name		body		string	true	"商品名稱"
-//	@Param			description	body		string	true	"描述"
-//	@Param			price		body		string	true	"價格"
-//	@Param			stock		body		string	true	"庫存"
-//	@Param			sku			body		string	true	"庫存單位"
-//	@Param			imageURL	body		string	true	"圖片"
-//	@Success		200			{object}	shuming.UserResponse
-//	@Failure		400			{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/product [put]
+// @Summary		更新商品資料
+// @Description	更新商品資料
+// @Tags			Product
+// @Accept			json
+// @Produce		json
+// @Param			name		body		string	true	"商品名稱"
+// @Param			description	body		string	true	"描述"
+// @Param			price		body		string	true	"價格"
+// @Param			stock		body		string	true	"庫存"
+// @Param			sku			body		string	true	"庫存單位"
+// @Param			imageURL	body		string	true	"圖片"
+// @Success		200			{object}	shuming.UserResponse
+// @Failure		400			{object}	shuming.ErrorResponse
+// @Router			/shumingyu/product [put]
 func updateProduct(c *gin.Context) {
 	name := c.PostForm("name")
 	description := c.PostForm("description")
@@ -777,12 +781,14 @@ func updateProduct(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品價格錯誤",
 		})
+		return
 	}
 	stockiii, err := strconv.Atoi(stock)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品名稱重複了",
 		})
+		return
 	}
 	腦包商品 := shuming.Product{
 		Name:        name,
@@ -797,16 +803,17 @@ func updateProduct(c *gin.Context) {
 		"data": 腦包商品,
 		"msg":  "增加腦包商品",
 	})
+
 }
 
-//	@Summary		取得訂單清單
-//	@Description	回傳所有訂單的資料 跟 筆數
-//	@Tags			Order
-//	@Accept			json
-//	@Produce		json
-//	@Success		200	{object}	shuming.UserResponse
-//	@Failure		400	{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/order [get]
+// @Summary		取得訂單清單
+// @Description	回傳所有訂單的資料 跟 筆數
+// @Tags			Order
+// @Accept			json
+// @Produce		json
+// @Success		200	{object}	shuming.UserResponse
+// @Failure		400	{object}	shuming.ErrorResponse
+// @Router			/shumingyu/order [get]
 func hiOrder(c *gin.Context) {
 	results := conn.Order("id desc").Find(&orderobj)
 	c.JSON(http.StatusOK, gin.H{
@@ -816,16 +823,16 @@ func hiOrder(c *gin.Context) {
 	})
 }
 
-//	@Summary		新增訂單
-//	@Description	新增訂單
-//	@Tags			Order
-//	@Accept			json
-//	@Produce		json
-//	@Param			user			body		string	true	"用戶名稱"
-//	@Param			total_amount	body		string	true	"訂單總金額"
-//	@Success		200				{object}	shuming.UserResponse
-//	@Failure		400				{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/order [post]
+// @Summary		新增訂單
+// @Description	新增訂單
+// @Tags			Order
+// @Accept			json
+// @Produce		json
+// @Param			user			body		string	true	"用戶名稱"
+// @Param			total_amount	body		string	true	"訂單總金額"
+// @Success		200				{object}	shuming.UserResponse
+// @Failure		400				{object}	shuming.ErrorResponse
+// @Router			/shumingyu/order [post]
 func addOrder(c *gin.Context) {
 	user := c.PostForm("user")
 	total_amount := c.PostForm("total_amount")
@@ -842,6 +849,7 @@ func addOrder(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "訂單總金額錯誤",
 		})
+		return
 	}
 	腦包訂單 := shuming.Order{
 		UserID:         result.ID,
@@ -858,15 +866,15 @@ func addOrder(c *gin.Context) {
 	})
 }
 
-//	@Summary		更新訂單
-//	@Description	更新訂單
-//	@Tags			Order
-//	@Accept			json
-//	@Produce		json
-//	@Param			user_id	body		string	true	"用戶資訊"
-//	@Success		200		{object}	shuming.UserResponse
-//	@Failure		400		{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/order [put]
+// @Summary		更新訂單
+// @Description	更新訂單
+// @Tags			Order
+// @Accept			json
+// @Produce		json
+// @Param			user_id	body		string	true	"用戶資訊"
+// @Success		200		{object}	shuming.UserResponse
+// @Failure		400		{object}	shuming.ErrorResponse
+// @Router			/shumingyu/order [put]
 func updateOrder(c *gin.Context) {
 	user_id := c.PostForm("user_id")
 	user_idiii, err := strconv.Atoi(user_id)
@@ -883,20 +891,20 @@ func updateOrder(c *gin.Context) {
 	})
 }
 
-//	@title						書銘的API
-//	@version					1.0
-//	@description				This is a sample server celler server.
-//	@termsOfService				http://swagger.io/terms/
-//	@contact.name				API Support
-//	@contact.url				http://www.swagger.io/support
-//	@contact.email				support@swagger.io
-//	@license.name				Apache 2.0
-//	@license.url				http://www.apache.org/licenses/LICENSE-2.0.html
-//	@host						127.0.0.1:6620
-//	@BasePath					/shumingyu
-//	@securityDefinitions.basic	BasicAuth
-//	@externalDocs.description	OpenAPI
-//	@externalDocs.url			https://swagger.io/resources/open-api/
+// @title						書銘的API
+// @version					1.0
+// @description				This is a sample server celler server.
+// @termsOfService				http://swagger.io/terms/
+// @contact.name				API Support
+// @contact.url				http://www.swagger.io/support
+// @contact.email				support@swagger.io
+// @license.name				Apache 2.0
+// @license.url				http://www.apache.org/licenses/LICENSE-2.0.html
+// @host						127.0.0.1:6620
+// @BasePath					/shumingyu
+// @securityDefinitions.basic	BasicAuth
+// @externalDocs.description	OpenAPI
+// @externalDocs.url			https://swagger.io/resources/open-api/
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
