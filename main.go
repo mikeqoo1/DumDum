@@ -938,7 +938,7 @@ func updateOrder(c *gin.Context) {
 //	@Param			id	query		string	true	"訂單ID"
 //	@Success		200	{object}	shuming.UserResponse
 //	@Failure		400	{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/product [delete]
+//	@Router			/shumingyu/order [delete]
 func deleteOrder(c *gin.Context) {
 	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
 	conn.Delete(&shuming.Order{}, uid)

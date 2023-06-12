@@ -166,6 +166,42 @@ const docTemplate = `{
                         }
                     }
                 }
+            },
+            "delete": {
+                "description": "刪掉訂單",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Order"
+                ],
+                "summary": "刪掉訂單",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "訂單ID",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.UserResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.ErrorResponse"
+                        }
+                    }
+                }
             }
         },
         "/shumingyu/product": {
@@ -372,7 +408,7 @@ const docTemplate = `{
                 }
             },
             "delete": {
-                "description": "刪掉訂單",
+                "description": "刪掉商品資料",
                 "consumes": [
                     "application/json"
                 ],
@@ -380,13 +416,13 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "Order"
+                    "Product"
                 ],
-                "summary": "刪掉訂單",
+                "summary": "刪掉商品資料",
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "訂單ID",
+                        "description": "商品ID",
                         "name": "id",
                         "in": "query",
                         "required": true

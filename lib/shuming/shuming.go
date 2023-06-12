@@ -26,7 +26,7 @@ type Order struct {
 
 // 定義產品模型結構
 type Product struct {
-	ID          uint
+	ID          uint64
 	Name        string
 	Description string
 	Price       float64

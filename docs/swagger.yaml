@@ -51,6 +51,30 @@ paths:
       tags:
       - Test
   /shumingyu/order:
+    delete:
+      consumes:
+      - application/json
+      description: 刪掉訂單
+      parameters:
+      - description: 訂單ID
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 刪掉訂單
+      tags:
+      - Order
     get:
       consumes:
       - application/json
@@ -129,9 +153,9 @@ paths:
     delete:
       consumes:
       - application/json
-      description: 刪掉訂單
+      description: 刪掉商品資料
       parameters:
-      - description: 訂單ID
+      - description: 商品ID
         in: query
         name: id
         required: true
@@ -147,9 +171,9 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/shuming.ErrorResponse'
-      summary: 刪掉訂單
+      summary: 刪掉商品資料
       tags:
-      - Order
+      - Product
     get:
       consumes:
       - application/json
