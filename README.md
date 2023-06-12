@@ -1,4 +1,5 @@
 # DumDum
+*[English](/docs/README-en.md) ∙ [繁體中文](README.md) ∙ *
 Dum Dum專案 用TiDB做一些無聊東西
 
 做個網頁 可以輸入 星座 血型 找到適合自己的Nici娃娃
