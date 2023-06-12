@@ -210,6 +210,15 @@ const docTemplate = `{
                 "summary": "更新商品資料",
                 "parameters": [
                     {
+                        "description": "商品ID",
+                        "name": "id",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "description": "商品名稱",
                         "name": "name",
                         "in": "body",
@@ -361,6 +370,42 @@ const docTemplate = `{
                         }
                     }
                 }
+            },
+            "delete": {
+                "description": "刪掉訂單",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Order"
+                ],
+                "summary": "刪掉訂單",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "訂單ID",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.UserResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.ErrorResponse"
+                        }
+                    }
+                }
             }
         },
         "/shumingyu/user": {
@@ -404,6 +449,15 @@ const docTemplate = `{
                 ],
                 "summary": "更新User",
                 "parameters": [
+                    {
+                        "description": "使用者ID",
+                        "name": "id",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
                     {
                         "description": "使用者名稱",
                         "name": "name",
@@ -504,6 +558,42 @@ const docTemplate = `{
                         "schema": {
                             "type": "string"
                         }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.UserResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "刪掉User的資料",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Users"
+                ],
+                "summary": "刪掉User",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "使用者ID",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
                     }
                 ],
                 "responses": {

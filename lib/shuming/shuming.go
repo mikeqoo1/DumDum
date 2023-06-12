@@ -4,19 +4,19 @@ import "time"
 
 // 定義用戶模型結構
 type User struct {
-	ID        uint
-	Username  string
-	Email     string
-	Password  string
-	Address   string
+	ID           uint64
+	Username     string
+	Email        string
+	Password     string
+	Address      string
 	Payment_info string
-	CreatedAt time.Time
+	CreatedAt    time.Time
 }
 
 // 定義訂單模型結構
 type Order struct {
-	ID             uint
-	UserID         uint
+	ID             uint64
+	UserID         uint64
 	User           User `gorm:"foreignKey:UserID"`
 	OrderDate      time.Time
 	PaymentStatus  string

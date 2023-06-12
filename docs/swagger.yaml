@@ -126,6 +126,30 @@ paths:
       tags:
       - Order
   /shumingyu/product:
+    delete:
+      consumes:
+      - application/json
+      description: 刪掉訂單
+      parameters:
+      - description: 訂單ID
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 刪掉訂單
+      tags:
+      - Order
     get:
       consumes:
       - application/json
@@ -204,6 +228,12 @@ paths:
       - application/json
       description: 更新商品資料
       parameters:
+      - description: 商品ID
+        in: body
+        name: id
+        required: true
+        schema:
+          type: string
       - description: 商品名稱
         in: body
         name: name
@@ -255,6 +285,30 @@ paths:
       tags:
       - Product
   /shumingyu/user:
+    delete:
+      consumes:
+      - application/json
+      description: 刪掉User的資料
+      parameters:
+      - description: 使用者ID
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 刪掉User
+      tags:
+      - Users
     get:
       consumes:
       - application/json
@@ -321,6 +375,12 @@ paths:
       - application/json
       description: 更新User的資料
       parameters:
+      - description: 使用者ID
+        in: body
+        name: id
+        required: true
+        schema:
+          type: string
       - description: 使用者名稱
         in: body
         name: name

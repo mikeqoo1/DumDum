@@ -628,6 +628,7 @@ func addUser(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "名稱重複了",
 		})
+		return
 	} else {
 		新腦包 := shuming.User{
 			Username:     username,
@@ -650,6 +651,7 @@ func addUser(c *gin.Context) {
 //	@Tags			Users
 //	@Accept			json
 //	@Produce		json
+//	@Param			id			body		string	true	"使用者ID"
 //	@Param			name		body		string	true	"使用者名稱"
 //	@Param			email		body		string	true	"電子信箱"
 //	@Param			password	body		string	true	"密碼"
@@ -658,11 +660,14 @@ func addUser(c *gin.Context) {
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/user [put]
 func updateUser(c *gin.Context) {
+	uid := c.PostForm("id")
+	id, _ := strconv.ParseUint(uid, 10, 64)
 	username := c.PostForm("name")
 	email := c.PostForm("email")
 	pwd := c.PostForm("password")
 	address := c.PostForm("address")
 	腦包 := shuming.User{
+		ID:           id,
 		Username:     username,
 		Email:        email,
 		Password:     pwd,
@@ -673,6 +678,23 @@ func updateUser(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"data": 腦包,
 		"msg":  "更新腦包客戶資料",
+	})
+}
+
+//	@Summary		刪掉User
+//	@Description	刪掉User的資料
+//	@Tags			Users
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	query		string	true	"使用者ID"
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/user [delete]
+func deleteUser(c *gin.Context) {
+	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
+	conn.Delete(&shuming.User{}, uid)
+	c.JSON(http.StatusOK, gin.H{
+		"msg": "刪除客戶資料",
 	})
 }
 
@@ -721,18 +743,21 @@ func addProduct(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品名稱重複了",
 		})
+		return
 	} else {
 		pricefff, err := strconv.ParseFloat(price, 64)
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"msg": "商品價格錯誤",
 			})
+			return
 		}
 		stockiii, err := strconv.Atoi(stock)
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
-				"msg": "商品名稱重複了",
+				"msg": "商品庫存錯誤",
 			})
+			return
 		}
 		腦包商品 := shuming.Product{
 			Name:        name,
@@ -756,6 +781,7 @@ func addProduct(c *gin.Context) {
 //	@Tags			Product
 //	@Accept			json
 //	@Produce		json
+//	@Param			id			body		string	true	"商品ID"
 //	@Param			name		body		string	true	"商品名稱"
 //	@Param			description	body		string	true	"描述"
 //	@Param			price		body		string	true	"價格"
@@ -777,12 +803,14 @@ func updateProduct(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品價格錯誤",
 		})
+		return
 	}
 	stockiii, err := strconv.Atoi(stock)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品名稱重複了",
 		})
+		return
 	}
 	腦包商品 := shuming.Product{
 		Name:        name,
@@ -796,6 +824,24 @@ func updateProduct(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"data": 腦包商品,
 		"msg":  "增加腦包商品",
+	})
+
+}
+
+//	@Summary		刪掉商品資料
+//	@Description	刪掉商品資料
+//	@Tags			Product
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	query		string	true	"商品ID"
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/product [delete]
+func deleteProduct(c *gin.Context) {
+	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
+	conn.Delete(&shuming.Product{}, uid)
+	c.JSON(http.StatusOK, gin.H{
+		"msg": "刪除商品資料",
 	})
 }
 
@@ -842,6 +888,7 @@ func addOrder(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "訂單總金額錯誤",
 		})
+		return
 	}
 	腦包訂單 := shuming.Order{
 		UserID:         result.ID,
@@ -880,6 +927,23 @@ func updateOrder(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"data": orderobj,
 		"msg":  "更新腦包訂單",
+	})
+}
+
+//	@Summary		刪掉訂單
+//	@Description	刪掉訂單
+//	@Tags			Order
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	query		string	true	"訂單ID"
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/product [delete]
+func deleteOrder(c *gin.Context) {
+	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
+	conn.Delete(&shuming.Order{}, uid)
+	c.JSON(http.StatusOK, gin.H{
+		"msg": "刪除訂單資料",
 	})
 }
 
@@ -963,14 +1027,17 @@ func main() {
 		shumingyuRouter.GET("/user", hiUser)
 		shumingyuRouter.POST("/user", addUser)
 		shumingyuRouter.PUT("/user", updateUser)
+		shumingyuRouter.DELETE("/user", deleteUser)
 
 		shumingyuRouter.GET("/product", hiProduct)
 		shumingyuRouter.POST("/product", addProduct)
 		shumingyuRouter.PUT("/product", updateProduct)
+		shumingyuRouter.DELETE("/product", deleteProduct)
 
 		shumingyuRouter.GET("/order", hiOrder)
 		shumingyuRouter.POST("/order", addOrder)
 		shumingyuRouter.PUT("/order", updateOrder)
+		shumingyuRouter.DELETE("/order", deleteOrder)
 
 	}
 
