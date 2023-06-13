@@ -38,5 +38,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   price DECIMAL(10, 2) NOT NULL COMMENT '價格',
   stock INT NOT NULL COMMENT '庫存',
   sku VARCHAR(50) NOT NULL COMMENT 'SKU(庫存單位)',
-  image_url VARCHAR(200) COMMENT '圖片'
+  image_url VARCHAR(200) COMMENT '圖片',
+  category VARCHAR(100) NOT NULL COMMENT '產品分類',
+  is_enabled INT NOT NULL DEFAULT 1 COMMENT '啟用1 關閉0'
 ) COMMENT='產品資料表';

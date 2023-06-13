@@ -233,6 +233,18 @@ paths:
         required: true
         schema:
           type: string
+      - description: 商品分類
+        in: body
+        name: category
+        required: true
+        schema:
+          type: string
+      - description: 商品啟用(0/1)
+        in: body
+        name: enabled
+        required: true
+        schema:
+          type: string
       produces:
       - application/json
       responses:
@@ -291,6 +303,18 @@ paths:
       - description: 圖片
         in: body
         name: imageURL
+        required: true
+        schema:
+          type: string
+      - description: 商品分類
+        in: body
+        name: category
+        required: true
+        schema:
+          type: string
+      - description: 商品啟用(0/1)
+        in: body
+        name: enabled
         required: true
         schema:
           type: string

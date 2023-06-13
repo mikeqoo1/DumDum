@@ -307,6 +307,24 @@ const docTemplate = `{
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "description": "商品分類",
+                        "name": "category",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "商品啟用(0/1)",
+                        "name": "enabled",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "responses": {
@@ -385,6 +403,24 @@ const docTemplate = `{
                     {
                         "description": "圖片",
                         "name": "imageURL",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "商品分類",
+                        "name": "category",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "商品啟用(0/1)",
+                        "name": "enabled",
                         "in": "body",
                         "required": true,
                         "schema": {

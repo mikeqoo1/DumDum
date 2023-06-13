@@ -726,6 +726,8 @@ func hiProduct(c *gin.Context) {
 //	@Param			stock		body		string	true	"庫存"
 //	@Param			sku			body		string	true	"庫存單位"
 //	@Param			imageURL	body		string	true	"圖片"
+//	@Param			category	body		string	true	"商品分類"
+//	@Param			enabled		body		string	true	"商品啟用(0/1)"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/product [post]
@@ -736,6 +738,8 @@ func addProduct(c *gin.Context) {
 	stock := c.PostForm("stock")
 	sku := c.PostForm("sku")
 	url := c.PostForm("imageURL")
+	category := c.PostForm("category")
+	enabled := c.PostForm("enabled")
 	var result shuming.Product
 	conn.First(&result, "name = ?", name)
 	if result.Name == name {
@@ -759,6 +763,17 @@ func addProduct(c *gin.Context) {
 			})
 			return
 		}
+		var 啟用 bool
+		if enabled == "1" {
+			啟用 = true
+		} else if enabled == "0" {
+			啟用 = false
+		} else {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"msg": "商品狀態錯誤",
+			})
+			return
+		}
 		腦包商品 := shuming.Product{
 			Name:        name,
 			Description: description,
@@ -766,6 +781,8 @@ func addProduct(c *gin.Context) {
 			Stock:       stockiii,
 			SKU:         sku,
 			ImageURL:    url,
+			Category:    category,
+			Is_enabled:  啟用,
 		}
 		conn.Save(&腦包商品)
 
@@ -788,6 +805,8 @@ func addProduct(c *gin.Context) {
 //	@Param			stock		body		string	true	"庫存"
 //	@Param			sku			body		string	true	"庫存單位"
 //	@Param			imageURL	body		string	true	"圖片"
+//	@Param			category	body		string	true	"商品分類"
+//	@Param			enabled		body		string	true	"商品啟用(0/1)"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/product [put]
@@ -798,6 +817,8 @@ func updateProduct(c *gin.Context) {
 	stock := c.PostForm("stock")
 	sku := c.PostForm("sku")
 	url := c.PostForm("imageURL")
+	category := c.PostForm("category")
+	enabled := c.PostForm("enabled")
 	pricefff, err := strconv.ParseFloat(price, 64)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
@@ -812,6 +833,17 @@ func updateProduct(c *gin.Context) {
 		})
 		return
 	}
+	var 啟用 bool
+	if enabled == "1" {
+		啟用 = true
+	} else if enabled == "0" {
+		啟用 = false
+	} else {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "商品狀態錯誤",
+		})
+		return
+	}
 	腦包商品 := shuming.Product{
 		Name:        name,
 		Description: description,
@@ -819,11 +851,13 @@ func updateProduct(c *gin.Context) {
 		Stock:       stockiii,
 		SKU:         sku,
 		ImageURL:    url,
+		Category:    category,
+		Is_enabled:  啟用,
 	}
 	conn.Save(&腦包商品)
 	c.JSON(http.StatusOK, gin.H{
 		"data": 腦包商品,
-		"msg":  "增加腦包商品",
+		"msg":  "更新腦包商品",
 	})
 
 }

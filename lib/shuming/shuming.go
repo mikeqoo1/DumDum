@@ -33,6 +33,8 @@ type Product struct {
 	Stock       int
 	SKU         string
 	ImageURL    string
+	Category    string
+	Is_enabled  bool
 }
 
 type UserResponse struct {
