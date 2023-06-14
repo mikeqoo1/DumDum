@@ -596,6 +596,7 @@ func hi腦包(c *gin.Context) {
 //	@Router			/shumingyu/user [get]
 func hiUser(c *gin.Context) {
 	results := conn.Order("id desc").Find(&userobj)
+	Logger().Info("取得User資料", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   userobj,
@@ -620,13 +621,14 @@ func addUser(c *gin.Context) {
 	email := c.PostForm("email")
 	pwd := c.PostForm("password")
 	address := c.PostForm("address")
-
+	Logger().Info("增加User資料:", username, email, pwd, address)
 	var result shuming.User
 	conn.First(&result, "username = ?", username)
 	if result.Username == username {
-		fmt.Println("名稱重複了", result)
+		Logger().Error("User名稱重複了", result, username)
 		c.JSON(http.StatusBadRequest, gin.H{
-			"msg": "名稱重複了",
+			"data": result,
+			"msg":  "名稱重複了",
 		})
 		return
 	} else {
@@ -638,10 +640,10 @@ func addUser(c *gin.Context) {
 			Payment_info: "付款資訊現在先用假的",
 		}
 		conn.Save(&新腦包)
-
+		Logger().Info("新的User資料", 新腦包)
 		c.JSON(http.StatusOK, gin.H{
 			"data": 新腦包,
-			"msg":  "增加腦包客戶",
+			"msg":  "增加客戶",
 		})
 	}
 }
@@ -660,14 +662,15 @@ func addUser(c *gin.Context) {
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/user [put]
 func updateUser(c *gin.Context) {
-	uid := c.PostForm("id")
-	id, _ := strconv.ParseUint(uid, 10, 64)
+	id := c.PostForm("id")
+	uid, _ := strconv.ParseUint(id, 10, 64)
 	username := c.PostForm("name")
 	email := c.PostForm("email")
 	pwd := c.PostForm("password")
 	address := c.PostForm("address")
+	Logger().Info("更新User資料:", uid, username, email, pwd, address)
 	腦包 := shuming.User{
-		ID:           id,
+		ID:           uid,
 		Username:     username,
 		Email:        email,
 		Password:     pwd,
@@ -677,7 +680,7 @@ func updateUser(c *gin.Context) {
 	conn.Save(&腦包)
 	c.JSON(http.StatusOK, gin.H{
 		"data": 腦包,
-		"msg":  "更新腦包客戶資料",
+		"msg":  "更新客戶資料",
 	})
 }
 
@@ -692,6 +695,7 @@ func updateUser(c *gin.Context) {
 //	@Router			/shumingyu/user [delete]
 func deleteUser(c *gin.Context) {
 	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
+	Logger().Info("刪掉User資料:", uid)
 	conn.Delete(&shuming.User{}, uid)
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "刪除客戶資料",
@@ -708,6 +712,7 @@ func deleteUser(c *gin.Context) {
 //	@Router			/shumingyu/product [get]
 func hiProduct(c *gin.Context) {
 	results := conn.Order("id desc").Find(&productobj)
+	Logger().Info("取得商品資料", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   productobj,
@@ -721,13 +726,13 @@ func hiProduct(c *gin.Context) {
 //	@Accept			json
 //	@Produce		json
 //	@Param			name		body		string	true	"商品名稱"
-//	@Param			description	body		string	true	"描述"
-//	@Param			price		body		string	true	"價格"
-//	@Param			stock		body		string	true	"庫存"
-//	@Param			sku			body		string	true	"庫存單位"
-//	@Param			imageURL	body		string	true	"圖片"
-//	@Param			category	body		string	true	"商品分類"
-//	@Param			enabled		body		string	true	"商品啟用(0/1)"
+//	@Param			description	body		string	false	"描述"
+//	@Param			price		body		string	false	"價格"
+//	@Param			stock		body		string	false	"庫存"
+//	@Param			sku			body		string	false	"庫存單位"
+//	@Param			imageURL	body		string	false	"圖片"
+//	@Param			category	body		string	false	"商品分類"
+//	@Param			enabled		body		string	false	"商品啟用(0/1)"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/product [post]
@@ -741,9 +746,10 @@ func addProduct(c *gin.Context) {
 	category := c.PostForm("category")
 	enabled := c.PostForm("enabled")
 	var result shuming.Product
+	Logger().Info("新增商品資料:", name, description, price, stock, sku, url, category, enabled)
 	conn.First(&result, "name = ?", name)
 	if result.Name == name {
-		fmt.Println("商品名稱重複了", result)
+		Logger().Error("商品名稱重複了:", result, name)
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品名稱重複了",
 		})
@@ -751,6 +757,7 @@ func addProduct(c *gin.Context) {
 	} else {
 		pricefff, err := strconv.ParseFloat(price, 64)
 		if err != nil {
+			Logger().Error("商品價格錯誤:", err.Error())
 			c.JSON(http.StatusBadRequest, gin.H{
 				"msg": "商品價格錯誤",
 			})
@@ -758,17 +765,20 @@ func addProduct(c *gin.Context) {
 		}
 		stockiii, err := strconv.Atoi(stock)
 		if err != nil {
+			Logger().Error("商品庫存錯誤:", err.Error())
 			c.JSON(http.StatusBadRequest, gin.H{
 				"msg": "商品庫存錯誤",
 			})
 			return
 		}
 		var 啟用 bool
+		啟用 = true
 		if enabled == "1" {
 			啟用 = true
 		} else if enabled == "0" {
 			啟用 = false
 		} else {
+			Logger().Error("商品狀態錯誤:", name, description, price, stock, sku, url, category, enabled, 啟用)
 			c.JSON(http.StatusBadRequest, gin.H{
 				"msg": "商品狀態錯誤",
 			})
@@ -784,11 +794,12 @@ func addProduct(c *gin.Context) {
 			Category:    category,
 			Is_enabled:  啟用,
 		}
+		Logger().Info("增加商品:", 腦包商品)
 		conn.Save(&腦包商品)
 
 		c.JSON(http.StatusOK, gin.H{
 			"data": 腦包商品,
-			"msg":  "增加腦包商品",
+			"msg":  "增加商品",
 		})
 	}
 }
@@ -800,13 +811,13 @@ func addProduct(c *gin.Context) {
 //	@Produce		json
 //	@Param			id			body		string	true	"商品ID"
 //	@Param			name		body		string	true	"商品名稱"
-//	@Param			description	body		string	true	"描述"
-//	@Param			price		body		string	true	"價格"
-//	@Param			stock		body		string	true	"庫存"
-//	@Param			sku			body		string	true	"庫存單位"
-//	@Param			imageURL	body		string	true	"圖片"
-//	@Param			category	body		string	true	"商品分類"
-//	@Param			enabled		body		string	true	"商品啟用(0/1)"
+//	@Param			description	body		string	false	"描述"
+//	@Param			price		body		string	false	"價格"
+//	@Param			stock		body		string	false	"庫存"
+//	@Param			sku			body		string	false	"庫存單位"
+//	@Param			imageURL	body		string	false	"圖片"
+//	@Param			category	body		string	false	"商品分類"
+//	@Param			enabled		body		string	false	"商品啟用(0/1)"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/product [put]
@@ -819,8 +830,10 @@ func updateProduct(c *gin.Context) {
 	url := c.PostForm("imageURL")
 	category := c.PostForm("category")
 	enabled := c.PostForm("enabled")
+	Logger().Info("更新商品資料:", name, description, price, stock, sku, url, category, enabled)
 	pricefff, err := strconv.ParseFloat(price, 64)
 	if err != nil {
+		Logger().Error("商品價格錯誤:", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品價格錯誤",
 		})
@@ -828,17 +841,20 @@ func updateProduct(c *gin.Context) {
 	}
 	stockiii, err := strconv.Atoi(stock)
 	if err != nil {
+		Logger().Error("商品庫存錯誤:", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
-			"msg": "商品名稱重複了",
+			"msg": "商品庫存錯誤",
 		})
 		return
 	}
 	var 啟用 bool
+	啟用 = true
 	if enabled == "1" {
 		啟用 = true
 	} else if enabled == "0" {
 		啟用 = false
 	} else {
+		Logger().Error("商品狀態錯誤:", name, description, price, stock, sku, url, category, enabled, 啟用)
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品狀態錯誤",
 		})
@@ -854,12 +870,12 @@ func updateProduct(c *gin.Context) {
 		Category:    category,
 		Is_enabled:  啟用,
 	}
+	Logger().Info("更新商品:", 腦包商品)
 	conn.Save(&腦包商品)
 	c.JSON(http.StatusOK, gin.H{
 		"data": 腦包商品,
-		"msg":  "更新腦包商品",
+		"msg":  "更新商品",
 	})
-
 }
 
 //	@Summary		刪掉商品資料
@@ -873,6 +889,7 @@ func updateProduct(c *gin.Context) {
 //	@Router			/shumingyu/product [delete]
 func deleteProduct(c *gin.Context) {
 	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
+	Logger().Info("刪掉商品資料:", uid)
 	conn.Delete(&shuming.Product{}, uid)
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "刪除商品資料",
@@ -889,6 +906,7 @@ func deleteProduct(c *gin.Context) {
 //	@Router			/shumingyu/order [get]
 func hiOrder(c *gin.Context) {
 	results := conn.Order("id desc").Find(&orderobj)
+	Logger().Info("取得訂單清單", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   orderobj,
@@ -912,6 +930,7 @@ func addOrder(c *gin.Context) {
 	var result shuming.User
 	conn.First(&result, "username = ?", user)
 	if result.ID <= 0 {
+		Logger().Error("查無此人:", result, user)
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "查無此人" + user,
 		})
@@ -919,6 +938,7 @@ func addOrder(c *gin.Context) {
 
 	total_amountffff, err := strconv.ParseFloat(total_amount, 64)
 	if err != nil {
+		Logger().Error("訂單總金額錯誤:", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "訂單總金額錯誤",
 		})
@@ -931,8 +951,9 @@ func addOrder(c *gin.Context) {
 		ShippingStatus: "Shipped",
 		TotalAmount:    total_amountffff,
 	}
+	Logger().Info("增加訂單:", 腦包訂單)
 	conn.Create(&腦包訂單)
-	msg := result.Username + "增加腦包訂單"
+	msg := result.Username + "增加訂單"
 	c.JSON(http.StatusOK, gin.H{
 		"data": 腦包訂單,
 		"msg":  msg,
@@ -950,8 +971,10 @@ func addOrder(c *gin.Context) {
 //	@Router			/shumingyu/order [put]
 func updateOrder(c *gin.Context) {
 	user_id := c.PostForm("user_id")
+	Logger().Info("更新訂單:", user_id)
 	user_idiii, err := strconv.Atoi(user_id)
 	if err != nil {
+		Logger().Error("user_id錯誤:", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "user_id錯誤",
 		})
@@ -975,6 +998,7 @@ func updateOrder(c *gin.Context) {
 //	@Router			/shumingyu/order [delete]
 func deleteOrder(c *gin.Context) {
 	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
+	Logger().Info("刪除訂單:", uid)
 	conn.Delete(&shuming.Order{}, uid)
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "刪除訂單資料",

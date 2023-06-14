@@ -267,7 +267,6 @@ const docTemplate = `{
                         "description": "描述",
                         "name": "description",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -276,7 +275,6 @@ const docTemplate = `{
                         "description": "價格",
                         "name": "price",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -285,7 +283,6 @@ const docTemplate = `{
                         "description": "庫存",
                         "name": "stock",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -294,7 +291,6 @@ const docTemplate = `{
                         "description": "庫存單位",
                         "name": "sku",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -303,7 +299,6 @@ const docTemplate = `{
                         "description": "圖片",
                         "name": "imageURL",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -312,7 +307,6 @@ const docTemplate = `{
                         "description": "商品分類",
                         "name": "category",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -321,7 +315,6 @@ const docTemplate = `{
                         "description": "商品啟用(0/1)",
                         "name": "enabled",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -368,7 +361,6 @@ const docTemplate = `{
                         "description": "描述",
                         "name": "description",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -377,7 +369,6 @@ const docTemplate = `{
                         "description": "價格",
                         "name": "price",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -386,7 +377,6 @@ const docTemplate = `{
                         "description": "庫存",
                         "name": "stock",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -395,7 +385,6 @@ const docTemplate = `{
                         "description": "庫存單位",
                         "name": "sku",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -404,7 +393,6 @@ const docTemplate = `{
                         "description": "圖片",
                         "name": "imageURL",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -413,7 +401,6 @@ const docTemplate = `{
                         "description": "商品分類",
                         "name": "category",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -422,7 +409,6 @@ const docTemplate = `{
                         "description": "商品啟用(0/1)",
                         "name": "enabled",
                         "in": "body",
-                        "required": true,
                         "schema": {
                             "type": "string"
                         }

@@ -206,43 +206,36 @@ paths:
       - description: 描述
         in: body
         name: description
-        required: true
         schema:
           type: string
       - description: 價格
         in: body
         name: price
-        required: true
         schema:
           type: string
       - description: 庫存
         in: body
         name: stock
-        required: true
         schema:
           type: string
       - description: 庫存單位
         in: body
         name: sku
-        required: true
         schema:
           type: string
       - description: 圖片
         in: body
         name: imageURL
-        required: true
         schema:
           type: string
       - description: 商品分類
         in: body
         name: category
-        required: true
         schema:
           type: string
       - description: 商品啟用(0/1)
         in: body
         name: enabled
-        required: true
         schema:
           type: string
       produces:
@@ -279,43 +272,36 @@ paths:
       - description: 描述
         in: body
         name: description
-        required: true
         schema:
           type: string
       - description: 價格
         in: body
         name: price
-        required: true
         schema:
           type: string
       - description: 庫存
         in: body
         name: stock
-        required: true
         schema:
           type: string
       - description: 庫存單位
         in: body
         name: sku
-        required: true
         schema:
           type: string
       - description: 圖片
         in: body
         name: imageURL
-        required: true
         schema:
           type: string
       - description: 商品分類
         in: body
         name: category
-        required: true
         schema:
           type: string
       - description: 商品啟用(0/1)
         in: body
         name: enabled
-        required: true
         schema:
           type: string
       produces:
