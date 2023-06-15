@@ -745,6 +745,13 @@ func addProduct(c *gin.Context) {
 	url := c.PostForm("imageURL")
 	category := c.PostForm("category")
 	enabled := c.PostForm("enabled")
+	//給初始值
+	if price == "" {
+		price = "1200"
+	}
+	if stock == "" {
+		price = "999"
+	}
 	var result shuming.Product
 	Logger().Info("新增商品資料:", name, description, price, stock, sku, url, category, enabled)
 	conn.First(&result, "name = ?", name)
@@ -772,17 +779,11 @@ func addProduct(c *gin.Context) {
 			return
 		}
 		var 啟用 bool
-		啟用 = true
+		啟用 = false
 		if enabled == "1" {
 			啟用 = true
 		} else if enabled == "0" {
 			啟用 = false
-		} else {
-			Logger().Error("商品狀態錯誤:", name, description, price, stock, sku, url, category, enabled, 啟用)
-			c.JSON(http.StatusBadRequest, gin.H{
-				"msg": "商品狀態錯誤",
-			})
-			return
 		}
 		腦包商品 := shuming.Product{
 			Name:        name,
@@ -848,7 +849,7 @@ func updateProduct(c *gin.Context) {
 		return
 	}
 	var 啟用 bool
-	啟用 = true
+	啟用 = false
 	if enabled == "1" {
 		啟用 = true
 	} else if enabled == "0" {
