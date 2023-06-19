@@ -21,6 +21,8 @@ const (
 	MaxIdleConns int = 10
 )
 
+var Globalconn *gorm.DB
+
 type TiDB struct {
 	Ip       string
 	Port     int
@@ -97,7 +99,7 @@ func (tidb *TiDB) GetDB() (*gorm.DB, error) {
 	if err != nil {
 		return nil, err
 	}
-
+	Globalconn = conn
 	//設定ConnMaxLifetime/MaxIdleConns/MaxOpenConns
 	db, err = conn.DB()
 	if err != nil {
