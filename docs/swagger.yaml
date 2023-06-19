@@ -9,6 +9,8 @@ definitions:
     properties:
       data:
         type: string
+      errmsg:
+        type: string
       msg:
         type: string
       record:
@@ -318,6 +320,25 @@ paths:
       summary: 更新商品資料
       tags:
       - Product
+  /shumingyu/report:
+    get:
+      consumes:
+      - application/json
+      description: 回傳統計值
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 取得報表
+      tags:
+      - Report
   /shumingyu/user:
     delete:
       consumes:

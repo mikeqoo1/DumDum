@@ -37,10 +37,24 @@ type Product struct {
 	Is_enabled  bool
 }
 
+// 定義報表結構
+type Report struct {
+	ID          uint64
+	Name        string
+	Description string
+	Price       float64
+	Stock       int
+	SKU         string
+	ImageURL    string
+	Category    string
+	Is_enabled  bool
+}
+
 type UserResponse struct {
-	Data   string `json:"data"`
-	Msg    string `json:"msg"`
-	Record int    `json:"record"`
+	Data     string `json:"data"`
+	Msg      string `json:"msg"`
+	Record   int    `json:"record"`
+	ErrorMag string `json:"errmsg"`
 }
 
 type ErrorResponse struct {

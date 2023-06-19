@@ -466,6 +466,35 @@ const docTemplate = `{
                 }
             }
         },
+        "/shumingyu/report": {
+            "get": {
+                "description": "回傳統計值",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Report"
+                ],
+                "summary": "取得報表",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.UserResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/shumingyu/user": {
             "get": {
                 "description": "回傳所有User的資料 跟 筆數",
@@ -684,6 +713,9 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "data": {
+                    "type": "string"
+                },
+                "errmsg": {
                     "type": "string"
                 },
                 "msg": {

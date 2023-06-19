@@ -8,11 +8,9 @@ import (
 	tidb "DumDum/lib/tidb"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"path"
-	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -31,7 +29,6 @@ var (
 	//Googl雲端版本
 	IsGoogle string
 	conn     *gorm.DB
-	niciobj  []nici.Nici
 
 	userobj    []shuming.User
 	orderobj   []shuming.Order
@@ -108,75 +105,6 @@ func LoggerToFile() gin.HandlerFunc {
 			reqUri,
 		)
 	}
-}
-
-// getFileName 統計不同系列的最大名稱
-func getFileName(series string) string {
-	files, err := os.ReadDir("./static/img")
-	if err != nil {
-		log.Fatal(err)
-	}
-	var friendsort []int
-	var dragonsort []int
-	var bearsort []int
-	var unicornsort []int
-	//先整理排序
-	for _, file := range files {
-		if strings.Contains(file.Name(), "friend") {
-			str := strings.Split(file.Name(), "friend")
-			num := strings.Split(str[1], ".jpg")
-			i, _ := strconv.Atoi(num[0])
-			friendsort = append(friendsort, i)
-		} else if strings.Contains(file.Name(), "dragon") {
-			str := strings.Split(file.Name(), "dragon")
-			num := strings.Split(str[1], ".jpg")
-			i, _ := strconv.Atoi(num[0])
-			dragonsort = append(dragonsort, i)
-		} else if strings.Contains(file.Name(), "bear") {
-			str := strings.Split(file.Name(), "bear")
-			num := strings.Split(str[1], ".jpg")
-			i, _ := strconv.Atoi(num[0])
-			bearsort = append(bearsort, i)
-		} else if strings.Contains(file.Name(), "unicorn") {
-			str := strings.Split(file.Name(), "unicorn")
-			num := strings.Split(str[1], ".jpg")
-			i, _ := strconv.Atoi(num[0])
-			unicornsort = append(unicornsort, i)
-		}
-	}
-
-	fileName := ""
-	if series == "動物好夥伴" {
-		sort.Ints(friendsort)
-		max := friendsort[len(friendsort)-1]
-		s := strconv.Itoa(max + 1)
-		fileName = "friend" + s + ".jpg"
-	} else if series == "恐龍時代" {
-		sort.Ints(dragonsort)
-		max := dragonsort[len(dragonsort)-1]
-		s := strconv.Itoa(max + 1)
-		fileName = "dragon" + s + ".jpg"
-	} else if series == "熊熊家族" {
-		sort.Ints(bearsort)
-		max := bearsort[len(bearsort)-1]
-		s := strconv.Itoa(max + 1)
-		fileName = "bear" + s + ".jpg"
-	} else if series == "獨角精靈" {
-		sort.Ints(unicornsort)
-		max := unicornsort[len(unicornsort)-1]
-		s := strconv.Itoa(max + 1)
-		fileName = "unicorn" + s + ".jpg"
-	}
-	return fileName
-}
-
-// checkname 更新小夥伴防呆
-func checkname(name string) int64 {
-	var sqlstr string
-	var results *gorm.DB
-	sqlstr = "name = ?"
-	results = conn.Where(sqlstr, name).Find(&niciobj)
-	return results.RowsAffected
 }
 
 // StrPad
@@ -283,190 +211,6 @@ func checkIP() gin.HandlerFunc {
 			Logger().Error("解析IP的API失敗(Not found in database)")
 		}
 	}
-}
-
-/*Nici區*/
-
-func love(c *gin.Context) {
-	//Find=> SELECT * FROM `nici ORDER BY series desc`
-	results := conn.Order("series desc").Find(&niciobj)
-	title := "Nici好夥伴"
-	c.HTML(http.StatusOK, "nici.html", gin.H{
-		"title":  title,
-		"record": results.RowsAffected,
-		"data":   niciobj,
-	})
-}
-
-func destiny(c *gin.Context) {
-	title := "Nici好夥伴"
-	c.HTML(http.StatusOK, "destiny.html", gin.H{
-		"title": title,
-	})
-}
-
-func conform(c *gin.Context) {
-	title := "Nici好夥伴"
-	blood := c.PostForm("blood")
-	star := c.PostForm("star")
-	var sqlstr string
-	var results *gorm.DB
-	if blood == "" || len(blood) == 0 {
-		sqlstr = "starsign = ?"
-		results = conn.Where(sqlstr, star).Find(&niciobj)
-	} else if star == "" || len(star) == 0 {
-		sqlstr = "blood = ?"
-		results = conn.Where(sqlstr, blood).Find(&niciobj)
-	} else {
-		sqlstr = "starsign = ? AND blood = ?"
-		results = conn.Where(sqlstr, star, blood).Find(&niciobj)
-	}
-	Logger().Info("輸入的條件", star, blood)
-	// c.JSON(http.StatusOK, gin.H{
-	// 	"blood":   blood,
-	// 	"star":    star,
-	// 	"record":  results.RowsAffected,
-	// 	"results": niciobj,
-	// })
-
-	if results.RowsAffected == 0 {
-		notfound := nici.Nici{
-			Name:     "查無資料",
-			Blood:    blood,
-			Starsign: star,
-			Series:   "未知",
-			Img:      "NotFound.jpg",
-		}
-		niciobj = append(niciobj, notfound)
-		c.HTML(http.StatusOK, "only.html", gin.H{
-			"title":  title,
-			"record": results.RowsAffected,
-			"data":   niciobj,
-		})
-	} else {
-		c.HTML(http.StatusOK, "only.html", gin.H{
-			"title":  title,
-			"record": results.RowsAffected,
-			"data":   niciobj,
-		})
-	}
-}
-
-func newfriend(c *gin.Context) {
-	title := "Nici好夥伴"
-	c.HTML(http.StatusOK, "newfriend.html", gin.H{
-		"title": title,
-	})
-}
-
-func update(c *gin.Context) {
-	name := c.PostForm("name")
-	blood := c.PostForm("blood")
-	star := c.PostForm("star")
-	series := c.PostForm("series")
-	file, _ := c.FormFile("file0") // get file from form input name 'file0'
-	yesorno := checkname(name)
-	if yesorno > 0 {
-		c.JSON(http.StatusOK, gin.H{
-			"狀態": "新增失敗",
-			"原因": "夥伴已經存在了",
-		})
-	} else {
-		filename := getFileName(series)
-		file.Filename = filename
-		c.SaveUploadedFile(file, "static/img/"+file.Filename) // save file to tmp folder in current directory
-		new := nici.Nici{
-			Name:     name,
-			Blood:    blood,
-			Starsign: star,
-			Series:   series,
-			Img:      file.Filename,
-		}
-		conn.Save(&new)
-
-		title := "Nici家族"
-		message := "歡迎來到Nici家族"
-		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title":   title,
-			"message": message,
-		})
-	}
-}
-
-func price(c *gin.Context) {
-	title := "Nici好夥伴"
-	c.HTML(http.StatusOK, "price.html", gin.H{
-		"title": title,
-	})
-}
-
-func priceee(c *gin.Context) {
-	//Hevisaurus
-	//Wind Rose
-	//Dragon Force
-	typeee := c.PostForm("typeee")
-	size := c.PostForm("size")
-	fmt.Println(typeee)
-	fmt.Println(size)
-	price_str := ""
-	newprice_str := ""
-	price1 := 0.0
-	price2 := 0.0
-	if typeee == "鑰匙圈" {
-		price_str = "340~590"
-		price1 = 340 * 0.9 * 0.95
-		price2 = 590 * 0.9 * 0.95
-	} else if typeee == "杯套" {
-		price_str = "420~650"
-		price1 = 420 * 0.9 * 0.95
-		price2 = 650 * 0.9 * 0.95
-	} else if typeee == "玩偶" {
-		if size == "29" {
-			price_str = "840~1090"
-			price1 = 840 * 0.9 * 0.95
-			price2 = 1090 * 0.9 * 0.95
-		} else if size == "39" {
-			price_str = "840~1600"
-			price1 = 840 * 0.9 * 0.95
-			price2 = 1600 * 0.9 * 0.95
-		} else if size == "49" {
-			price_str = "1290~1890"
-			price1 = 1290 * 0.9 * 0.95
-			price2 = 1890 * 0.9 * 0.95
-		} else if size == "59" {
-			price_str = "1470~2100"
-			price1 = 1470 * 0.9 * 0.95
-			price2 = 2100 * 0.9 * 0.95
-		} else if size == "79" {
-			price_str = "3570起"
-			price1 = 3570 * 0.9 * 0.95
-			price2 = 0
-		} else if size == "100" {
-			price_str = "5840起(誠品沒販售, 不適用估價)"
-			price1 = 5840 * 0.9 * 0.95
-			price2 = 0
-		}
-	}
-	s1 := fmt.Sprintf("%f", price1)
-	s2 := fmt.Sprintf("%f", price2)
-	if s2 == "0" {
-		s2 = "很多的錢錢"
-	}
-	newprice_str = s1 + "~" + s2
-	c.HTML(http.StatusOK, "price.html", gin.H{
-		"OGprice":  price_str,
-		"Newprice": newprice_str,
-	})
-}
-
-/*Nici API區*/
-
-func getallnici(c *gin.Context) {
-	results := conn.Order("series desc").Find(&niciobj)
-	c.JSON(http.StatusOK, gin.H{
-		"record": results.RowsAffected,
-		"data":   niciobj,
-	})
 }
 
 /*其他區*/
@@ -596,11 +340,15 @@ func hi腦包(c *gin.Context) {
 //	@Router			/shumingyu/user [get]
 func hiUser(c *gin.Context) {
 	results := conn.Order("id desc").Find(&userobj)
+	if results.Error != nil {
+		Logger().Error("取得User資料錯誤", results.Error.Error())
+	}
 	Logger().Info("取得User資料", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   userobj,
 		"msg":    "腦包書銘兒, 你好, 晚上峽谷見",
+		"errmsg": results.Error.Error(),
 	})
 }
 
@@ -712,11 +460,15 @@ func deleteUser(c *gin.Context) {
 //	@Router			/shumingyu/product [get]
 func hiProduct(c *gin.Context) {
 	results := conn.Order("id desc").Find(&productobj)
-	Logger().Info("取得商品資料", results)
+	if results.Error != nil {
+		Logger().Error("取得商品資料錯誤", results.Error.Error())
+	}
+	Logger().Info("取得商品資料", productobj)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   productobj,
 		"msg":    "商品列表列出來",
+		"errmsg": results.Error.Error(),
 	})
 }
 
@@ -907,11 +659,15 @@ func deleteProduct(c *gin.Context) {
 //	@Router			/shumingyu/order [get]
 func hiOrder(c *gin.Context) {
 	results := conn.Order("id desc").Find(&orderobj)
+	if results.Error != nil {
+		Logger().Error("取得訂單錯誤", results.Error.Error())
+	}
 	Logger().Info("取得訂單清單", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   orderobj,
 		"msg":    "訂單通通列出來",
+		"errmsg": results.Error.Error(),
 	})
 }
 
@@ -1006,6 +762,29 @@ func deleteOrder(c *gin.Context) {
 	})
 }
 
+//	@Summary		取得報表
+//	@Description	回傳統計值
+//	@Tags			Report
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/report [get]
+func hireport(c *gin.Context) {
+	results := conn.Order("id desc").Find(&orderobj)
+	results2 := conn.Order("id desc").Find(&productobj)
+	results3 := conn.Order("id desc").Find(&userobj)
+	Logger().Info("取得報表", orderobj, productobj, userobj)
+	c.JSON(http.StatusOK, gin.H{
+		"record":  results.RowsAffected,
+		"data":    orderobj,
+		"msg":     "訂單通通列出來",
+		"errmsg":  results.Error.Error(),
+		"errmsg2": results2.Error.Error(),
+		"errmsg3": results3.Error.Error(),
+	})
+}
+
 //	@title						書銘的API
 //	@version					1.0
 //	@description				This is a sample server celler server.
@@ -1062,14 +841,13 @@ func main() {
 
 	niciRouter := router.Group("/nici")
 	{
-		niciRouter.GET("/", love)           //列出所有
-		niciRouter.GET("/destiny", destiny) //顯示輸入畫面
-		niciRouter.GET("/newfriend", newfriend)
-		niciRouter.GET("/price", price)
-		niciRouter.POST("/conform", conform)
-		niciRouter.POST("/update", update)
-		niciRouter.POST("/priceee", priceee)
-		niciRouter.GET("/api/all", getallnici)
+		niciRouter.GET("/", nici.Love)           //列出所有
+		niciRouter.GET("/destiny", nici.Destiny) //顯示輸入畫面
+		niciRouter.GET("/newfriend", nici.Newfriend)
+		niciRouter.GET("/price", nici.Price)
+		niciRouter.POST("/conform", nici.Conform)
+		niciRouter.POST("/update", nici.Update)
+		niciRouter.POST("/priceee", nici.Priceee)
 	}
 
 	otherRouter := router.Group("/other")
@@ -1098,6 +876,7 @@ func main() {
 		shumingyuRouter.PUT("/order", updateOrder)
 		shumingyuRouter.DELETE("/order", deleteOrder)
 
+		shumingyuRouter.GET("/report", hireport)
 	}
 
 	if IsGoogle == "NO" {
