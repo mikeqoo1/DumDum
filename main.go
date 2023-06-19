@@ -340,11 +340,15 @@ func hi腦包(c *gin.Context) {
 //	@Router			/shumingyu/user [get]
 func hiUser(c *gin.Context) {
 	results := conn.Order("id desc").Find(&userobj)
+	if results.Error != nil {
+		Logger().Error("取得User資料錯誤", results.Error.Error())
+	}
 	Logger().Info("取得User資料", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   userobj,
 		"msg":    "腦包書銘兒, 你好, 晚上峽谷見",
+		"errmsg": results.Error.Error(),
 	})
 }
 
@@ -456,11 +460,15 @@ func deleteUser(c *gin.Context) {
 //	@Router			/shumingyu/product [get]
 func hiProduct(c *gin.Context) {
 	results := conn.Order("id desc").Find(&productobj)
-	Logger().Info("取得商品資料", results)
+	if results.Error != nil {
+		Logger().Error("取得商品資料錯誤", results.Error.Error())
+	}
+	Logger().Info("取得商品資料", productobj)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   productobj,
 		"msg":    "商品列表列出來",
+		"errmsg": results.Error.Error(),
 	})
 }
 
@@ -651,11 +659,15 @@ func deleteProduct(c *gin.Context) {
 //	@Router			/shumingyu/order [get]
 func hiOrder(c *gin.Context) {
 	results := conn.Order("id desc").Find(&orderobj)
+	if results.Error != nil {
+		Logger().Error("取得訂單錯誤", results.Error.Error())
+	}
 	Logger().Info("取得訂單清單", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   orderobj,
 		"msg":    "訂單通通列出來",
+		"errmsg": results.Error.Error(),
 	})
 }
 
@@ -750,6 +762,29 @@ func deleteOrder(c *gin.Context) {
 	})
 }
 
+//	@Summary		取得報表
+//	@Description	回傳統計值
+//	@Tags			Report
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/report [get]
+func hireport(c *gin.Context) {
+	results := conn.Order("id desc").Find(&orderobj)
+	results2 := conn.Order("id desc").Find(&productobj)
+	results3 := conn.Order("id desc").Find(&userobj)
+	Logger().Info("取得報表", orderobj, productobj, userobj)
+	c.JSON(http.StatusOK, gin.H{
+		"record":  results.RowsAffected,
+		"data":    orderobj,
+		"msg":     "訂單通通列出來",
+		"errmsg":  results.Error.Error(),
+		"errmsg2": results2.Error.Error(),
+		"errmsg3": results3.Error.Error(),
+	})
+}
+
 //	@title						書銘的API
 //	@version					1.0
 //	@description				This is a sample server celler server.
@@ -841,6 +876,7 @@ func main() {
 		shumingyuRouter.PUT("/order", updateOrder)
 		shumingyuRouter.DELETE("/order", deleteOrder)
 
+		shumingyuRouter.GET("/report", hireport)
 	}
 
 	if IsGoogle == "NO" {
