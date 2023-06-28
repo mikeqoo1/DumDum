@@ -348,7 +348,7 @@ func hiUser(c *gin.Context) {
 		"record": results.RowsAffected,
 		"data":   userobj,
 		"msg":    "腦包書銘兒, 你好, 晚上峽谷見",
-		"errmsg": results.Error.Error(),
+		//"errmsg": results.Error.Error(),
 	})
 }
 
@@ -460,15 +460,19 @@ func deleteUser(c *gin.Context) {
 //	@Router			/shumingyu/product [get]
 func hiProduct(c *gin.Context) {
 	results := conn.Order("id desc").Find(&productobj)
+	fmt.Println(results)
 	if results.Error != nil {
 		Logger().Error("取得商品資料錯誤", results.Error.Error())
 	}
+	fmt.Println(1)
 	Logger().Info("取得商品資料", productobj)
+	fmt.Println(2)
+	fmt.Println(results.Error.Error())
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   productobj,
 		"msg":    "商品列表列出來",
-		"errmsg": results.Error.Error(),
+		//"errmsg": results.Error.Error(),
 	})
 }
 
@@ -667,7 +671,7 @@ func hiOrder(c *gin.Context) {
 		"record": results.RowsAffected,
 		"data":   orderobj,
 		"msg":    "訂單通通列出來",
-		"errmsg": results.Error.Error(),
+		//"errmsg": results.Error.Error(),
 	})
 }
 
