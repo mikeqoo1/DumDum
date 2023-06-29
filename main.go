@@ -342,13 +342,16 @@ func hiUser(c *gin.Context) {
 	results := conn.Order("id desc").Find(&userobj)
 	if results.Error != nil {
 		Logger().Error("取得User資料錯誤", results.Error.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": results.Error.Error(),
+		})
+		return
 	}
 	Logger().Info("取得User資料", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   userobj,
 		"msg":    "腦包書銘兒, 你好, 晚上峽谷見",
-		//"errmsg": results.Error.Error(),
 	})
 }
 
@@ -463,16 +466,16 @@ func hiProduct(c *gin.Context) {
 	fmt.Println(results)
 	if results.Error != nil {
 		Logger().Error("取得商品資料錯誤", results.Error.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": results.Error.Error(),
+		})
+		return
 	}
-	fmt.Println(1)
 	Logger().Info("取得商品資料", productobj)
-	fmt.Println(2)
-	fmt.Println(results.Error.Error())
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   productobj,
 		"msg":    "商品列表列出來",
-		//"errmsg": results.Error.Error(),
 	})
 }
 
@@ -665,13 +668,16 @@ func hiOrder(c *gin.Context) {
 	results := conn.Order("id desc").Find(&orderobj)
 	if results.Error != nil {
 		Logger().Error("取得訂單錯誤", results.Error.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": results.Error.Error(),
+		})
+		return
 	}
 	Logger().Info("取得訂單清單", results)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
 		"data":   orderobj,
 		"msg":    "訂單通通列出來",
-		//"errmsg": results.Error.Error(),
 	})
 }
 
