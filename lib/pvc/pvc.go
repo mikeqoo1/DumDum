@@ -6,6 +6,23 @@ import (
 	"strings"
 )
 
+type Family struct {
+	Id            int
+	Name          string
+	Nickname      string
+	Birthday      string
+	Age           int
+	Chinesezodiac string
+	Zodiacsign    string
+	Occupation    string
+	Extension     string
+	Profileimage  string
+}
+
+func (Family) TableName() string {
+	return "family"
+}
+
 type Fix struct {
 	OrderID               string `mytag:"37"`
 	ClOrdID               string `mytag:"11"`

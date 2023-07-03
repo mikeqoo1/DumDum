@@ -42,3 +42,17 @@ CREATE TABLE IF NOT EXISTS `products` (
   category VARCHAR(100) NOT NULL COMMENT '產品分類',
   is_enabled INT NOT NULL DEFAULT 1 COMMENT '啟用1 關閉0'
 ) COMMENT='產品資料表';
+
+-- 建立產品資料表
+CREATE TABLE IF NOT EXISTS `family` (
+  id INT(10) PRIMARY KEY NOT NULL COMMENT '編號',
+  name VARCHAR(100) NOT NULL COMMENT '名稱',
+  nickname VARCHAR(50) NOT NULL COMMENT '暱稱',
+  birthday VARCHAR(50) NOT NULL COMMENT '生日',
+  age INT NOT NULL COMMENT '年齡',
+  chinesezodiac VARCHAR(20) NOT NULL COMMENT '生肖',
+  zodiacsign VARCHAR(20) NOT NULL COMMENT '星座',
+  occupation VARCHAR(100) NOT NULL COMMENT '職業',
+  extension VARCHAR(10) NOT NULL COMMENT '分機',
+  profileimage VARCHAR(255) NOT NULL COMMENT '大頭貼'
+) COMMENT='家族資料';
