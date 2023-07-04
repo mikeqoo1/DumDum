@@ -34,6 +34,8 @@ var (
 	orderobj   []shuming.Order
 	productobj []shuming.Product
 
+	familyobj []pvc.Family
+
 	// 產生上市櫃客戶端物件
 	client = basic.TCPClient{
 		SendCh:    make(chan string, 1024),
@@ -239,13 +241,14 @@ func pigtranslate(c *gin.Context) {
 	newpig = strings.Replace(newpig, "ㄅ", "不", -1)
 	newpig = strings.Replace(newpig, "ㄇ", "嗎", -1)
 	newpig = strings.Replace(newpig, "ㄍ", "個", -1)
+	newpig = strings.Replace(newpig, "ㄞ", "挨", -1)
 	newpig = strings.Replace(newpig, "仍", "來", -1)
 	newpig = strings.Replace(newpig, "度", "對", -1)
 	newpig = strings.Replace(newpig, "迷", "沒", -1)
 	newpig = strings.Replace(newpig, "抗", "看", -1)
 	newpig = strings.Replace(newpig, "奏", "揍", -1)
 	newpig = strings.Replace(newpig, "牙", "阿", -1)
-	Logger().Info("翻譯後長:", newpig)
+	Logger().Info("翻譯後:", newpig)
 	c.HTML(http.StatusOK, "otherpig.html", gin.H{
 		"pig":    pig,
 		"newpig": newpig,
@@ -311,6 +314,16 @@ func searchconcordsEM(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"OrderMsg":  msg,
 		"ReportMsg": reportmsg,
+	})
+}
+
+func concordsFamily(c *gin.Context) {
+	results := tidb.Globalconn.Find(&familyobj)
+	title := "加菲教夥伴"
+	c.HTML(http.StatusOK, "family.html", gin.H{
+		"title":  title,
+		"record": results.RowsAffected,
+		"data":   familyobj,
 	})
 }
 
@@ -894,6 +907,7 @@ func main() {
 		{
 			concordsRouter.GET("/", concords)
 			concordsRouter.GET("/EM", concordsEM)
+			concordsRouter.GET("/family", concordsFamily)
 			concordsRouter.POST("/search", searchconcords)
 			concordsRouter.POST("/searchEM", searchconcordsEM)
 		}
