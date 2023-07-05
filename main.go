@@ -28,7 +28,9 @@ import (
 var (
 	//Googl雲端版本
 	IsGoogle string
-	conn     *gorm.DB
+	//要不要開PVC
+	IsPvc string
+	conn  *gorm.DB
 
 	userobj    []shuming.User
 	orderobj   []shuming.Order
@@ -912,29 +914,31 @@ func main() {
 			concordsRouter.POST("/searchEM", searchconcordsEM)
 		}
 
-		if err := client.Connect("192.168.199.185:7052"); err != nil {
-			fmt.Println("Error connecting TWSE/OTC:", err)
-			return
+		if IsPvc == "YES" {
+			if err := client.Connect("192.168.199.185:7052"); err != nil {
+				fmt.Println("Error connecting TWSE/OTC:", err)
+				return
+			}
+			defer client.Close()
+
+			if err := clientEM.Connect("192.168.199.250:7080"); err != nil {
+				fmt.Println("Error connecting EM:", err)
+				return
+			}
+			defer clientEM.Close()
+
+			message := p.CreateRegisterMsg()
+			client.SendCh <- message
+			go client.SendMessages()
+			go client.ReceiveMessages()
+			go p.ParseMessages(client)
+
+			emmsg := pem.CreateRegisterMsg()
+			clientEM.SendCh <- emmsg
+			go clientEM.SendMessages()
+			go clientEM.ReceiveMessages()
+			go pem.ParseMessages(clientEM)
 		}
-		defer client.Close()
-
-		if err := clientEM.Connect("192.168.199.250:7080"); err != nil {
-			fmt.Println("Error connecting EM:", err)
-			return
-		}
-		defer clientEM.Close()
-
-		message := p.CreateRegisterMsg()
-		client.SendCh <- message
-		go client.SendMessages()
-		go client.ReceiveMessages()
-		go p.ParseMessages(client)
-
-		emmsg := pem.CreateRegisterMsg()
-		clientEM.SendCh <- emmsg
-		go clientEM.SendMessages()
-		go clientEM.ReceiveMessages()
-		go pem.ParseMessages(clientEM)
 	}
 
 	err = router.Run(addr)

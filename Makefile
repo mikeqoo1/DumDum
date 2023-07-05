@@ -4,11 +4,14 @@ ifeq ($(google),6016)
 IsGoogle=NO
 endif
 
+ifeq ($(pvc),on)
+IsPvc=YES
+endif
 
 .PHONY: build clean install help
 
 build:
-	go build -ldflags="-X main.IsGoogle=${IsGoogle}" -o bin/${NICI} main.go
+	go build -ldflags="-X main.IsGoogle=${IsGoogle} -X main.IsPvc=${IsPvc}" -o bin/${NICI} main.go
 
 install:
 	go install
