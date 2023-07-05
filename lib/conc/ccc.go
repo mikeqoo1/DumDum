@@ -5,7 +5,6 @@ import (
 	"DumDum/lib/tidb"
 	"net/http"
 	"strings"
-	"time"
 
 	"github.com/gin-gonic/gin"
 )

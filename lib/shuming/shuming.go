@@ -3,7 +3,6 @@ package shuming
 import (
 	"DumDum/lib/basic"
 	"DumDum/lib/tidb"
-	"fmt"
 	"net/http"
 	"strconv"
 	"time"
@@ -217,9 +216,26 @@ func UpdateUser(c *gin.Context) {
 func DeleteUser(c *gin.Context) {
 	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
 	basic.Logger().Info("刪掉User資料:", uid)
-	tidb.Globalconn.Delete(&User{}, uid)
+	var u User
+	results := tidb.Globalconn.First(&u, "id = ?", uid)
+	if results.RowsAffected == 0 {
+		basic.Logger().Error("找不到User資訊 id=", uid)
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": "找不到User資訊:" + c.Query("id"),
+		})
+		return
+	}
+	results = tidb.Globalconn.Delete(&User{}, uid)
+	if results.Error != nil {
+		basic.Logger().Error("刪掉User資料錯誤:", results.Error.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": results.Error.Error(),
+		})
+		return
+	}
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "刪除客戶資料",
+		"msg":  "刪除客戶資料",
+		"data": u,
 	})
 }
 
@@ -233,7 +249,6 @@ func DeleteUser(c *gin.Context) {
 //	@Router			/shumingyu/product [get]
 func HiProduct(c *gin.Context) {
 	results := tidb.Globalconn.Order("id desc").Find(&productobj)
-	fmt.Println(results)
 	if results.Error != nil {
 		basic.Logger().Error("取得商品資料錯誤", results.Error.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
@@ -420,9 +435,26 @@ func UpdateProduct(c *gin.Context) {
 func DeleteProduct(c *gin.Context) {
 	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
 	basic.Logger().Info("刪掉商品資料:", uid)
-	tidb.Globalconn.Delete(&Product{}, uid)
+	var p Product
+	results := tidb.Globalconn.First(&p, "id = ?", uid)
+	if results.RowsAffected == 0 {
+		basic.Logger().Error("找不到商品資訊 id=", uid)
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": "找不到商品資訊:" + c.Query("id"),
+		})
+		return
+	}
+	results = tidb.Globalconn.Delete(&Product{}, uid)
+	if results.Error != nil {
+		basic.Logger().Error("刪掉商品資料錯誤:", results.Error.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": results.Error.Error(),
+		})
+		return
+	}
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "刪除商品資料",
+		"msg":  "刪除商品資料",
+		"data": p,
 	})
 }
 
@@ -536,9 +568,26 @@ func UpdateOrder(c *gin.Context) {
 func DeleteOrder(c *gin.Context) {
 	uid, _ := strconv.ParseUint(c.Query("id"), 10, 64)
 	basic.Logger().Info("刪除訂單:", uid)
-	tidb.Globalconn.Delete(&Order{}, uid)
+	var o Order
+	results := tidb.Globalconn.First(&o, "id = ?", uid)
+	if results.RowsAffected == 0 {
+		basic.Logger().Error("找不到訂單資訊 id=", uid)
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": "找不到訂單資訊:" + c.Query("id"),
+		})
+		return
+	}
+	results = tidb.Globalconn.Delete(&Order{}, uid)
+	if results.Error != nil {
+		basic.Logger().Error("刪掉訂單錯誤:", results.Error.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": results.Error.Error(),
+		})
+		return
+	}
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "刪除訂單資料",
+		"msg":  "刪除訂單資料",
+		"data": o,
 	})
 }
 

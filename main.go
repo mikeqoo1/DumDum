@@ -6,6 +6,7 @@ import (
 	nici "DumDum/lib/nici"
 	"DumDum/lib/pvc"
 	shuming "DumDum/lib/shuming"
+	"DumDum/lib/tidb"
 	"fmt"
 	"io"
 	"net/http"
@@ -42,6 +43,13 @@ var (
 )
 
 func init() {
+	var errdb error
+	mydb := tidb.NewTiDB()
+	_, errdb = mydb.GetDB()
+	if errdb != nil {
+		fmt.Println("DB連線失敗->" + errdb.Error())
+		os.Exit(0)
+	}
 }
 
 // crosHandler 處理跨域問題
