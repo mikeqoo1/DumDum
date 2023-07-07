@@ -90,14 +90,14 @@ var productobj []Product
 //	@Tags			Login
 //	@Accept			json
 //	@Produce		json
-//	@Param			name		body		string	true	"使用者名稱"
-//	@Param			password	body		string	true	"密碼"
+//	@Param			Name		body		string	true	"使用者名稱"
+//	@Param			Password	body		string	true	"密碼"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/login [post]
 func Login(c *gin.Context) {
-	username := c.PostForm("name")
-	pwd := c.PostForm("password")
+	username := c.PostForm("Name")
+	pwd := c.PostForm("Password")
 	basic.Logger().Info("登入紀錄:", username, pwd)
 	var u User
 	results := tidb.Globalconn.First(&u, "username = ?", username)
@@ -161,18 +161,18 @@ func HiUser(c *gin.Context) {
 //	@Tags			Users
 //	@Accept			json
 //	@Produce		json
-//	@Param			name		body		string	true	"使用者名稱"
-//	@Param			email		body		string	true	"電子信箱"
-//	@Param			password	body		string	true	"密碼"
-//	@Param			address		body		string	true	"住址"
+//	@Param			Name		body		string	true	"使用者名稱"
+//	@Param			Email		body		string	true	"電子信箱"
+//	@Param			Password	body		string	true	"密碼"
+//	@Param			Address		body		string	true	"住址"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/user [post]
 func AddUser(c *gin.Context) {
-	username := c.PostForm("name")
-	email := c.PostForm("email")
-	pwd := c.PostForm("password")
-	address := c.PostForm("address")
+	username := c.PostForm("Name")
+	email := c.PostForm("Email")
+	pwd := c.PostForm("Password")
+	address := c.PostForm("Address")
 	basic.Logger().Info("增加User資料:", username, email, pwd, address)
 	var result User
 	tidb.Globalconn.First(&result, "username = ?", username)
@@ -205,21 +205,21 @@ func AddUser(c *gin.Context) {
 //	@Tags			Users
 //	@Accept			json
 //	@Produce		json
-//	@Param			id			body		string	true	"使用者ID"
-//	@Param			name		body		string	true	"使用者名稱"
-//	@Param			email		body		string	true	"電子信箱"
-//	@Param			password	body		string	true	"密碼"
-//	@Param			address		body		string	true	"住址"
+//	@Param			Id			body		string	true	"使用者ID"
+//	@Param			Name		body		string	true	"使用者名稱"
+//	@Param			Email		body		string	true	"電子信箱"
+//	@Param			Password	body		string	true	"密碼"
+//	@Param			Address		body		string	true	"住址"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/user [put]
 func UpdateUser(c *gin.Context) {
-	id := c.PostForm("id")
+	id := c.PostForm("Id")
 	uid, _ := strconv.ParseUint(id, 10, 64)
-	username := c.PostForm("name")
-	email := c.PostForm("email")
-	pwd := c.PostForm("password")
-	address := c.PostForm("address")
+	username := c.PostForm("Name")
+	email := c.PostForm("Email")
+	pwd := c.PostForm("Password")
+	address := c.PostForm("Address")
 	basic.Logger().Info("更新User資料:", uid, username, email, pwd, address)
 	腦包 := User{
 		ID:           uid,
@@ -301,26 +301,26 @@ func HiProduct(c *gin.Context) {
 //	@Tags			Product
 //	@Accept			json
 //	@Produce		json
-//	@Param			name		body		string	true	"商品名稱"
-//	@Param			description	body		string	false	"描述"
-//	@Param			price		body		string	false	"價格"
-//	@Param			stock		body		string	false	"庫存"
-//	@Param			sku			body		string	false	"庫存單位"
-//	@Param			imageURL	body		string	false	"圖片"
-//	@Param			category	body		string	false	"商品分類"
-//	@Param			enabled		body		string	false	"商品啟用(0/1)"
+//	@Param			Name		body		string	true	"商品名稱"
+//	@Param			Description	body		string	false	"描述"
+//	@Param			Price		body		string	false	"價格"
+//	@Param			Stock		body		string	false	"庫存"
+//	@Param			Sku			body		string	false	"庫存單位"
+//	@Param			ImageURL	body		string	false	"圖片"
+//	@Param			Category	body		string	false	"商品分類"
+//	@Param			Enabled		body		string	false	"商品啟用(0/1)"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/product [post]
 func AddProduct(c *gin.Context) {
-	name := c.PostForm("name")
-	description := c.PostForm("description")
-	price := c.PostForm("price")
-	stock := c.PostForm("stock")
-	sku := c.PostForm("sku")
-	url := c.PostForm("imageURL")
-	category := c.PostForm("category")
-	enabled := c.PostForm("enabled")
+	name := c.PostForm("Name")
+	description := c.PostForm("Description")
+	price := c.PostForm("Price")
+	stock := c.PostForm("Stock")
+	sku := c.PostForm("Sku")
+	url := c.PostForm("ImageURL")
+	category := c.PostForm("Category")
+	enabled := c.PostForm("Enabled")
 	//給初始值
 	if price == "" {
 		price = "1200"
@@ -386,27 +386,27 @@ func AddProduct(c *gin.Context) {
 //	@Tags			Product
 //	@Accept			json
 //	@Produce		json
-//	@Param			id			body		string	true	"商品ID"
-//	@Param			name		body		string	true	"商品名稱"
-//	@Param			description	body		string	false	"描述"
-//	@Param			price		body		string	false	"價格"
-//	@Param			stock		body		string	false	"庫存"
-//	@Param			sku			body		string	false	"庫存單位"
-//	@Param			imageURL	body		string	false	"圖片"
-//	@Param			category	body		string	false	"商品分類"
-//	@Param			enabled		body		string	false	"商品啟用(0/1)"
+//	@Param			Id			body		string	true	"商品ID"
+//	@Param			Name		body		string	true	"商品名稱"
+//	@Param			Description	body		string	false	"描述"
+//	@Param			Price		body		string	false	"價格"
+//	@Param			Stock		body		string	false	"庫存"
+//	@Param			Sku			body		string	false	"庫存單位"
+//	@Param			ImageURL	body		string	false	"圖片"
+//	@Param			Category	body		string	false	"商品分類"
+//	@Param			Enabled		body		string	false	"商品啟用(0/1)"
 //	@Success		200			{object}	shuming.UserResponse
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/product [put]
 func UpdateProduct(c *gin.Context) {
-	name := c.PostForm("name")
-	description := c.PostForm("description")
-	price := c.PostForm("price")
-	stock := c.PostForm("stock")
-	sku := c.PostForm("sku")
-	url := c.PostForm("imageURL")
-	category := c.PostForm("category")
-	enabled := c.PostForm("enabled")
+	name := c.PostForm("Name")
+	description := c.PostForm("Description")
+	price := c.PostForm("Price")
+	stock := c.PostForm("Stock")
+	sku := c.PostForm("Sku")
+	url := c.PostForm("ImageURL")
+	category := c.PostForm("Category")
+	enabled := c.PostForm("Enabled")
 	basic.Logger().Info("更新商品資料:", name, description, price, stock, sku, url, category, enabled)
 	pricefff, err := strconv.ParseFloat(price, 64)
 	if err != nil {
@@ -520,14 +520,14 @@ func HiOrder(c *gin.Context) {
 //	@Tags			Order
 //	@Accept			json
 //	@Produce		json
-//	@Param			user			body		string	true	"用戶名稱"
-//	@Param			total_amount	body		string	true	"訂單總金額"
+//	@Param			User			body		string	true	"用戶名稱"
+//	@Param			Total_amount	body		string	true	"訂單總金額"
 //	@Success		200				{object}	shuming.UserResponse
 //	@Failure		400				{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/order [post]
 func AddOrder(c *gin.Context) {
-	user := c.PostForm("user")
-	total_amount := c.PostForm("total_amount")
+	user := c.PostForm("User")
+	total_amount := c.PostForm("Total_amount")
 	var result User
 	tidb.Globalconn.First(&result, "username = ?", user)
 	if result.ID <= 0 {
@@ -566,12 +566,12 @@ func AddOrder(c *gin.Context) {
 //	@Tags			Order
 //	@Accept			json
 //	@Produce		json
-//	@Param			user_id	body		string	true	"用戶資訊"
+//	@Param			User_id	body		string	true	"用戶資訊"
 //	@Success		200		{object}	shuming.UserResponse
 //	@Failure		400		{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/order [put]
 func UpdateOrder(c *gin.Context) {
-	user_id := c.PostForm("user_id")
+	user_id := c.PostForm("User_id")
 	basic.Logger().Info("更新訂單:", user_id)
 	user_idiii, err := strconv.Atoi(user_id)
 	if err != nil {
