@@ -42,7 +42,7 @@ type Product struct {
 	SKU         string
 	ImageURL    string
 	Category    string
-	Is_enabled  bool
+	Enabled  bool
 }
 
 // 定義報表結構
@@ -55,7 +55,7 @@ type Report struct {
 	SKU         string
 	ImageURL    string
 	Category    string
-	Is_enabled  bool
+	Enabled  bool
 }
 
 type UserResponse struct {
@@ -369,7 +369,7 @@ func AddProduct(c *gin.Context) {
 			SKU:         sku,
 			ImageURL:    url,
 			Category:    category,
-			Is_enabled:  啟用,
+			Enabled:  啟用,
 		}
 		basic.Logger().Info("增加商品:", 腦包商品)
 		tidb.Globalconn.Save(&腦包商品)
@@ -445,7 +445,7 @@ func UpdateProduct(c *gin.Context) {
 		SKU:         sku,
 		ImageURL:    url,
 		Category:    category,
-		Is_enabled:  啟用,
+		Enabled:  啟用,
 	}
 	basic.Logger().Info("更新商品:", 腦包商品)
 	tidb.Globalconn.Save(&腦包商品)
