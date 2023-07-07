@@ -41,13 +41,13 @@ paths:
       parameters:
       - description: 使用者名稱
         in: body
-        name: name
+        name: Name
         required: true
         schema:
           type: string
       - description: 密碼
         in: body
-        name: password
+        name: Password
         required: true
         schema:
           type: string
@@ -115,13 +115,13 @@ paths:
       parameters:
       - description: 用戶名稱
         in: body
-        name: user
+        name: User
         required: true
         schema:
           type: string
       - description: 訂單總金額
         in: body
-        name: total_amount
+        name: Total_amount
         required: true
         schema:
           type: string
@@ -146,7 +146,7 @@ paths:
       parameters:
       - description: 用戶資訊
         in: body
-        name: user_id
+        name: User_id
         required: true
         schema:
           type: string
@@ -214,43 +214,43 @@ paths:
       parameters:
       - description: 商品名稱
         in: body
-        name: name
+        name: Name
         required: true
         schema:
           type: string
       - description: 描述
         in: body
-        name: description
+        name: Description
         schema:
           type: string
       - description: 價格
         in: body
-        name: price
+        name: Price
         schema:
           type: string
       - description: 庫存
         in: body
-        name: stock
+        name: Stock
         schema:
           type: string
       - description: 庫存單位
         in: body
-        name: sku
+        name: SKU
         schema:
           type: string
       - description: 圖片
         in: body
-        name: imageURL
+        name: ImageURL
         schema:
           type: string
       - description: 商品分類
         in: body
-        name: category
+        name: Category
         schema:
           type: string
       - description: 商品啟用(0/1)
         in: body
-        name: enabled
+        name: Enabled
         schema:
           type: string
       produces:
@@ -274,49 +274,49 @@ paths:
       parameters:
       - description: 商品ID
         in: body
-        name: id
+        name: Id
         required: true
         schema:
           type: string
       - description: 商品名稱
         in: body
-        name: name
+        name: Name
         required: true
         schema:
           type: string
       - description: 描述
         in: body
-        name: description
+        name: Description
         schema:
           type: string
       - description: 價格
         in: body
-        name: price
+        name: Price
         schema:
           type: string
       - description: 庫存
         in: body
-        name: stock
+        name: Stock
         schema:
           type: string
       - description: 庫存單位
         in: body
-        name: sku
+        name: SKU
         schema:
           type: string
       - description: 圖片
         in: body
-        name: imageURL
+        name: ImageURL
         schema:
           type: string
       - description: 商品分類
         in: body
-        name: category
+        name: Category
         schema:
           type: string
       - description: 商品啟用(0/1)
         in: body
-        name: enabled
+        name: Enabled
         schema:
           type: string
       produces:
@@ -402,25 +402,25 @@ paths:
       parameters:
       - description: 使用者名稱
         in: body
-        name: name
+        name: Name
         required: true
         schema:
           type: string
       - description: 電子信箱
         in: body
-        name: email
+        name: Email
         required: true
         schema:
           type: string
       - description: 密碼
         in: body
-        name: password
+        name: Password
         required: true
         schema:
           type: string
       - description: 住址
         in: body
-        name: address
+        name: Address
         required: true
         schema:
           type: string
@@ -445,31 +445,31 @@ paths:
       parameters:
       - description: 使用者ID
         in: body
-        name: id
+        name: Id
         required: true
         schema:
           type: string
       - description: 使用者名稱
         in: body
-        name: name
+        name: Name
         required: true
         schema:
           type: string
       - description: 電子信箱
         in: body
-        name: email
+        name: Email
         required: true
         schema:
           type: string
       - description: 密碼
         in: body
-        name: password
+        name: Password
         required: true
         schema:
           type: string
       - description: 住址
         in: body
-        name: address
+        name: Address
         required: true
         schema:
           type: string

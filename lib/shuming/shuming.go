@@ -42,7 +42,7 @@ type Product struct {
 	SKU         string
 	ImageURL    string
 	Category    string
-	Enabled  bool
+	Enabled     bool
 }
 
 // 定義報表結構
@@ -55,7 +55,7 @@ type Report struct {
 	SKU         string
 	ImageURL    string
 	Category    string
-	Enabled  bool
+	Enabled     bool
 }
 
 type UserResponse struct {
@@ -305,7 +305,7 @@ func HiProduct(c *gin.Context) {
 //	@Param			Description	body		string	false	"描述"
 //	@Param			Price		body		string	false	"價格"
 //	@Param			Stock		body		string	false	"庫存"
-//	@Param			Sku			body		string	false	"庫存單位"
+//	@Param			SKU			body		string	false	"庫存單位"
 //	@Param			ImageURL	body		string	false	"圖片"
 //	@Param			Category	body		string	false	"商品分類"
 //	@Param			Enabled		body		string	false	"商品啟用(0/1)"
@@ -317,7 +317,7 @@ func AddProduct(c *gin.Context) {
 	description := c.PostForm("Description")
 	price := c.PostForm("Price")
 	stock := c.PostForm("Stock")
-	sku := c.PostForm("Sku")
+	sku := c.PostForm("SKU")
 	url := c.PostForm("ImageURL")
 	category := c.PostForm("Category")
 	enabled := c.PostForm("Enabled")
@@ -369,7 +369,7 @@ func AddProduct(c *gin.Context) {
 			SKU:         sku,
 			ImageURL:    url,
 			Category:    category,
-			Enabled:  啟用,
+			Enabled:     啟用,
 		}
 		basic.Logger().Info("增加商品:", 腦包商品)
 		tidb.Globalconn.Save(&腦包商品)
@@ -391,7 +391,7 @@ func AddProduct(c *gin.Context) {
 //	@Param			Description	body		string	false	"描述"
 //	@Param			Price		body		string	false	"價格"
 //	@Param			Stock		body		string	false	"庫存"
-//	@Param			Sku			body		string	false	"庫存單位"
+//	@Param			SKU			body		string	false	"庫存單位"
 //	@Param			ImageURL	body		string	false	"圖片"
 //	@Param			Category	body		string	false	"商品分類"
 //	@Param			Enabled		body		string	false	"商品啟用(0/1)"
@@ -399,15 +399,20 @@ func AddProduct(c *gin.Context) {
 //	@Failure		400			{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/product [put]
 func UpdateProduct(c *gin.Context) {
+	id, _ := strconv.ParseUint(c.PostForm("ID"), 10, 64)
 	name := c.PostForm("Name")
 	description := c.PostForm("Description")
 	price := c.PostForm("Price")
 	stock := c.PostForm("Stock")
-	sku := c.PostForm("Sku")
+	sku := c.PostForm("SKU")
 	url := c.PostForm("ImageURL")
 	category := c.PostForm("Category")
 	enabled := c.PostForm("Enabled")
-	basic.Logger().Info("更新商品資料:", name, description, price, stock, sku, url, category, enabled)
+	basic.Logger().Info("更新商品ID:", id)
+	basic.Logger().Info("更新商品內容:",
+		name, ",",
+		description, ",", price, ",", stock, ",",
+		sku, ",", url, ",", category, ",", enabled)
 	pricefff, err := strconv.ParseFloat(price, 64)
 	if err != nil {
 		basic.Logger().Error("商品價格錯誤:", err.Error())
@@ -431,13 +436,21 @@ func UpdateProduct(c *gin.Context) {
 	} else if enabled == "false" {
 		啟用 = false
 	} else {
-		basic.Logger().Error("商品狀態錯誤:", name, description, price, stock, sku, url, category, enabled, 啟用)
+		basic.Logger().Error("商品狀態錯誤:", enabled)
 		c.JSON(http.StatusBadRequest, gin.H{
 			"msg": "商品狀態錯誤",
 		})
 		return
 	}
+
+	var p Product
+	results := tidb.Globalconn.First(&p, "id = ?", id)
+	if results.RowsAffected == 0 {
+		basic.Logger().Warn("找不到商品資訊 id=", id, "變新增一筆")
+	}
+
 	腦包商品 := Product{
+		ID:          id,
 		Name:        name,
 		Description: description,
 		Price:       pricefff,
@@ -445,7 +458,7 @@ func UpdateProduct(c *gin.Context) {
 		SKU:         sku,
 		ImageURL:    url,
 		Category:    category,
-		Enabled:  啟用,
+		Enabled:     啟用,
 	}
 	basic.Logger().Info("更新商品:", 腦包商品)
 	tidb.Globalconn.Save(&腦包商品)

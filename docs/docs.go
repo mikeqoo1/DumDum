@@ -41,7 +41,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "description": "使用者名稱",
-                        "name": "name",
+                        "name": "Name",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -50,7 +50,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "密碼",
-                        "name": "password",
+                        "name": "Password",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -117,7 +117,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "description": "用戶資訊",
-                        "name": "user_id",
+                        "name": "User_id",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -155,7 +155,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "description": "用戶名稱",
-                        "name": "user",
+                        "name": "User",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -164,7 +164,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "訂單總金額",
-                        "name": "total_amount",
+                        "name": "Total_amount",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -267,7 +267,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "description": "商品ID",
-                        "name": "id",
+                        "name": "Id",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -276,7 +276,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "商品名稱",
-                        "name": "name",
+                        "name": "Name",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -285,7 +285,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "描述",
-                        "name": "description",
+                        "name": "Description",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -293,7 +293,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "價格",
-                        "name": "price",
+                        "name": "Price",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -301,7 +301,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "庫存",
-                        "name": "stock",
+                        "name": "Stock",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -309,7 +309,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "庫存單位",
-                        "name": "sku",
+                        "name": "SKU",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -317,7 +317,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "圖片",
-                        "name": "imageURL",
+                        "name": "ImageURL",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -325,7 +325,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "商品分類",
-                        "name": "category",
+                        "name": "Category",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -333,7 +333,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "商品啟用(0/1)",
-                        "name": "enabled",
+                        "name": "Enabled",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -370,7 +370,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "description": "商品名稱",
-                        "name": "name",
+                        "name": "Name",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -379,7 +379,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "描述",
-                        "name": "description",
+                        "name": "Description",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -387,7 +387,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "價格",
-                        "name": "price",
+                        "name": "Price",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -395,7 +395,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "庫存",
-                        "name": "stock",
+                        "name": "Stock",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -403,7 +403,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "庫存單位",
-                        "name": "sku",
+                        "name": "SKU",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -411,7 +411,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "圖片",
-                        "name": "imageURL",
+                        "name": "ImageURL",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -419,7 +419,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "商品分類",
-                        "name": "category",
+                        "name": "Category",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -427,7 +427,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "商品啟用(0/1)",
-                        "name": "enabled",
+                        "name": "Enabled",
                         "in": "body",
                         "schema": {
                             "type": "string"
@@ -558,7 +558,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "description": "使用者ID",
-                        "name": "id",
+                        "name": "Id",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -567,7 +567,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "使用者名稱",
-                        "name": "name",
+                        "name": "Name",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -576,7 +576,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "電子信箱",
-                        "name": "email",
+                        "name": "Email",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -585,7 +585,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "密碼",
-                        "name": "password",
+                        "name": "Password",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -594,7 +594,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "住址",
-                        "name": "address",
+                        "name": "Address",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -632,7 +632,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "description": "使用者名稱",
-                        "name": "name",
+                        "name": "Name",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -641,7 +641,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "電子信箱",
-                        "name": "email",
+                        "name": "Email",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -650,7 +650,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "密碼",
-                        "name": "password",
+                        "name": "Password",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -659,7 +659,7 @@ const docTemplate = `{
                     },
                     {
                         "description": "住址",
-                        "name": "address",
+                        "name": "Address",
                         "in": "body",
                         "required": true,
                         "schema": {
