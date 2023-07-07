@@ -356,9 +356,9 @@ func AddProduct(c *gin.Context) {
 		}
 		var 啟用 bool
 		啟用 = false
-		if enabled == "1" {
+		if enabled == "true" {
 			啟用 = true
-		} else if enabled == "0" {
+		} else if enabled == "false" {
 			啟用 = false
 		}
 		腦包商品 := Product{
@@ -426,9 +426,9 @@ func UpdateProduct(c *gin.Context) {
 	}
 	var 啟用 bool
 	啟用 = false
-	if enabled == "1" {
+	if enabled == "true" {
 		啟用 = true
-	} else if enabled == "0" {
+	} else if enabled == "false" {
 		啟用 = false
 	} else {
 		basic.Logger().Error("商品狀態錯誤:", name, description, price, stock, sku, url, category, enabled, 啟用)
