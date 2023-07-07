@@ -25,9 +25,9 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/shumingyu/example": {
-            "get": {
-                "description": "給書銘測試",
+        "/shumingyu/login": {
+            "post": {
+                "description": "登入功能",
                 "consumes": [
                     "application/json"
                 ],
@@ -35,9 +35,29 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "Test"
+                    "Login"
                 ],
-                "summary": "測試",
+                "summary": "登入功能",
+                "parameters": [
+                    {
+                        "description": "使用者名稱",
+                        "name": "name",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "密碼",
+                        "name": "password",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",

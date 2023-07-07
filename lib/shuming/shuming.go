@@ -85,18 +85,50 @@ var userobj []User
 var orderobj []Order
 var productobj []Product
 
-//	@Summary		測試
-//	@Description	給書銘測試
-//	@Tags			Test
+//	@Summary		登入功能
+//	@Description	登入功能
+//	@Tags			Login
 //	@Accept			json
 //	@Produce		json
-//	@Success		200	{object}	shuming.UserResponse
-//	@Failure		400	{object}	shuming.ErrorResponse
-//	@Router			/shumingyu/example [get]
-func Hi腦包(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "腦包書銘兒, 你的網站想做啥阿?? 方便確認API方向",
-	})
+//	@Param			name		body		string	true	"使用者名稱"
+//	@Param			password	body		string	true	"密碼"
+//	@Success		200			{object}	shuming.UserResponse
+//	@Failure		400			{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/login [post]
+func Login(c *gin.Context) {
+	username := c.PostForm("name")
+	pwd := c.PostForm("password")
+	basic.Logger().Info("登入紀錄:", username, pwd)
+	var u User
+	results := tidb.Globalconn.First(&u, "username = ?", username)
+	if u.Username == username && u.Password == pwd {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "登入成功",
+		})
+		return
+	} else {
+		if u.Username == username && u.Password != pwd {
+			basic.Logger().Error("User密碼錯誤", u, username)
+			c.JSON(http.StatusBadRequest, gin.H{
+				"errmsg": "密碼錯誤!!!",
+			})
+			return
+		}
+		if results.RowsAffected == 0 {
+			basic.Logger().Error("查無User", u, username)
+			c.JSON(http.StatusBadRequest, gin.H{
+				"errmsg": "帳號錯誤!!!",
+			})
+			return
+		}
+		if results.Error != nil {
+			basic.Logger().Error("DB錯誤", results.Error.Error())
+			c.JSON(http.StatusBadRequest, gin.H{
+				"errmsg": results.Error.Error(),
+			})
+			return
+		}
+	}
 }
 
 //	@Summary		取得User資料

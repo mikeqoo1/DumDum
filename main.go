@@ -239,7 +239,7 @@ func main() {
 
 	shumingyuRouter := router.Group("/shumingyu")
 	{
-		shumingyuRouter.GET("/example", shuming.Hi腦包)
+		shumingyuRouter.POST("/login", shuming.Login)
 		shumingyuRouter.GET("/user", shuming.HiUser)
 		shumingyuRouter.POST("/user", shuming.AddUser)
 		shumingyuRouter.PUT("/user", shuming.UpdateUser)
@@ -256,6 +256,7 @@ func main() {
 		shumingyuRouter.DELETE("/order", shuming.DeleteOrder)
 
 		shumingyuRouter.GET("/report", shuming.Hireport)
+
 	}
 
 	if IsGoogle == "NO" {
