@@ -33,11 +33,24 @@ info:
   title: 書銘的API
   version: "1.0"
 paths:
-  /shumingyu/example:
-    get:
+  /shumingyu/login:
+    post:
       consumes:
       - application/json
-      description: 給書銘測試
+      description: 登入功能
+      parameters:
+      - description: 使用者名稱
+        in: body
+        name: name
+        required: true
+        schema:
+          type: string
+      - description: 密碼
+        in: body
+        name: password
+        required: true
+        schema:
+          type: string
       produces:
       - application/json
       responses:
@@ -49,9 +62,9 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/shuming.ErrorResponse'
-      summary: 測試
+      summary: 登入功能
       tags:
-      - Test
+      - Login
   /shumingyu/order:
     delete:
       consumes:
