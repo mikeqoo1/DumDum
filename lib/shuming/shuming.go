@@ -326,7 +326,7 @@ func AddProduct(c *gin.Context) {
 		price = "1200"
 	}
 	if stock == "" {
-		price = "999"
+		stock = "999"
 	}
 	var result Product
 	basic.Logger().Info("新增商品資料:", name, description, price, stock, sku, url, category, enabled)
