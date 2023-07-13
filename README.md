@@ -24,8 +24,8 @@ Dum Dum專案 用TiDB做一些無聊東西
 [GORM說明](https://gorm.io/zh_CN/)
 
 
-API文件<http://34.80.185.163/swagger/index.html/>
+[API文件](http://34.80.185.163/swagger/index.html/)
 
-API示範網站<https://shuming-yu.github.io/demo/dist/#/>
+[API示範網站](https://shuming-yu.github.io/demo/dist/#/)
 
-很不像 請shuming-yu<https://github.com/shuming-yu>好好努力
+很不像 請[shuming-yu](https://github.com/shuming-yu)好好努力
