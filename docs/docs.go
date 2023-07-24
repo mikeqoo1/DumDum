@@ -25,6 +25,44 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
+        "/shumingyu/getoneproduct": {
+            "post": {
+                "description": "取得單一商品",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Product"
+                ],
+                "summary": "取得單一商品",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "商品ID",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.UserResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/shumingyu/login": {
             "post": {
                 "description": "登入功能",
@@ -300,6 +338,14 @@ const docTemplate = `{
                         }
                     },
                     {
+                        "description": "折扣 例如10代表打9折",
+                        "name": "Discount",
+                        "in": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "description": "庫存",
                         "name": "Stock",
                         "in": "body",
@@ -394,6 +440,14 @@ const docTemplate = `{
                         }
                     },
                     {
+                        "description": "折扣 例如10代表打9折",
+                        "name": "Discount",
+                        "in": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "description": "庫存",
                         "name": "Stock",
                         "in": "body",
@@ -470,6 +524,35 @@ const docTemplate = `{
                         "required": true
                     }
                 ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.UserResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/shuming.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/shumingyu/productcategory": {
+            "get": {
+                "description": "回傳商品的所有種類",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Product"
+                ],
+                "summary": "取得商品種類",
                 "responses": {
                     "200": {
                         "description": "OK",

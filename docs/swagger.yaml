@@ -33,6 +33,31 @@ info:
   title: 書銘的API
   version: "1.0"
 paths:
+  /shumingyu/getoneproduct:
+    post:
+      consumes:
+      - application/json
+      description: 取得單一商品
+      parameters:
+      - description: 商品ID
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 取得單一商品
+      tags:
+      - Product
   /shumingyu/login:
     post:
       consumes:
@@ -228,6 +253,11 @@ paths:
         name: Price
         schema:
           type: string
+      - description: 折扣 例如10代表打9折
+        in: body
+        name: Discount
+        schema:
+          type: string
       - description: 庫存
         in: body
         name: Stock
@@ -294,6 +324,11 @@ paths:
         name: Price
         schema:
           type: string
+      - description: 折扣 例如10代表打9折
+        in: body
+        name: Discount
+        schema:
+          type: string
       - description: 庫存
         in: body
         name: Stock
@@ -331,6 +366,25 @@ paths:
           schema:
             $ref: '#/definitions/shuming.ErrorResponse'
       summary: 更新商品資料
+      tags:
+      - Product
+  /shumingyu/productcategory:
+    get:
+      consumes:
+      - application/json
+      description: 回傳商品的所有種類
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/shuming.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/shuming.ErrorResponse'
+      summary: 取得商品種類
       tags:
       - Product
   /shumingyu/report:

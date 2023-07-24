@@ -38,6 +38,7 @@ type Product struct {
 	Name        string
 	Description string
 	Price       float64
+	Discount    int
 	Stock       int
 	SKU         string
 	ImageURL    string
@@ -304,6 +305,7 @@ func HiProduct(c *gin.Context) {
 //	@Param			Name		body		string	true	"商品名稱"
 //	@Param			Description	body		string	false	"描述"
 //	@Param			Price		body		string	false	"價格"
+//	@Param			Discount	body		string	false	"折扣 例如10代表打9折"
 //	@Param			Stock		body		string	false	"庫存"
 //	@Param			SKU			body		string	false	"庫存單位"
 //	@Param			ImageURL	body		string	false	"圖片"
@@ -316,6 +318,7 @@ func AddProduct(c *gin.Context) {
 	name := c.PostForm("Name")
 	description := c.PostForm("Description")
 	price := c.PostForm("Price")
+	discount := c.PostForm("Discount")
 	stock := c.PostForm("Stock")
 	sku := c.PostForm("SKU")
 	url := c.PostForm("ImageURL")
@@ -328,13 +331,17 @@ func AddProduct(c *gin.Context) {
 	if stock == "" {
 		stock = "999"
 	}
+	if discount == "" {
+		discount = "0"
+	}
 	var result Product
-	basic.Logger().Info("新增商品資料:", name, description, price, stock, sku, url, category, enabled)
+	basic.Logger().Info("新增商品資料:",
+		name, description, price, discount, stock, sku, url, category, enabled)
 	tidb.Globalconn.First(&result, "name = ?", name)
 	if result.Name == name {
 		basic.Logger().Error("商品名稱重複了:", result, name)
 		c.JSON(http.StatusBadRequest, gin.H{
-			"msg": "商品名稱重複了",
+			"errmsg": "商品名稱重複了",
 		})
 		return
 	} else {
@@ -342,7 +349,7 @@ func AddProduct(c *gin.Context) {
 		if err != nil {
 			basic.Logger().Error("商品價格錯誤:", err.Error())
 			c.JSON(http.StatusBadRequest, gin.H{
-				"msg": "商品價格錯誤",
+				"errmsg": "商品價格錯誤",
 			})
 			return
 		}
@@ -350,7 +357,15 @@ func AddProduct(c *gin.Context) {
 		if err != nil {
 			basic.Logger().Error("商品庫存錯誤:", err.Error())
 			c.JSON(http.StatusBadRequest, gin.H{
-				"msg": "商品庫存錯誤",
+				"errmsg": "商品庫存錯誤",
+			})
+			return
+		}
+		discountiii, err := strconv.Atoi(discount)
+		if err != nil {
+			basic.Logger().Error("折扣錯誤:", err.Error())
+			c.JSON(http.StatusBadRequest, gin.H{
+				"errmsg": "商品折扣錯誤",
 			})
 			return
 		}
@@ -365,6 +380,7 @@ func AddProduct(c *gin.Context) {
 			Name:        name,
 			Description: description,
 			Price:       pricefff,
+			Discount:    discountiii,
 			Stock:       stockiii,
 			SKU:         sku,
 			ImageURL:    url,
@@ -390,6 +406,7 @@ func AddProduct(c *gin.Context) {
 //	@Param			Name		body		string	true	"商品名稱"
 //	@Param			Description	body		string	false	"描述"
 //	@Param			Price		body		string	false	"價格"
+//	@Param			Discount	body		string	false	"折扣 例如10代表打9折"
 //	@Param			Stock		body		string	false	"庫存"
 //	@Param			SKU			body		string	false	"庫存單位"
 //	@Param			ImageURL	body		string	false	"圖片"
@@ -403,6 +420,7 @@ func UpdateProduct(c *gin.Context) {
 	name := c.PostForm("Name")
 	description := c.PostForm("Description")
 	price := c.PostForm("Price")
+	discount := c.PostForm("Discount")
 	stock := c.PostForm("Stock")
 	sku := c.PostForm("SKU")
 	url := c.PostForm("ImageURL")
@@ -417,7 +435,7 @@ func UpdateProduct(c *gin.Context) {
 	if err != nil {
 		basic.Logger().Error("商品價格錯誤:", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
-			"msg": "商品價格錯誤",
+			"errmsg": "商品價格錯誤",
 		})
 		return
 	}
@@ -425,7 +443,15 @@ func UpdateProduct(c *gin.Context) {
 	if err != nil {
 		basic.Logger().Error("商品庫存錯誤:", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
-			"msg": "商品庫存錯誤",
+			"errmsg": "商品庫存錯誤",
+		})
+		return
+	}
+	discountiii, err := strconv.Atoi(discount)
+	if err != nil {
+		basic.Logger().Error("折扣錯誤:", err.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": "商品折扣錯誤",
 		})
 		return
 	}
@@ -447,6 +473,9 @@ func UpdateProduct(c *gin.Context) {
 	results := tidb.Globalconn.First(&p, "id = ?", id)
 	if results.RowsAffected == 0 {
 		basic.Logger().Warn("找不到商品資訊 id=", id, "變新增一筆")
+		pricefff = 1200
+		stockiii = 999
+		discountiii = 0
 	}
 
 	腦包商品 := Product{
@@ -454,6 +483,7 @@ func UpdateProduct(c *gin.Context) {
 		Name:        name,
 		Description: description,
 		Price:       pricefff,
+		Discount:    discountiii,
 		Stock:       stockiii,
 		SKU:         sku,
 		ImageURL:    url,
@@ -500,6 +530,59 @@ func DeleteProduct(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"msg":  "刪除商品資料",
 		"data": p,
+	})
+}
+
+//	@Summary		取得單一商品
+//	@Description	取得單一商品
+//	@Tags			Product
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	query		string	true	"商品ID"
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/getoneproduct [post]
+func GetOneProduct(c *gin.Context) {
+	id, _ := strconv.ParseUint(c.PostForm("ID"), 10, 64)
+	basic.Logger().Info("取得單一商品ID:", id)
+	var p Product
+	results := tidb.Globalconn.First(&p, "id = ?", id)
+	if results.RowsAffected == 0 {
+		basic.Logger().Warn("找不到商品資訊 id=", id)
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": "找不到商品資訊",
+		})
+	} else {
+		c.JSON(http.StatusOK, gin.H{
+			"data": p,
+			"msg":  "取得商品成功",
+		})
+	}
+}
+
+//	@Summary		取得商品種類
+//	@Description	回傳商品的所有種類
+//	@Tags			Product
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	shuming.UserResponse
+//	@Failure		400	{object}	shuming.ErrorResponse
+//	@Router			/shumingyu/productcategory [get]
+func GetProductCategory(c *gin.Context) {
+	results := tidb.Globalconn.Order("id desc").Find(&productobj)
+	if results.Error != nil {
+		basic.Logger().Error("取得商品資料錯誤", results.Error.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"errmsg": results.Error.Error(),
+		})
+		return
+	}
+	discountList := productobj[len(productobj)-1].Discount
+	basic.Logger().Info("取得商品種類", discountList)
+	c.JSON(http.StatusOK, gin.H{
+		"record": results.RowsAffected,
+		"data":   discountList,
+		"msg":    "全部商品種類",
 	})
 }
 

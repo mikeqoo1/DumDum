@@ -249,6 +249,8 @@ func main() {
 		shumingyuRouter.POST("/product", shuming.AddProduct)
 		shumingyuRouter.PUT("/product", shuming.UpdateProduct)
 		shumingyuRouter.DELETE("/product", shuming.DeleteProduct)
+		shumingyuRouter.GET("/productcategory", shuming.GetProductCategory)
+		shumingyuRouter.POST("/getoneproduct", shuming.GetOneProduct)
 
 		shumingyuRouter.GET("/order", shuming.HiOrder)
 		shumingyuRouter.POST("/order", shuming.AddOrder)
@@ -256,7 +258,6 @@ func main() {
 		shumingyuRouter.DELETE("/order", shuming.DeleteOrder)
 
 		shumingyuRouter.GET("/report", shuming.Hireport)
-
 	}
 
 	if IsGoogle == "NO" {

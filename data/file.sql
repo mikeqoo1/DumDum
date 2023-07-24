@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   name VARCHAR(100) NOT NULL COMMENT '產品名稱',
   description TEXT COMMENT '描述',
   price DECIMAL(10, 2) NOT NULL COMMENT '價格',
+  discount INT NOT NULL DEFAULT 0 COMMENT '折扣',
   stock INT NOT NULL COMMENT '庫存',
   sku VARCHAR(50) NOT NULL COMMENT 'SKU(庫存單位)',
   image_url VARCHAR(200) COMMENT '圖片',
@@ -43,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   enabled INT NOT NULL DEFAULT 1 COMMENT '啟用1 關閉0'
 ) COMMENT='產品資料表';
 
--- 建立產品資料表
+-- 建立家族資料表
 CREATE TABLE IF NOT EXISTS `family` (
   id INT(10) PRIMARY KEY NOT NULL COMMENT '編號',
   name VARCHAR(100) NOT NULL COMMENT '名稱',
