@@ -577,11 +577,15 @@ func GetProductCategory(c *gin.Context) {
 		})
 		return
 	}
-	discountList := productobj[len(productobj)-1].Discount
-	basic.Logger().Info("取得商品種類", discountList)
+	var 類別 []string
+	for i := 0; i < len(productobj); i++ {
+		類別 = append(類別, productobj[i].Category)
+
+	}
+	basic.Logger().Info("取得商品種類", 類別)
 	c.JSON(http.StatusOK, gin.H{
 		"record": results.RowsAffected,
-		"data":   discountList,
+		"data":   類別,
 		"msg":    "全部商品種類",
 	})
 }
