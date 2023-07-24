@@ -569,7 +569,7 @@ func GetOneProduct(c *gin.Context) {
 //	@Failure		400	{object}	shuming.ErrorResponse
 //	@Router			/shumingyu/productcategory [get]
 func GetProductCategory(c *gin.Context) {
-	results := tidb.Globalconn.Group("category").Find(&productobj)
+	results := tidb.Globalconn.Select("category").Group("category").Find(&productobj)
 	if results.Error != nil {
 		basic.Logger().Error("取得商品資料錯誤", results.Error.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
