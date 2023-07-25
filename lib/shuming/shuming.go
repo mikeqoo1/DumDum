@@ -70,6 +70,14 @@ type ErrorResponse struct {
 	Message string `json:"message"`
 }
 
+type product_Category struct {
+	All              string `json:"All"`
+	ExperienceClass  string `json:"ExperienceClass"`
+	Aerobics         string `json:"Aerobics"`
+	Yoga             string `json:"Yoga"`
+	StrengthTraining string `json:"StrengthTraining"`
+}
+
 func (User) TableName() string {
 	return "users"
 }
@@ -577,16 +585,23 @@ func GetProductCategory(c *gin.Context) {
 		})
 		return
 	}
-	var 類別 []string
+	var pc product_Category
+	pc.All = "全部商品"
 	for i := 0; i < len(productobj); i++ {
-		類別 = append(類別, productobj[i].Category)
-
+		if productobj[i].Category == "瑜珈" {
+			pc.Yoga = productobj[i].Category
+		} else if productobj[i].Category == "有氧" {
+			pc.Aerobics = productobj[i].Category
+		} else if productobj[i].Category == "體驗" {
+			pc.ExperienceClass = productobj[i].Category
+		} else if productobj[i].Category == "肌力訓練" {
+			pc.StrengthTraining = productobj[i].Category
+		}
 	}
-	basic.Logger().Info("取得商品種類", 類別)
+	basic.Logger().Info("取得商品種類", pc)
 	c.JSON(http.StatusOK, gin.H{
-		"record": results.RowsAffected,
-		"data":   類別,
-		"msg":    "全部商品種類",
+		"data": pc,
+		"msg":  "全部商品種類",
 	})
 }
 
