@@ -301,6 +301,7 @@ func main() {
 		}
 	}
 
+	go router.RunTLS(":443", "./certs/server.crt", "./certs/server.key")
 	err = router.Run(addr)
 	if err != nil {
 		fmt.Println("Nici網頁啟動失敗" + err.Error())
