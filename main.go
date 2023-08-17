@@ -210,17 +210,18 @@ func main() {
 		// 定義模板變量
 		title := "Nici家族"
 		message := "歡迎來到Nici家族"
-		donate:="網站經營不意 跪求贊助或是我幫放廣告 請用GitHub聯絡我"
+		donate := "網站經營不意 跪求贊助或是我幫放廣告 請用GitHub聯絡我"
 
 		// 注入模板變量，並渲染模板
 		c.HTML(http.StatusOK, "index.html", gin.H{
 			"title":   title,
 			"message": message,
-			"donate": donate,
-
+			"donate":  donate,
 		})
 	})
 
+	router.GET("/alice", concord.Alice)
+	router.POST("/alice/love", concord.AliceLove)
 	niciRouter := router.Group("/nici")
 	{
 		niciRouter.GET("/", nici.Love)           //列出所有

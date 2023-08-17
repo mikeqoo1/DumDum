@@ -3,7 +3,9 @@ package concord
 import (
 	"DumDum/lib/basic"
 	"DumDum/lib/tidb"
+	"fmt"
 	"net/http"
+	"strconv"
 	"strings"
 
 	"github.com/gin-gonic/gin"
@@ -120,4 +122,82 @@ func ConcordsFamily(c *gin.Context) {
 		"record": results.RowsAffected,
 		"data":   familyobj,
 	})
+}
+
+func Alice(c *gin.Context) {
+	title := "海豬問券"
+	c.HTML(http.StatusOK, "alice.html", gin.H{
+		"title": title,
+	})
+}
+
+func AliceLove(c *gin.Context) {
+	name := c.PostForm("name")
+	age := c.PostForm("age")
+	profession := c.PostForm("profession")
+	yearmoney := c.PostForm("yearmoney")
+	radio1 := c.PostForm("radio1")
+	radio2 := c.PostForm("radio2")
+	radio3 := c.PostForm("radio3")
+	radio4 := c.PostForm("radio4")
+	radio5 := c.PostForm("radio5")
+	iage, err1 := strconv.Atoi(age)
+	iyearmoney, err2 := strconv.Atoi(yearmoney)
+
+	if err1 != nil || err2 != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "年紀或是年收入錯誤",
+		})
+		return
+	}
+
+	fmt.Println("姓名:", name)
+	fmt.Println("年紀:", age)
+	fmt.Println("職業:", profession)
+	fmt.Println("收入:", yearmoney)
+	fmt.Println("1.答案:", radio1)
+	fmt.Println("2.答案:", radio2)
+	fmt.Println("3.答案:", radio3)
+	fmt.Println("4.答案:", radio4)
+	fmt.Println("5.答案:", radio5)
+
+	if iage < 18 {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "年紀太小部符合資格",
+		})
+		return
+	}
+	if iyearmoney < 100 {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "沒有百萬年收海豬看不上 在磨練磨練八",
+		})
+		return
+	}
+	y := 0
+	if radio1 == "Yes" {
+		y++
+	}
+	if radio2 == "Yes" {
+		y++
+	}
+	if radio3 == "Yes" {
+		y++
+	}
+	if radio4 == "Yes" {
+		y++
+	}
+	if radio5 == "Yes" {
+		y++
+	}
+
+	if y >= 5 {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "天選之人 恭喜有機會成為第N號男",
+		})
+		return
+	} else {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "你不適合海豬 滾八",
+		})
+	}
 }
