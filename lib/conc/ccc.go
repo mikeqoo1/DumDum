@@ -152,22 +152,33 @@ func AliceLove(c *gin.Context) {
 	}
 
 	fmt.Println("姓名:", name)
+	basic.Logger().Info("姓名:", name)
 	fmt.Println("年紀:", age)
+	basic.Logger().Info("年紀:", age)
 	fmt.Println("職業:", profession)
+	basic.Logger().Info("職業:", profession)
 	fmt.Println("收入:", yearmoney)
+	basic.Logger().Info("收入:", yearmoney)
 	fmt.Println("1.答案:", radio1)
+	basic.Logger().Info("1.答案:", radio1)
 	fmt.Println("2.答案:", radio2)
+	basic.Logger().Info("2.答案:", radio2)
 	fmt.Println("3.答案:", radio3)
+	basic.Logger().Info("3.答案:", radio3)
 	fmt.Println("4.答案:", radio4)
+	basic.Logger().Info("4.答案:", radio4)
 	fmt.Println("5.答案:", radio5)
+	basic.Logger().Info("5.答案:", radio5)
 
 	if iage < 18 {
+		basic.Logger().Info("年紀太小不符合資格")
 		c.JSON(http.StatusOK, gin.H{
-			"msg": "年紀太小部符合資格",
+			"msg": "年紀太小不符合資格",
 		})
 		return
 	}
 	if iyearmoney < 100 {
+		basic.Logger().Info("沒有百萬年收海豬看不上 在磨練磨練八")
 		c.JSON(http.StatusOK, gin.H{
 			"msg": "沒有百萬年收海豬看不上 在磨練磨練八",
 		})
@@ -191,11 +202,13 @@ func AliceLove(c *gin.Context) {
 	}
 
 	if y >= 5 {
+		basic.Logger().Info("天選之人 恭喜有機會成為第N號男")
 		c.JSON(http.StatusOK, gin.H{
 			"msg": "天選之人 恭喜有機會成為第N號男",
 		})
 		return
 	} else {
+		basic.Logger().Info("你不適合海豬 滾八")
 		c.JSON(http.StatusOK, gin.H{
 			"msg": "你不適合海豬 滾八",
 		})
