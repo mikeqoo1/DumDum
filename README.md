@@ -29,3 +29,10 @@ Dum Dum專案 用TiDB做一些無聊東西
 [API示範網站](https://shuming-yu.github.io/demo/dist/#/)
 
 很不像 請[shuming-yu](https://github.com/shuming-yu)好好努力
+
+
+Google雲建制
+
+用tiup下載TiDB 用 tiup playground 部屬
+
+導出資料 tiup dumpling -u root -P 4000 -h 127.0.0.1 --filetype sql -t 8 -o ~/ -F256MiB
