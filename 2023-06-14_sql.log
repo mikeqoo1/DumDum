@@ -1,0 +1,192 @@
+
+2023/06/14 03:39:03 /home/mikeqoo123/DumDum/main.go:598
+[4.648ms] [rows:1] SELECT * FROM `users` ORDER BY id desc
+
+2023/06/14 03:40:28 /home/mikeqoo123/DumDum/main.go:750
+[10.444ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 03:40:28 /home/mikeqoo123/DumDum/main.go:798
+[16.844ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/06/14 03:40:48 /home/mikeqoo123/DumDum/main.go:714
+[9.130ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 05:06:28 /home/mikeqoo123/DumDum/main.go:292
+[8.870ms] [rows:145] SELECT * FROM `nici` ORDER BY series desc
+
+2023/06/14 05:06:36 /home/mikeqoo123/DumDum/main.go:322
+[3.379ms] [rows:1] SELECT * FROM `nici` WHERE starsign = ? AND blood = ?
+
+2023/06/14 05:57:56 /home/mikeqoo123/DumDum/main.go:714
+[5.320ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 05:58:00 /home/mikeqoo123/DumDum/main.go:714
+[2.504ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 05:58:18 /home/mikeqoo123/DumDum/main.go:750
+[5.228ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:04:35 /home/mikeqoo123/DumDum/main.go:714
+[4.781ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:06:09 /home/mikeqoo123/DumDum/main.go:714
+[5.756ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:08:56 /home/mikeqoo123/DumDum/main.go:714
+[7.629ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:09:07 /home/mikeqoo123/DumDum/main.go:750
+[5.275ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:10:06 /home/mikeqoo123/DumDum/main.go:714
+[3.834ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:10:12 /home/mikeqoo123/DumDum/main.go:714
+[2.339ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:10:14 /home/mikeqoo123/DumDum/main.go:714
+[2.241ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:10:17 /home/mikeqoo123/DumDum/main.go:750
+[5.725ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:10:36 /home/mikeqoo123/DumDum/main.go:714
+[4.200ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:10:39 /home/mikeqoo123/DumDum/main.go:714
+[2.449ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:10:41 /home/mikeqoo123/DumDum/main.go:750
+[3.715ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:11:07 /home/mikeqoo123/DumDum/main.go:714
+[4.219ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:11:10 /home/mikeqoo123/DumDum/main.go:714
+[2.469ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:11:13 /home/mikeqoo123/DumDum/main.go:750
+[4.439ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:11:23 /home/mikeqoo123/DumDum/main.go:750
+[5.298ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:12:10 /home/mikeqoo123/DumDum/main.go:750
+[4.906ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:12:15 /home/mikeqoo123/DumDum/main.go:714
+[2.646ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:13:06 /home/mikeqoo123/DumDum/main.go:750
+[5.138ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:19:16 /home/mikeqoo123/DumDum/main.go:714
+[4.755ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:19:25 /home/mikeqoo123/DumDum/main.go:714
+[2.700ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:20:00 /home/mikeqoo123/DumDum/main.go:714
+[5.218ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:20:07 /home/mikeqoo123/DumDum/main.go:714
+[2.935ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:20:31 /home/mikeqoo123/DumDum/main.go:714
+[4.136ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:20:33 /home/mikeqoo123/DumDum/main.go:714
+[2.444ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:20:38 /home/mikeqoo123/DumDum/main.go:750
+[3.261ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:21:09 /home/mikeqoo123/DumDum/main.go:750
+[5.679ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:21:15 /home/mikeqoo123/DumDum/main.go:750
+[3.397ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:21:15 /home/mikeqoo123/DumDum/main.go:798
+[6.256ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/06/14 06:21:31 /home/mikeqoo123/DumDum/main.go:714
+[4.268ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:22:08 /home/mikeqoo123/DumDum/main.go:714
+[4.140ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:22:10 /home/mikeqoo123/DumDum/main.go:714
+[2.832ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:22:11 /home/mikeqoo123/DumDum/main.go:714
+[2.219ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:22:23 /home/mikeqoo123/DumDum/main.go:714
+[5.394ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:22:25 /home/mikeqoo123/DumDum/main.go:714
+[4.133ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:22:40 /home/mikeqoo123/DumDum/main.go:714
+[3.882ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:22:46 /home/mikeqoo123/DumDum/main.go:714
+[2.190ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:23:01 /home/mikeqoo123/DumDum/main.go:714
+[4.290ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:24:20 /home/mikeqoo123/DumDum/main.go:714
+[4.465ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:25:22 /home/mikeqoo123/DumDum/main.go:714
+[4.300ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:25:25 /home/mikeqoo123/DumDum/main.go:714
+[2.600ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:25:34 /home/mikeqoo123/DumDum/main.go:750
+[4.468ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:27:19 /home/mikeqoo123/DumDum/main.go:714
+[4.254ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:32:15 /home/mikeqoo123/DumDum/main.go:714
+[5.723ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:32:20 /home/mikeqoo123/DumDum/main.go:714
+[2.521ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:32:38 /home/mikeqoo123/DumDum/main.go:714
+[3.960ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 06:32:47 /home/mikeqoo123/DumDum/main.go:750
+[3.397ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:32:55 /home/mikeqoo123/DumDum/main.go:750
+[4.840ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:33:03 /home/mikeqoo123/DumDum/main.go:750
+[3.084ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 06:33:03 /home/mikeqoo123/DumDum/main.go:798
+[7.051ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/06/14 06:33:21 /home/mikeqoo123/DumDum/main.go:714
+[4.169ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 08:14:33 /home/mikeqoo123/DumDum/main.go:714
+[5.074ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/14 08:17:55 /home/mikeqoo123/DumDum/main.go:750
+[5.521ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 08:18:59 /home/mikeqoo123/DumDum/main.go:750
+[5.652ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 08:19:11 /home/mikeqoo123/DumDum/main.go:750
+[5.399ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/14 08:19:18 /home/mikeqoo123/DumDum/main.go:750
+[3.222ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1

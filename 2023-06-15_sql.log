@@ -1,0 +1,3 @@
+
+2023/06/16 14:41:00 /home/mikeqoo123/DumDum/main.go:714
+[68.591ms] [rows:6] SELECT * FROM `products` ORDER BY id desc

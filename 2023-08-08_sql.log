@@ -1,0 +1,30 @@
+
+2023/08/08 01:59:14 /home/mikeqoo123/DumDum/lib/nici/nici.go:103
+[31.419ms] [rows:145] SELECT * FROM `nici` ORDER BY series desc
+
+2023/08/08 06:30:04 /home/mikeqoo123/DumDum/lib/nici/nici.go:97
+[19.051ms] [rows:0] SELECT * FROM `nici` WHERE name = ?
+
+2023/08/08 06:30:07 /home/mikeqoo123/DumDum/lib/nici/nici.go:97
+[2.708ms] [rows:1] SELECT * FROM `nici` WHERE name = ?
+
+2023/08/08 06:30:24 /home/mikeqoo123/DumDum/lib/nici/nici.go:97
+[5.921ms] [rows:0] SELECT * FROM `nici` WHERE name = ?
+
+2023/08/08 06:30:24 /home/mikeqoo123/DumDum/lib/nici/nici.go:195
+[21.449ms] [rows:1] INSERT INTO `nici` (`name`,`blood`,`starsign`,`series`,`img`) VALUES (?,?,?,?,?)
+
+2023/08/08 06:35:32 /home/mikeqoo123/DumDum/lib/nici/nici.go:97
+[5.522ms] [rows:0] SELECT * FROM `nici` WHERE name = ?
+
+2023/08/08 06:35:32 /home/mikeqoo123/DumDum/lib/nici/nici.go:195
+[7.364ms] [rows:1] INSERT INTO `nici` (`name`,`blood`,`starsign`,`series`,`img`) VALUES (?,?,?,?,?)
+
+2023/08/08 06:37:08 /home/mikeqoo123/DumDum/lib/nici/nici.go:97
+[4.809ms] [rows:0] SELECT * FROM `nici` WHERE name = ?
+
+2023/08/08 06:37:09 /home/mikeqoo123/DumDum/lib/nici/nici.go:195
+[113.159ms] [rows:1] INSERT INTO `nici` (`name`,`blood`,`starsign`,`series`,`img`) VALUES (?,?,?,?,?)
+
+2023/08/08 08:36:34 /home/mikeqoo123/DumDum/lib/nici/nici.go:127
+[26.563ms] [rows:1] SELECT * FROM `nici` WHERE starsign = ?

@@ -1,0 +1,45 @@
+
+2023/07/24 03:35:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[5.438ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/24 05:13:16 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[22.801ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/24 05:35:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572 Error 1055 (42000): Expression #10 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sea.products.discount' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[19.895ms] [rows:0] SELECT * FROM `products` GROUP BY `category` ORDER BY id desc
+
+2023/07/24 05:35:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572 Error 1055 (42000): Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sea.products.name' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[1.417ms] [rows:0] SELECT * FROM `products` GROUP BY `category` ORDER BY id desc
+
+2023/07/24 05:35:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572 Error 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sea.products.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[1.036ms] [rows:0] SELECT * FROM `products` GROUP BY `category` ORDER BY id desc
+
+2023/07/24 05:35:10 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572 Error 1055 (42000): Expression #4 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sea.products.price' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[1.724ms] [rows:0] SELECT * FROM `products` GROUP BY `category` ORDER BY id desc
+
+2023/07/24 05:35:21 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572 Error 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sea.products.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[4.973ms] [rows:0] SELECT * FROM `products` GROUP BY `category` ORDER BY id desc
+
+2023/07/24 05:42:28 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572 Error 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sea.products.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[3.461ms] [rows:0] SELECT * FROM `products` GROUP BY `category`
+
+2023/07/24 05:47:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[3.121ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/24 05:48:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[4.278ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/24 10:05:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[7.745ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/25 00:14:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[6.714ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/25 00:14:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[2.898ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/25 00:52:27 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[5.163ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/25 01:08:16 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:572
+[4.965ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`

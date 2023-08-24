@@ -1,0 +1,3615 @@
+
+2023/06/29 06:21:56 /home/mikeqoo123/DumDum/main.go:465
+[8.176ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/29 07:19:50 /home/mikeqoo123/DumDum/main.go:465
+[8.788ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:36:45 /home/mikeqoo123/DumDum/main.go:465
+[78.998ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:36:45 /home/mikeqoo123/DumDum/main.go:465
+[2.558ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:45:17 /home/mikeqoo123/DumDum/main.go:465
+[4.967ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:45:40 /home/mikeqoo123/DumDum/main.go:465
+[4.574ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:52:23 /home/mikeqoo123/DumDum/main.go:465
+[5.258ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:52:35 /home/mikeqoo123/DumDum/main.go:465
+[4.191ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:52:58 /home/mikeqoo123/DumDum/main.go:465
+[8.197ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:53:00 /home/mikeqoo123/DumDum/main.go:465
+[2.615ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:55:55 /home/mikeqoo123/DumDum/main.go:465
+[4.117ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:56:08 /home/mikeqoo123/DumDum/main.go:465
+[4.576ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:56:25 /home/mikeqoo123/DumDum/main.go:465
+[4.506ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:56:32 /home/mikeqoo123/DumDum/main.go:465
+[2.381ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:57:07 /home/mikeqoo123/DumDum/main.go:465
+[4.028ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 02:57:35 /home/mikeqoo123/DumDum/main.go:465
+[7.343ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:03:11 /home/mikeqoo123/DumDum/main.go:516
+[28.604ms] [rows:1] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:03:37 /home/mikeqoo123/DumDum/main.go:465
+[4.198ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:04:25 /home/mikeqoo123/DumDum/main.go:465
+[4.315ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:04:35 /home/mikeqoo123/DumDum/main.go:516
+[4.368ms] [rows:1] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:06:35 /home/mikeqoo123/DumDum/main.go:516
+[5.409ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:07:20 /home/mikeqoo123/DumDum/main.go:516
+[4.892ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:07:20 /home/mikeqoo123/DumDum/main.go:558
+[25.176ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/06/30 03:07:32 /home/mikeqoo123/DumDum/main.go:465
+[4.628ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:09:34 /home/mikeqoo123/DumDum/main.go:465
+[5.935ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:09:50 /home/mikeqoo123/DumDum/main.go:465
+[3.775ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:10:03 /home/mikeqoo123/DumDum/main.go:465
+[4.167ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:10:16 /home/mikeqoo123/DumDum/main.go:516
+[5.261ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:10:49 /home/mikeqoo123/DumDum/main.go:465
+[4.072ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:11:29 /home/mikeqoo123/DumDum/main.go:465
+[4.366ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:11:32 /home/mikeqoo123/DumDum/main.go:465
+[2.664ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:11:36 /home/mikeqoo123/DumDum/main.go:516
+[3.270ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:11:41 /home/mikeqoo123/DumDum/main.go:516
+[6.370ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:14:38 /home/mikeqoo123/DumDum/main.go:465
+[5.025ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:14:42 /home/mikeqoo123/DumDum/main.go:465
+[2.565ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:14:45 /home/mikeqoo123/DumDum/main.go:516
+[3.323ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:14:51 /home/mikeqoo123/DumDum/main.go:516
+[5.807ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:14:56 /home/mikeqoo123/DumDum/main.go:516
+[4.211ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:15:05 /home/mikeqoo123/DumDum/main.go:465
+[5.540ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:15:14 /home/mikeqoo123/DumDum/main.go:465
+[2.542ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:15:19 /home/mikeqoo123/DumDum/main.go:465
+[6.103ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:15:49 /home/mikeqoo123/DumDum/main.go:465
+[4.783ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:17:09 /home/mikeqoo123/DumDum/main.go:465
+[4.862ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:17:28 /home/mikeqoo123/DumDum/main.go:465
+[4.135ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:17:31 /home/mikeqoo123/DumDum/main.go:465
+[2.360ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:17:50 /home/mikeqoo123/DumDum/main.go:465
+[4.216ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:17:52 /home/mikeqoo123/DumDum/main.go:465
+[2.645ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:17:59 /home/mikeqoo123/DumDum/main.go:516
+[4.126ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 03:17:59 /home/mikeqoo123/DumDum/main.go:558
+[14.115ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/06/30 03:19:32 /home/mikeqoo123/DumDum/main.go:465
+[4.500ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:23:17 /home/mikeqoo123/DumDum/main.go:465
+[4.919ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:23:43 /home/mikeqoo123/DumDum/main.go:465
+[4.494ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:24:16 /home/mikeqoo123/DumDum/main.go:465
+[3.795ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:32:16 /home/mikeqoo123/DumDum/main.go:465
+[5.243ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:32:18 /home/mikeqoo123/DumDum/main.go:465
+[2.704ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:33:44 /home/mikeqoo123/DumDum/main.go:465
+[4.417ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:33:47 /home/mikeqoo123/DumDum/main.go:465
+[2.544ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:33:55 /home/mikeqoo123/DumDum/main.go:465
+[4.198ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:33:57 /home/mikeqoo123/DumDum/main.go:465
+[2.648ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:34:28 /home/mikeqoo123/DumDum/main.go:465
+[4.446ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:34:30 /home/mikeqoo123/DumDum/main.go:465
+[2.435ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:35:17 /home/mikeqoo123/DumDum/main.go:465
+[4.765ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:35:20 /home/mikeqoo123/DumDum/main.go:465
+[2.554ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:35:24 /home/mikeqoo123/DumDum/main.go:465
+[2.832ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:39:32 /home/mikeqoo123/DumDum/main.go:465
+[4.666ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:39:34 /home/mikeqoo123/DumDum/main.go:465
+[2.608ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:41:07 /home/mikeqoo123/DumDum/main.go:465
+[4.588ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 03:41:10 /home/mikeqoo123/DumDum/main.go:465
+[2.802ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:15:51 /home/mikeqoo123/DumDum/main.go:465
+[4.970ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:15:52 /home/mikeqoo123/DumDum/main.go:465
+[3.140ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:17:23 /home/mikeqoo123/DumDum/main.go:465
+[4.251ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:17:26 /home/mikeqoo123/DumDum/main.go:465
+[2.756ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:17:51 /home/mikeqoo123/DumDum/main.go:465
+[4.741ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:18:02 /home/mikeqoo123/DumDum/main.go:465
+[4.067ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:18:04 /home/mikeqoo123/DumDum/main.go:465
+[3.430ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:18:11 /home/mikeqoo123/DumDum/main.go:465
+[2.811ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:18:17 /home/mikeqoo123/DumDum/main.go:465
+[4.929ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:18:22 /home/mikeqoo123/DumDum/main.go:465
+[2.663ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:18:25 /home/mikeqoo123/DumDum/main.go:465
+[2.829ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:18:48 /home/mikeqoo123/DumDum/main.go:465
+[6.257ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:18:56 /home/mikeqoo123/DumDum/main.go:465
+[2.636ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:19:19 /home/mikeqoo123/DumDum/main.go:465
+[6.179ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:19:20 /home/mikeqoo123/DumDum/main.go:465
+[2.696ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:20:41 /home/mikeqoo123/DumDum/main.go:465
+[4.222ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:21:47 /home/mikeqoo123/DumDum/main.go:465
+[4.547ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:21:48 /home/mikeqoo123/DumDum/main.go:465
+[2.935ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:25:38 /home/mikeqoo123/DumDum/main.go:465
+[5.457ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:25:56 /home/mikeqoo123/DumDum/main.go:465
+[4.112ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:26:00 /home/mikeqoo123/DumDum/main.go:465
+[2.326ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:26:56 /home/mikeqoo123/DumDum/main.go:465
+[5.553ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:26:58 /home/mikeqoo123/DumDum/main.go:465
+[2.587ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:27:19 /home/mikeqoo123/DumDum/main.go:465
+[4.843ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:27:21 /home/mikeqoo123/DumDum/main.go:465
+[2.873ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:27:24 /home/mikeqoo123/DumDum/main.go:465
+[2.502ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:31:33 /home/mikeqoo123/DumDum/main.go:465
+[4.514ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:31:43 /home/mikeqoo123/DumDum/main.go:465
+[2.413ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:31:48 /home/mikeqoo123/DumDum/main.go:465
+[4.020ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:47:14 /home/mikeqoo123/DumDum/main.go:465
+[6.369ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:47:17 /home/mikeqoo123/DumDum/main.go:465
+[2.643ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:49:46 /home/mikeqoo123/DumDum/main.go:465
+[4.189ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:49:48 /home/mikeqoo123/DumDum/main.go:465
+[2.638ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:49:52 /home/mikeqoo123/DumDum/main.go:465
+[2.817ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:49:53 /home/mikeqoo123/DumDum/main.go:465
+[2.417ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:59:13 /home/mikeqoo123/DumDum/main.go:465
+[5.904ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:59:16 /home/mikeqoo123/DumDum/main.go:465
+[2.607ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:59:33 /home/mikeqoo123/DumDum/main.go:465
+[4.406ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 05:59:36 /home/mikeqoo123/DumDum/main.go:465
+[3.317ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:00:27 /home/mikeqoo123/DumDum/main.go:465
+[3.730ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:00:39 /home/mikeqoo123/DumDum/main.go:465
+[4.771ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:00:42 /home/mikeqoo123/DumDum/main.go:465
+[2.961ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:01:18 /home/mikeqoo123/DumDum/main.go:465
+[5.085ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:01:20 /home/mikeqoo123/DumDum/main.go:465
+[3.065ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:01:26 /home/mikeqoo123/DumDum/main.go:465
+[2.556ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:01:30 /home/mikeqoo123/DumDum/main.go:465
+[4.390ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:02:05 /home/mikeqoo123/DumDum/main.go:465
+[4.537ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:03:10 /home/mikeqoo123/DumDum/main.go:465
+[4.916ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:03:12 /home/mikeqoo123/DumDum/main.go:465
+[2.970ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:03:16 /home/mikeqoo123/DumDum/main.go:465
+[2.474ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:03:37 /home/mikeqoo123/DumDum/main.go:465
+[4.362ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:03:41 /home/mikeqoo123/DumDum/main.go:465
+[2.651ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:04:16 /home/mikeqoo123/DumDum/main.go:465
+[4.251ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:04:18 /home/mikeqoo123/DumDum/main.go:465
+[2.545ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:06:42 /home/mikeqoo123/DumDum/main.go:465
+[5.584ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:06:45 /home/mikeqoo123/DumDum/main.go:465
+[2.748ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:17:34 /home/mikeqoo123/DumDum/main.go:465
+[6.616ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:17:35 /home/mikeqoo123/DumDum/main.go:465
+[2.504ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:17:46 /home/mikeqoo123/DumDum/main.go:465
+[6.368ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:19:13 /home/mikeqoo123/DumDum/main.go:465
+[4.322ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:19:15 /home/mikeqoo123/DumDum/main.go:465
+[2.525ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:19:39 /home/mikeqoo123/DumDum/main.go:465
+[4.043ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:19:41 /home/mikeqoo123/DumDum/main.go:465
+[2.957ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:20:41 /home/mikeqoo123/DumDum/main.go:465
+[3.917ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:20:44 /home/mikeqoo123/DumDum/main.go:465
+[2.500ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:20:51 /home/mikeqoo123/DumDum/main.go:465
+[4.127ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:21:17 /home/mikeqoo123/DumDum/main.go:465
+[4.331ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:22:10 /home/mikeqoo123/DumDum/main.go:465
+[4.532ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:22:27 /home/mikeqoo123/DumDum/main.go:465
+[4.677ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:22:36 /home/mikeqoo123/DumDum/main.go:465
+[2.660ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:23:04 /home/mikeqoo123/DumDum/main.go:465
+[3.933ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:23:13 /home/mikeqoo123/DumDum/main.go:465
+[2.692ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:27:15 /home/mikeqoo123/DumDum/main.go:465
+[6.838ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:27:44 /home/mikeqoo123/DumDum/main.go:465
+[4.644ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:28:51 /home/mikeqoo123/DumDum/main.go:465
+[4.062ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:29:42 /home/mikeqoo123/DumDum/main.go:465
+[4.439ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:29:45 /home/mikeqoo123/DumDum/main.go:465
+[2.393ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:30:00 /home/mikeqoo123/DumDum/main.go:465
+[5.056ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:30:03 /home/mikeqoo123/DumDum/main.go:465
+[2.592ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:30:18 /home/mikeqoo123/DumDum/main.go:465
+[4.641ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:30:42 /home/mikeqoo123/DumDum/main.go:465
+[4.178ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:30:49 /home/mikeqoo123/DumDum/main.go:465
+[2.447ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:30:56 /home/mikeqoo123/DumDum/main.go:465
+[4.316ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:31:08 /home/mikeqoo123/DumDum/main.go:465
+[4.014ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:31:22 /home/mikeqoo123/DumDum/main.go:465
+[4.615ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:31:36 /home/mikeqoo123/DumDum/main.go:465
+[4.350ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:31:39 /home/mikeqoo123/DumDum/main.go:465
+[2.749ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:31:47 /home/mikeqoo123/DumDum/main.go:465
+[4.203ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:32:13 /home/mikeqoo123/DumDum/main.go:465
+[4.002ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:32:15 /home/mikeqoo123/DumDum/main.go:465
+[2.688ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:32:23 /home/mikeqoo123/DumDum/main.go:465
+[4.824ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:32:25 /home/mikeqoo123/DumDum/main.go:465
+[2.560ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:34:15 /home/mikeqoo123/DumDum/main.go:465
+[4.910ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:34:23 /home/mikeqoo123/DumDum/main.go:465
+[2.763ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:34:31 /home/mikeqoo123/DumDum/main.go:465
+[5.177ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:34:33 /home/mikeqoo123/DumDum/main.go:465
+[4.187ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:35:00 /home/mikeqoo123/DumDum/main.go:465
+[5.089ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:35:01 /home/mikeqoo123/DumDum/main.go:465
+[2.802ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:35:17 /home/mikeqoo123/DumDum/main.go:465
+[3.983ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:35:19 /home/mikeqoo123/DumDum/main.go:465
+[3.073ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:44:29 /home/mikeqoo123/DumDum/main.go:465
+[5.080ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:44:41 /home/mikeqoo123/DumDum/main.go:465
+[4.386ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:44:51 /home/mikeqoo123/DumDum/main.go:465
+[2.298ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:47:47 /home/mikeqoo123/DumDum/main.go:465
+[5.115ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:47:52 /home/mikeqoo123/DumDum/main.go:465
+[2.536ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:48:15 /home/mikeqoo123/DumDum/main.go:465
+[4.289ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:48:59 /home/mikeqoo123/DumDum/main.go:465
+[4.283ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:49:03 /home/mikeqoo123/DumDum/main.go:465
+[2.673ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:49:08 /home/mikeqoo123/DumDum/main.go:465
+[2.718ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:49:18 /home/mikeqoo123/DumDum/main.go:516
+[7.827ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 06:49:18 /home/mikeqoo123/DumDum/main.go:558
+[5.872ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/06/30 06:49:51 /home/mikeqoo123/DumDum/main.go:465
+[4.677ms] [rows:9] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:50:03 /home/mikeqoo123/DumDum/main.go:465
+[4.040ms] [rows:9] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:50:10 /home/mikeqoo123/DumDum/main.go:516
+[3.380ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 06:50:10 /home/mikeqoo123/DumDum/main.go:558
+[7.933ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/06/30 06:50:11 /home/mikeqoo123/DumDum/main.go:465
+[2.564ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:52:24 /home/mikeqoo123/DumDum/main.go:465
+[5.127ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:52:33 /home/mikeqoo123/DumDum/main.go:465
+[3.478ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:52:50 /home/mikeqoo123/DumDum/main.go:516
+[5.691ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 06:52:57 /home/mikeqoo123/DumDum/main.go:516
+[3.042ms] [rows:1] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 06:53:03 /home/mikeqoo123/DumDum/main.go:516
+[4.570ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/06/30 06:54:38 /home/mikeqoo123/DumDum/main.go:465
+[3.943ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 06:55:02 /home/mikeqoo123/DumDum/main.go:465
+[5.174ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:07:43 /home/mikeqoo123/DumDum/main.go:465
+[5.849ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:07:48 /home/mikeqoo123/DumDum/main.go:465
+[2.795ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:10:01 /home/mikeqoo123/DumDum/main.go:465
+[6.325ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:10:05 /home/mikeqoo123/DumDum/main.go:465
+[2.730ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:10:37 /home/mikeqoo123/DumDum/main.go:465
+[4.020ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:12:09 /home/mikeqoo123/DumDum/main.go:465
+[3.998ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:12:12 /home/mikeqoo123/DumDum/main.go:465
+[2.551ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:13:32 /home/mikeqoo123/DumDum/main.go:465
+[4.298ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:13:39 /home/mikeqoo123/DumDum/main.go:465
+[2.496ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:15:58 /home/mikeqoo123/DumDum/main.go:465
+[3.856ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:16:01 /home/mikeqoo123/DumDum/main.go:465
+[2.478ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:16:36 /home/mikeqoo123/DumDum/main.go:465
+[4.147ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:16:39 /home/mikeqoo123/DumDum/main.go:465
+[2.929ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:16:55 /home/mikeqoo123/DumDum/main.go:465
+[4.277ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:16:57 /home/mikeqoo123/DumDum/main.go:465
+[2.659ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:17:11 /home/mikeqoo123/DumDum/main.go:465
+[4.833ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:17:33 /home/mikeqoo123/DumDum/main.go:465
+[4.792ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:17:50 /home/mikeqoo123/DumDum/main.go:465
+[4.149ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:17:55 /home/mikeqoo123/DumDum/main.go:465
+[2.741ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:17:56 /home/mikeqoo123/DumDum/main.go:465
+[2.815ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:18:18 /home/mikeqoo123/DumDum/main.go:465
+[4.429ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:18:30 /home/mikeqoo123/DumDum/main.go:465
+[4.489ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:18:31 /home/mikeqoo123/DumDum/main.go:465
+[3.223ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:18:35 /home/mikeqoo123/DumDum/main.go:465
+[2.658ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:18:37 /home/mikeqoo123/DumDum/main.go:465
+[3.396ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:24:32 /home/mikeqoo123/DumDum/main.go:465
+[4.477ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:24:38 /home/mikeqoo123/DumDum/main.go:465
+[2.606ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:25:46 /home/mikeqoo123/DumDum/main.go:465
+[4.238ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:25:48 /home/mikeqoo123/DumDum/main.go:465
+[2.576ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:28:23 /home/mikeqoo123/DumDum/main.go:465
+[5.710ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:28:26 /home/mikeqoo123/DumDum/main.go:465
+[2.508ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:28:59 /home/mikeqoo123/DumDum/main.go:465
+[4.416ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:29:01 /home/mikeqoo123/DumDum/main.go:465
+[3.246ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:29:09 /home/mikeqoo123/DumDum/main.go:465
+[2.803ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:29:11 /home/mikeqoo123/DumDum/main.go:465
+[4.045ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:29:55 /home/mikeqoo123/DumDum/main.go:465
+[4.491ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:36:24 /home/mikeqoo123/DumDum/main.go:465
+[4.370ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:36:27 /home/mikeqoo123/DumDum/main.go:465
+[4.553ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:36:49 /home/mikeqoo123/DumDum/main.go:465
+[5.241ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:36:59 /home/mikeqoo123/DumDum/main.go:465
+[4.813ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:37:04 /home/mikeqoo123/DumDum/main.go:465
+[2.461ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:38:27 /home/mikeqoo123/DumDum/main.go:465
+[6.870ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:38:50 /home/mikeqoo123/DumDum/main.go:465
+[4.228ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:38:57 /home/mikeqoo123/DumDum/main.go:465
+[2.495ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:38:58 /home/mikeqoo123/DumDum/main.go:465
+[2.889ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:40:46 /home/mikeqoo123/DumDum/main.go:465
+[4.733ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:41:03 /home/mikeqoo123/DumDum/main.go:465
+[8.638ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:41:06 /home/mikeqoo123/DumDum/main.go:465
+[2.601ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:41:19 /home/mikeqoo123/DumDum/main.go:465
+[4.706ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:41:21 /home/mikeqoo123/DumDum/main.go:465
+[3.440ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:42:16 /home/mikeqoo123/DumDum/main.go:465
+[4.263ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:42:19 /home/mikeqoo123/DumDum/main.go:465
+[3.137ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:42:27 /home/mikeqoo123/DumDum/main.go:465
+[4.379ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:42:31 /home/mikeqoo123/DumDum/main.go:465
+[3.639ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:43:10 /home/mikeqoo123/DumDum/main.go:465
+[4.764ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:43:16 /home/mikeqoo123/DumDum/main.go:465
+[2.683ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:43:26 /home/mikeqoo123/DumDum/main.go:465
+[5.496ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:43:28 /home/mikeqoo123/DumDum/main.go:465
+[3.433ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:43:38 /home/mikeqoo123/DumDum/main.go:465
+[6.842ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:43:40 /home/mikeqoo123/DumDum/main.go:465
+[2.593ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:43:49 /home/mikeqoo123/DumDum/main.go:465
+[4.958ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:43:51 /home/mikeqoo123/DumDum/main.go:465
+[2.922ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:44:23 /home/mikeqoo123/DumDum/main.go:465
+[4.062ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:44:28 /home/mikeqoo123/DumDum/main.go:465
+[3.580ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:44:35 /home/mikeqoo123/DumDum/main.go:465
+[3.862ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:44:37 /home/mikeqoo123/DumDum/main.go:465
+[2.529ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:45:04 /home/mikeqoo123/DumDum/main.go:465
+[4.984ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:45:07 /home/mikeqoo123/DumDum/main.go:465
+[3.378ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:46:40 /home/mikeqoo123/DumDum/main.go:465
+[5.221ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:46:43 /home/mikeqoo123/DumDum/main.go:465
+[2.572ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:46:45 /home/mikeqoo123/DumDum/main.go:465
+[2.874ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:47:02 /home/mikeqoo123/DumDum/main.go:465
+[5.553ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:47:02 /home/mikeqoo123/DumDum/main.go:465
+[2.542ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:13 /home/mikeqoo123/DumDum/main.go:465
+[5.067ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:16 /home/mikeqoo123/DumDum/main.go:465
+[2.718ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:23 /home/mikeqoo123/DumDum/main.go:465
+[5.927ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:28 /home/mikeqoo123/DumDum/main.go:465
+[5.855ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:29 /home/mikeqoo123/DumDum/main.go:465
+[2.702ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:32 /home/mikeqoo123/DumDum/main.go:465
+[2.519ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:34 /home/mikeqoo123/DumDum/main.go:465
+[6.633ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:41 /home/mikeqoo123/DumDum/main.go:465
+[2.585ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:43 /home/mikeqoo123/DumDum/main.go:465
+[2.575ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:49:58 /home/mikeqoo123/DumDum/main.go:465
+[4.581ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:50:00 /home/mikeqoo123/DumDum/main.go:465
+[2.745ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:50:02 /home/mikeqoo123/DumDum/main.go:465
+[2.567ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:50:17 /home/mikeqoo123/DumDum/main.go:465
+[3.895ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:51:04 /home/mikeqoo123/DumDum/main.go:465
+[5.735ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:51:07 /home/mikeqoo123/DumDum/main.go:465
+[2.995ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:51:08 /home/mikeqoo123/DumDum/main.go:465
+[2.471ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:51:24 /home/mikeqoo123/DumDum/main.go:465
+[5.090ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:51:26 /home/mikeqoo123/DumDum/main.go:465
+[3.023ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:51:28 /home/mikeqoo123/DumDum/main.go:465
+[2.506ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:51:38 /home/mikeqoo123/DumDum/main.go:465
+[4.166ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:52:40 /home/mikeqoo123/DumDum/main.go:465
+[4.580ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:52:42 /home/mikeqoo123/DumDum/main.go:465
+[3.090ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:52:55 /home/mikeqoo123/DumDum/main.go:465
+[6.121ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:52:58 /home/mikeqoo123/DumDum/main.go:465
+[3.327ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:53:04 /home/mikeqoo123/DumDum/main.go:465
+[2.756ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:53:05 /home/mikeqoo123/DumDum/main.go:465
+[6.762ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:53:06 /home/mikeqoo123/DumDum/main.go:465
+[2.517ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:54:39 /home/mikeqoo123/DumDum/main.go:465
+[4.987ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:57:29 /home/mikeqoo123/DumDum/main.go:465
+[5.501ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:57:34 /home/mikeqoo123/DumDum/main.go:465
+[3.208ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:57:37 /home/mikeqoo123/DumDum/main.go:465
+[2.515ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:57:39 /home/mikeqoo123/DumDum/main.go:465
+[4.022ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:58:19 /home/mikeqoo123/DumDum/main.go:465
+[6.218ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 07:59:27 /home/mikeqoo123/DumDum/main.go:465
+[6.670ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:00:56 /home/mikeqoo123/DumDum/main.go:465
+[4.312ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:03:18 /home/mikeqoo123/DumDum/main.go:465
+[4.516ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:03:29 /home/mikeqoo123/DumDum/main.go:465
+[4.430ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:03:41 /home/mikeqoo123/DumDum/main.go:465
+[3.704ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:03:45 /home/mikeqoo123/DumDum/main.go:465
+[4.085ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:04:19 /home/mikeqoo123/DumDum/main.go:465
+[4.851ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:06:20 /home/mikeqoo123/DumDum/main.go:465
+[4.964ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:06:32 /home/mikeqoo123/DumDum/main.go:465
+[4.132ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:08:03 /home/mikeqoo123/DumDum/main.go:465
+[5.719ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:08:17 /home/mikeqoo123/DumDum/main.go:465
+[4.269ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:08:20 /home/mikeqoo123/DumDum/main.go:465
+[2.843ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:09:34 /home/mikeqoo123/DumDum/main.go:465
+[6.643ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:09:42 /home/mikeqoo123/DumDum/main.go:465
+[2.650ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:10:00 /home/mikeqoo123/DumDum/main.go:465
+[4.526ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:10:03 /home/mikeqoo123/DumDum/main.go:465
+[3.146ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:10:18 /home/mikeqoo123/DumDum/main.go:465
+[4.317ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:18:03 /home/mikeqoo123/DumDum/main.go:465
+[5.019ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:19:15 /home/mikeqoo123/DumDum/main.go:465
+[4.917ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:19:22 /home/mikeqoo123/DumDum/main.go:465
+[2.539ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:19:37 /home/mikeqoo123/DumDum/main.go:465
+[5.158ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:22:04 /home/mikeqoo123/DumDum/main.go:465
+[4.481ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:25:16 /home/mikeqoo123/DumDum/main.go:465
+[4.582ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:32:09 /home/mikeqoo123/DumDum/main.go:465
+[6.657ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:32:10 /home/mikeqoo123/DumDum/main.go:465
+[2.676ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:32:20 /home/mikeqoo123/DumDum/main.go:465
+[4.724ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:32:31 /home/mikeqoo123/DumDum/main.go:465
+[4.480ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:32:36 /home/mikeqoo123/DumDum/main.go:465
+[2.898ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:32:41 /home/mikeqoo123/DumDum/main.go:465
+[4.841ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:33:01 /home/mikeqoo123/DumDum/main.go:465
+[6.888ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:33:17 /home/mikeqoo123/DumDum/main.go:465
+[5.156ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:36:12 /home/mikeqoo123/DumDum/main.go:465
+[3.826ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:37:07 /home/mikeqoo123/DumDum/main.go:465
+[4.425ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:38:04 /home/mikeqoo123/DumDum/main.go:465
+[4.898ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:38:27 /home/mikeqoo123/DumDum/main.go:465
+[4.284ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:39:18 /home/mikeqoo123/DumDum/main.go:465
+[5.540ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:39:30 /home/mikeqoo123/DumDum/main.go:465
+[4.453ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:39:50 /home/mikeqoo123/DumDum/main.go:465
+[4.745ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:39:50 /home/mikeqoo123/DumDum/main.go:465
+[2.631ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:39:51 /home/mikeqoo123/DumDum/main.go:465
+[2.325ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:40:01 /home/mikeqoo123/DumDum/main.go:465
+[5.323ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:40:17 /home/mikeqoo123/DumDum/main.go:465
+[4.953ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:42:47 /home/mikeqoo123/DumDum/main.go:465
+[4.151ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:43:02 /home/mikeqoo123/DumDum/main.go:465
+[4.907ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:43:50 /home/mikeqoo123/DumDum/main.go:465
+[4.611ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:44:25 /home/mikeqoo123/DumDum/main.go:465
+[4.862ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:44:49 /home/mikeqoo123/DumDum/main.go:465
+[4.371ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:45:39 /home/mikeqoo123/DumDum/main.go:465
+[4.502ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:45:44 /home/mikeqoo123/DumDum/main.go:465
+[3.130ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:45:52 /home/mikeqoo123/DumDum/main.go:465
+[4.144ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:46:25 /home/mikeqoo123/DumDum/main.go:465
+[4.492ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:48:04 /home/mikeqoo123/DumDum/main.go:465
+[6.705ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 08:48:14 /home/mikeqoo123/DumDum/main.go:465
+[2.326ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:10:47 /home/mikeqoo123/DumDum/main.go:465
+[4.904ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:10:47 /home/mikeqoo123/DumDum/main.go:465
+[2.763ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:11:30 /home/mikeqoo123/DumDum/main.go:465
+[4.614ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:11:44 /home/mikeqoo123/DumDum/main.go:465
+[4.403ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:12:29 /home/mikeqoo123/DumDum/main.go:465
+[5.493ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:13:32 /home/mikeqoo123/DumDum/main.go:465
+[4.823ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:13:38 /home/mikeqoo123/DumDum/main.go:465
+[2.477ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:13:55 /home/mikeqoo123/DumDum/main.go:465
+[4.923ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:14:04 /home/mikeqoo123/DumDum/main.go:465
+[2.590ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:14:41 /home/mikeqoo123/DumDum/main.go:465
+[4.153ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:14:48 /home/mikeqoo123/DumDum/main.go:465
+[2.531ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:15:57 /home/mikeqoo123/DumDum/main.go:465
+[4.574ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:16:00 /home/mikeqoo123/DumDum/main.go:465
+[2.509ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:16:12 /home/mikeqoo123/DumDum/main.go:465
+[4.448ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:16:30 /home/mikeqoo123/DumDum/main.go:465
+[4.336ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:16:34 /home/mikeqoo123/DumDum/main.go:465
+[2.632ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:16:43 /home/mikeqoo123/DumDum/main.go:465
+[4.051ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:16:52 /home/mikeqoo123/DumDum/main.go:465
+[2.891ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:16:54 /home/mikeqoo123/DumDum/main.go:465
+[4.157ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:17:27 /home/mikeqoo123/DumDum/main.go:465
+[5.016ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:17:37 /home/mikeqoo123/DumDum/main.go:465
+[4.937ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:18:06 /home/mikeqoo123/DumDum/main.go:465
+[4.013ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:18:08 /home/mikeqoo123/DumDum/main.go:465
+[2.497ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:20:55 /home/mikeqoo123/DumDum/main.go:465
+[4.506ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:21:01 /home/mikeqoo123/DumDum/main.go:465
+[3.070ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:27:51 /home/mikeqoo123/DumDum/main.go:465
+[5.011ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:28:02 /home/mikeqoo123/DumDum/main.go:465
+[4.300ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:28:35 /home/mikeqoo123/DumDum/main.go:465
+[4.444ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:28:38 /home/mikeqoo123/DumDum/main.go:465
+[2.701ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:28:55 /home/mikeqoo123/DumDum/main.go:465
+[5.214ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:29:13 /home/mikeqoo123/DumDum/main.go:465
+[5.331ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:29:36 /home/mikeqoo123/DumDum/main.go:465
+[4.598ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:29:40 /home/mikeqoo123/DumDum/main.go:465
+[3.710ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:39:36 /home/mikeqoo123/DumDum/main.go:465
+[5.574ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:40:02 /home/mikeqoo123/DumDum/main.go:465
+[4.235ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:40:31 /home/mikeqoo123/DumDum/main.go:465
+[4.016ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:41:03 /home/mikeqoo123/DumDum/main.go:465
+[4.557ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:41:12 /home/mikeqoo123/DumDum/main.go:465
+[2.811ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:44:44 /home/mikeqoo123/DumDum/main.go:465
+[4.872ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:44:46 /home/mikeqoo123/DumDum/main.go:465
+[3.549ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:45:36 /home/mikeqoo123/DumDum/main.go:465
+[4.171ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:45:51 /home/mikeqoo123/DumDum/main.go:465
+[3.993ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:47:51 /home/mikeqoo123/DumDum/main.go:465
+[4.950ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:47:58 /home/mikeqoo123/DumDum/main.go:465
+[2.877ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:48:06 /home/mikeqoo123/DumDum/main.go:465
+[4.779ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:48:31 /home/mikeqoo123/DumDum/main.go:465
+[4.068ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:48:36 /home/mikeqoo123/DumDum/main.go:465
+[2.451ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/06/30 09:48:45 /home/mikeqoo123/DumDum/main.go:465
+[6.852ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 01:21:10 /home/mikeqoo123/DumDum/main.go:465
+[104.137ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 01:21:35 /home/mikeqoo123/DumDum/main.go:516
+[34.931ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/03 01:21:42 /home/mikeqoo123/DumDum/main.go:516
+[4.276ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/03 01:21:42 /home/mikeqoo123/DumDum/main.go:558
+[25.532ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/07/03 01:21:43 /home/mikeqoo123/DumDum/main.go:465
+[3.156ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 01:22:01 /home/mikeqoo123/DumDum/main.go:465
+[7.542ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 01:23:03 /home/mikeqoo123/DumDum/main.go:465
+[6.025ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 01:26:07 /home/mikeqoo123/DumDum/main.go:465
+[6.483ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 01:29:57 /home/mikeqoo123/DumDum/main.go:465
+[7.141ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 01:30:00 /home/mikeqoo123/DumDum/main.go:465
+[3.506ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 02:55:55 /home/mikeqoo123/DumDum/lib/nici/nici.go:103
+[9.359ms] [rows:145] SELECT * FROM `nici` ORDER BY series desc
+
+2023/07/03 02:56:11 /home/mikeqoo123/DumDum/lib/nici/nici.go:133
+[4.995ms] [rows:3] SELECT * FROM `nici` WHERE starsign = ? AND blood = ?
+
+2023/07/03 03:12:13 /home/mikeqoo123/DumDum/main.go:465
+[7.015ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 03:12:31 /home/mikeqoo123/DumDum/main.go:465
+[4.803ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 05:17:16 /home/mikeqoo123/DumDum/main.go:465
+[9.899ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/03 05:18:21 /home/mikeqoo123/DumDum/main.go:465
+[4.401ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 01:17:51 /home/mikeqoo123/DumDum/main.go:465
+[67.697ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 08:00:59 /home/mikeqoo123/DumDum/main.go:465
+[70.472ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 08:54:08 /home/mikeqoo123/DumDum/main.go:465
+[5.491ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 08:54:08 /home/mikeqoo123/DumDum/main.go:465
+[2.405ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 08:54:16 /home/mikeqoo123/DumDum/main.go:465
+[2.555ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 08:55:20 /home/mikeqoo123/DumDum/main.go:465
+[4.366ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 08:55:35 /home/mikeqoo123/DumDum/main.go:465
+[4.706ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:00:27 /home/mikeqoo123/DumDum/main.go:465
+[5.324ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:01:01 /home/mikeqoo123/DumDum/main.go:465
+[5.598ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:01:48 /home/mikeqoo123/DumDum/main.go:465
+[5.206ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:15:08 /home/mikeqoo123/DumDum/main.go:465
+[4.573ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:15:20 /home/mikeqoo123/DumDum/main.go:465
+[4.783ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:15:20 /home/mikeqoo123/DumDum/main.go:465
+[2.688ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:15:30 /home/mikeqoo123/DumDum/main.go:465
+[4.908ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:16:16 /home/mikeqoo123/DumDum/main.go:465
+[4.392ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:16:16 /home/mikeqoo123/DumDum/main.go:465
+[2.559ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:17:30 /home/mikeqoo123/DumDum/main.go:465
+[5.194ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:17:42 /home/mikeqoo123/DumDum/main.go:465
+[7.945ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:17:42 /home/mikeqoo123/DumDum/main.go:465
+[2.773ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:17:58 /home/mikeqoo123/DumDum/main.go:465
+[4.547ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:29:36 /home/mikeqoo123/DumDum/main.go:465
+[6.172ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:29:36 /home/mikeqoo123/DumDum/main.go:465
+[2.768ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:29:37 /home/mikeqoo123/DumDum/main.go:465
+[3.613ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:31:07 /home/mikeqoo123/DumDum/main.go:465
+[4.533ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:31:08 /home/mikeqoo123/DumDum/main.go:465
+[2.480ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:31:11 /home/mikeqoo123/DumDum/main.go:465
+[2.643ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:31:23 /home/mikeqoo123/DumDum/main.go:465
+[4.436ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:31:24 /home/mikeqoo123/DumDum/main.go:465
+[2.882ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:31:25 /home/mikeqoo123/DumDum/main.go:465
+[2.426ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:32:59 /home/mikeqoo123/DumDum/main.go:465
+[4.560ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:39:33 /home/mikeqoo123/DumDum/main.go:465
+[6.840ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:40:04 /home/mikeqoo123/DumDum/main.go:465
+[4.816ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:40:35 /home/mikeqoo123/DumDum/main.go:465
+[5.442ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:42:01 /home/mikeqoo123/DumDum/main.go:465
+[4.353ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:42:07 /home/mikeqoo123/DumDum/main.go:465
+[2.328ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:44:22 /home/mikeqoo123/DumDum/main.go:465
+[4.745ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:44:26 /home/mikeqoo123/DumDum/main.go:465
+[2.513ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:45:04 /home/mikeqoo123/DumDum/main.go:465
+[5.769ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:46:16 /home/mikeqoo123/DumDum/main.go:465
+[4.615ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:46:20 /home/mikeqoo123/DumDum/main.go:465
+[2.586ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:46:49 /home/mikeqoo123/DumDum/main.go:465
+[4.168ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:46:52 /home/mikeqoo123/DumDum/main.go:465
+[2.595ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:47:03 /home/mikeqoo123/DumDum/main.go:465
+[4.863ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:47:08 /home/mikeqoo123/DumDum/main.go:465
+[2.480ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:47:10 /home/mikeqoo123/DumDum/main.go:465
+[2.798ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:47:15 /home/mikeqoo123/DumDum/main.go:465
+[3.766ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:47:17 /home/mikeqoo123/DumDum/main.go:465
+[2.453ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:47:20 /home/mikeqoo123/DumDum/main.go:465
+[2.843ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:48:02 /home/mikeqoo123/DumDum/main.go:465
+[4.650ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:48:05 /home/mikeqoo123/DumDum/main.go:465
+[2.684ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:48:09 /home/mikeqoo123/DumDum/main.go:465
+[2.651ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:48:59 /home/mikeqoo123/DumDum/main.go:465
+[4.661ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:49:07 /home/mikeqoo123/DumDum/main.go:465
+[2.547ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:49:21 /home/mikeqoo123/DumDum/main.go:465
+[4.130ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:50:50 /home/mikeqoo123/DumDum/main.go:465
+[4.715ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:51:21 /home/mikeqoo123/DumDum/main.go:465
+[4.128ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:51:22 /home/mikeqoo123/DumDum/main.go:465
+[2.487ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:51:30 /home/mikeqoo123/DumDum/main.go:465
+[2.829ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:57:32 /home/mikeqoo123/DumDum/main.go:465
+[5.122ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:57:36 /home/mikeqoo123/DumDum/main.go:465
+[3.564ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:57:37 /home/mikeqoo123/DumDum/main.go:465
+[2.571ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 09:57:43 /home/mikeqoo123/DumDum/main.go:465
+[4.201ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 13:55:06 /home/mikeqoo123/DumDum/main.go:465
+[6.929ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:41:55 /home/mikeqoo123/DumDum/main.go:465
+[6.229ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:41:57 /home/mikeqoo123/DumDum/main.go:465
+[2.525ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:44:35 /home/mikeqoo123/DumDum/main.go:465
+[4.482ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:44:40 /home/mikeqoo123/DumDum/main.go:465
+[2.722ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:44:58 /home/mikeqoo123/DumDum/main.go:465
+[4.272ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:45:07 /home/mikeqoo123/DumDum/main.go:465
+[2.734ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:45:23 /home/mikeqoo123/DumDum/main.go:465
+[5.384ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:45:24 /home/mikeqoo123/DumDum/main.go:465
+[3.015ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:45:38 /home/mikeqoo123/DumDum/main.go:465
+[3.962ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:46:19 /home/mikeqoo123/DumDum/main.go:465
+[4.666ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:46:32 /home/mikeqoo123/DumDum/main.go:465
+[4.363ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:46:35 /home/mikeqoo123/DumDum/main.go:465
+[2.691ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:47:06 /home/mikeqoo123/DumDum/main.go:465
+[4.461ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:47:07 /home/mikeqoo123/DumDum/main.go:465
+[2.525ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:47:22 /home/mikeqoo123/DumDum/main.go:465
+[5.077ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:47:24 /home/mikeqoo123/DumDum/main.go:465
+[2.570ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:47:34 /home/mikeqoo123/DumDum/main.go:465
+[4.909ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:47:51 /home/mikeqoo123/DumDum/main.go:465
+[3.800ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:47:53 /home/mikeqoo123/DumDum/main.go:465
+[2.764ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:48:29 /home/mikeqoo123/DumDum/main.go:465
+[4.572ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:48:33 /home/mikeqoo123/DumDum/main.go:465
+[2.673ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:48:37 /home/mikeqoo123/DumDum/main.go:465
+[2.806ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:48:38 /home/mikeqoo123/DumDum/main.go:465
+[2.475ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:48:46 /home/mikeqoo123/DumDum/main.go:465
+[4.596ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:49:36 /home/mikeqoo123/DumDum/main.go:465
+[4.000ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:49:42 /home/mikeqoo123/DumDum/main.go:465
+[2.609ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:51:00 /home/mikeqoo123/DumDum/main.go:465
+[4.813ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:51:24 /home/mikeqoo123/DumDum/main.go:465
+[5.003ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:51:26 /home/mikeqoo123/DumDum/main.go:465
+[2.773ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:51:40 /home/mikeqoo123/DumDum/main.go:465
+[4.601ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:51:42 /home/mikeqoo123/DumDum/main.go:465
+[2.653ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:52:28 /home/mikeqoo123/DumDum/main.go:465
+[3.938ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:52:31 /home/mikeqoo123/DumDum/main.go:465
+[3.176ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:52:35 /home/mikeqoo123/DumDum/main.go:465
+[2.705ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:52:54 /home/mikeqoo123/DumDum/main.go:465
+[4.758ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:52:56 /home/mikeqoo123/DumDum/main.go:465
+[2.733ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:52:58 /home/mikeqoo123/DumDum/main.go:465
+[2.309ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:57:28 /home/mikeqoo123/DumDum/main.go:465
+[5.125ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:57:51 /home/mikeqoo123/DumDum/main.go:465
+[3.969ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 14:57:53 /home/mikeqoo123/DumDum/main.go:465
+[2.774ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:01:52 /home/mikeqoo123/DumDum/main.go:465
+[5.083ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:01:58 /home/mikeqoo123/DumDum/main.go:465
+[2.743ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:02:45 /home/mikeqoo123/DumDum/main.go:465
+[4.193ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:02:49 /home/mikeqoo123/DumDum/main.go:465
+[2.616ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:03:08 /home/mikeqoo123/DumDum/main.go:465
+[4.093ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:03:12 /home/mikeqoo123/DumDum/main.go:465
+[3.355ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:03:13 /home/mikeqoo123/DumDum/main.go:465
+[2.838ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:03:29 /home/mikeqoo123/DumDum/main.go:465
+[4.361ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:03:48 /home/mikeqoo123/DumDum/main.go:465
+[4.069ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:03:59 /home/mikeqoo123/DumDum/main.go:465
+[4.204ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:04:11 /home/mikeqoo123/DumDum/main.go:465
+[4.904ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:04:32 /home/mikeqoo123/DumDum/main.go:465
+[4.647ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:04:39 /home/mikeqoo123/DumDum/main.go:465
+[2.907ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:04:51 /home/mikeqoo123/DumDum/main.go:465
+[4.271ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:05:08 /home/mikeqoo123/DumDum/main.go:465
+[4.178ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:05:49 /home/mikeqoo123/DumDum/main.go:465
+[4.729ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:06:30 /home/mikeqoo123/DumDum/main.go:465
+[4.811ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:06:39 /home/mikeqoo123/DumDum/main.go:465
+[2.722ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:06:50 /home/mikeqoo123/DumDum/main.go:465
+[4.176ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:07:04 /home/mikeqoo123/DumDum/main.go:465
+[4.418ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:10:35 /home/mikeqoo123/DumDum/main.go:465
+[4.879ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:10:39 /home/mikeqoo123/DumDum/main.go:465
+[2.522ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:10:42 /home/mikeqoo123/DumDum/main.go:465
+[2.752ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:11:33 /home/mikeqoo123/DumDum/main.go:465
+[4.342ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:11:48 /home/mikeqoo123/DumDum/main.go:465
+[4.727ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:12:04 /home/mikeqoo123/DumDum/main.go:465
+[5.820ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:12:07 /home/mikeqoo123/DumDum/main.go:465
+[2.528ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:12:32 /home/mikeqoo123/DumDum/main.go:465
+[4.576ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:12:37 /home/mikeqoo123/DumDum/main.go:465
+[2.559ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:12:56 /home/mikeqoo123/DumDum/main.go:465
+[4.395ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:13:55 /home/mikeqoo123/DumDum/main.go:465
+[4.728ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:14:19 /home/mikeqoo123/DumDum/main.go:465
+[3.992ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:14:45 /home/mikeqoo123/DumDum/main.go:465
+[4.537ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:15:12 /home/mikeqoo123/DumDum/main.go:465
+[4.218ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:15:35 /home/mikeqoo123/DumDum/main.go:465
+[4.538ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:15:37 /home/mikeqoo123/DumDum/main.go:465
+[2.377ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:15:47 /home/mikeqoo123/DumDum/main.go:465
+[4.115ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:15:54 /home/mikeqoo123/DumDum/main.go:465
+[3.430ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:17:04 /home/mikeqoo123/DumDum/main.go:465
+[4.108ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:18:13 /home/mikeqoo123/DumDum/main.go:465
+[4.920ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:18:33 /home/mikeqoo123/DumDum/main.go:465
+[4.307ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:18:35 /home/mikeqoo123/DumDum/main.go:465
+[2.998ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:18:52 /home/mikeqoo123/DumDum/main.go:465
+[4.117ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:20:32 /home/mikeqoo123/DumDum/main.go:465
+[4.409ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:20:40 /home/mikeqoo123/DumDum/main.go:465
+[2.609ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:21:13 /home/mikeqoo123/DumDum/main.go:465
+[5.922ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:21:26 /home/mikeqoo123/DumDum/main.go:465
+[3.971ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:21:55 /home/mikeqoo123/DumDum/main.go:465
+[4.472ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:22:17 /home/mikeqoo123/DumDum/main.go:465
+[4.188ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:22:57 /home/mikeqoo123/DumDum/main.go:465
+[4.439ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:23:23 /home/mikeqoo123/DumDum/main.go:465
+[6.258ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:23:50 /home/mikeqoo123/DumDum/main.go:465
+[4.192ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:25:49 /home/mikeqoo123/DumDum/main.go:465
+[4.103ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:25:56 /home/mikeqoo123/DumDum/main.go:465
+[2.483ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:26:23 /home/mikeqoo123/DumDum/main.go:465
+[4.387ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:26:25 /home/mikeqoo123/DumDum/main.go:465
+[4.003ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:27:46 /home/mikeqoo123/DumDum/main.go:465
+[5.227ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:27:57 /home/mikeqoo123/DumDum/main.go:465
+[4.336ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:30:16 /home/mikeqoo123/DumDum/main.go:465
+[4.200ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:32:23 /home/mikeqoo123/DumDum/main.go:465
+[4.419ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:32:52 /home/mikeqoo123/DumDum/main.go:465
+[5.138ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:43:18 /home/mikeqoo123/DumDum/main.go:465
+[5.041ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:45:18 /home/mikeqoo123/DumDum/main.go:465
+[4.154ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:45:19 /home/mikeqoo123/DumDum/main.go:465
+[2.502ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:46:03 /home/mikeqoo123/DumDum/main.go:465
+[4.069ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:49:17 /home/mikeqoo123/DumDum/main.go:465
+[4.231ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:49:27 /home/mikeqoo123/DumDum/main.go:465
+[2.587ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/04 15:50:16 /home/mikeqoo123/DumDum/main.go:465
+[4.247ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:15:48 /home/mikeqoo123/DumDum/main.go:465
+[5.502ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:15:48 /home/mikeqoo123/DumDum/main.go:465
+[2.859ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:17:22 /home/mikeqoo123/DumDum/main.go:465
+[4.014ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:17:30 /home/mikeqoo123/DumDum/main.go:465
+[2.696ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:19:25 /home/mikeqoo123/DumDum/main.go:465
+[4.564ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:19:46 /home/mikeqoo123/DumDum/main.go:465
+[3.937ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:19:50 /home/mikeqoo123/DumDum/main.go:465
+[2.916ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:19:58 /home/mikeqoo123/DumDum/main.go:465
+[4.670ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:20:23 /home/mikeqoo123/DumDum/main.go:465
+[4.603ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:20:52 /home/mikeqoo123/DumDum/main.go:465
+[4.900ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:21:09 /home/mikeqoo123/DumDum/main.go:465
+[4.091ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:22:06 /home/mikeqoo123/DumDum/main.go:465
+[4.575ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:23:31 /home/mikeqoo123/DumDum/main.go:465
+[7.079ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:24:34 /home/mikeqoo123/DumDum/main.go:465
+[4.472ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:25:34 /home/mikeqoo123/DumDum/main.go:465
+[4.003ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:26:00 /home/mikeqoo123/DumDum/main.go:465
+[4.193ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:26:31 /home/mikeqoo123/DumDum/main.go:465
+[4.568ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:30:21 /home/mikeqoo123/DumDum/main.go:465
+[4.764ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:31:27 /home/mikeqoo123/DumDum/main.go:465
+[4.378ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:38:15 /home/mikeqoo123/DumDum/main.go:465
+[5.186ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:38:22 /home/mikeqoo123/DumDum/main.go:465
+[2.609ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:38:34 /home/mikeqoo123/DumDum/main.go:465
+[3.924ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:39:07 /home/mikeqoo123/DumDum/main.go:465
+[6.340ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:41:28 /home/mikeqoo123/DumDum/main.go:465
+[4.652ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:41:32 /home/mikeqoo123/DumDum/main.go:465
+[2.618ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:42:34 /home/mikeqoo123/DumDum/main.go:465
+[4.301ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:42:41 /home/mikeqoo123/DumDum/main.go:465
+[2.584ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:46:14 /home/mikeqoo123/DumDum/main.go:465
+[5.855ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:46:31 /home/mikeqoo123/DumDum/main.go:465
+[5.921ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:46:45 /home/mikeqoo123/DumDum/main.go:465
+[4.743ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:46:52 /home/mikeqoo123/DumDum/main.go:465
+[2.835ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:47:09 /home/mikeqoo123/DumDum/main.go:465
+[4.271ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:47:37 /home/mikeqoo123/DumDum/main.go:465
+[6.296ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:48:49 /home/mikeqoo123/DumDum/main.go:465
+[5.663ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:49:24 /home/mikeqoo123/DumDum/main.go:465
+[4.332ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:49:53 /home/mikeqoo123/DumDum/main.go:465
+[4.306ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:51:07 /home/mikeqoo123/DumDum/main.go:465
+[4.792ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:51:09 /home/mikeqoo123/DumDum/main.go:465
+[2.816ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:56:08 /home/mikeqoo123/DumDum/main.go:465
+[4.630ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:56:27 /home/mikeqoo123/DumDum/main.go:465
+[4.809ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:56:35 /home/mikeqoo123/DumDum/main.go:465
+[2.765ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:56:51 /home/mikeqoo123/DumDum/main.go:465
+[5.373ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:59:42 /home/mikeqoo123/DumDum/main.go:465
+[7.970ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 01:59:45 /home/mikeqoo123/DumDum/main.go:465
+[2.356ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:11:00 /home/mikeqoo123/DumDum/main.go:465
+[5.567ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:12:06 /home/mikeqoo123/DumDum/main.go:465
+[4.284ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:12:07 /home/mikeqoo123/DumDum/main.go:465
+[2.771ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:12:38 /home/mikeqoo123/DumDum/main.go:465
+[4.245ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:13:15 /home/mikeqoo123/DumDum/main.go:465
+[4.207ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:13:16 /home/mikeqoo123/DumDum/main.go:465
+[2.698ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:13:26 /home/mikeqoo123/DumDum/main.go:465
+[4.344ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:13:28 /home/mikeqoo123/DumDum/main.go:465
+[2.597ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:13:57 /home/mikeqoo123/DumDum/main.go:465
+[4.714ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:14:04 /home/mikeqoo123/DumDum/main.go:465
+[3.160ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:14:13 /home/mikeqoo123/DumDum/main.go:465
+[4.933ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:14:46 /home/mikeqoo123/DumDum/main.go:465
+[4.411ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:17:01 /home/mikeqoo123/DumDum/main.go:465
+[3.997ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:17:19 /home/mikeqoo123/DumDum/main.go:465
+[6.095ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:17:43 /home/mikeqoo123/DumDum/main.go:465
+[3.968ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:17:55 /home/mikeqoo123/DumDum/main.go:465
+[4.515ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:18:15 /home/mikeqoo123/DumDum/main.go:465
+[5.110ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:20:33 /home/mikeqoo123/DumDum/main.go:465
+[4.456ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:20:37 /home/mikeqoo123/DumDum/main.go:653
+[25.294ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:20:38 /home/mikeqoo123/DumDum/main.go:465
+[2.756ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:21:08 /home/mikeqoo123/DumDum/main.go:465
+[5.769ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:21:32 /home/mikeqoo123/DumDum/main.go:465
+[4.550ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:21:37 /home/mikeqoo123/DumDum/main.go:465
+[3.036ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:21:43 /home/mikeqoo123/DumDum/main.go:653
+[9.382ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:21:43 /home/mikeqoo123/DumDum/main.go:465
+[2.668ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:23:16 /home/mikeqoo123/DumDum/main.go:653
+[8.269ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:23:31 /home/mikeqoo123/DumDum/main.go:465
+[4.407ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:23:35 /home/mikeqoo123/DumDum/main.go:465
+[2.669ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:23:44 /home/mikeqoo123/DumDum/main.go:465
+[4.644ms] [rows:11] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:23:54 /home/mikeqoo123/DumDum/main.go:653
+[7.726ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:25:01 /home/mikeqoo123/DumDum/main.go:653
+[12.685ms] [rows:1] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:25:05 /home/mikeqoo123/DumDum/main.go:465
+[2.597ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:25:20 /home/mikeqoo123/DumDum/main.go:465
+[4.171ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:28:54 /home/mikeqoo123/DumDum/main.go:465
+[5.529ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:28:56 /home/mikeqoo123/DumDum/main.go:465
+[3.243ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:29:06 /home/mikeqoo123/DumDum/main.go:465
+[5.612ms] [rows:10] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:29:11 /home/mikeqoo123/DumDum/main.go:653
+[6.069ms] [rows:1] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:29:12 /home/mikeqoo123/DumDum/main.go:465
+[2.696ms] [rows:9] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:29:17 /home/mikeqoo123/DumDum/main.go:465
+[4.142ms] [rows:9] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:29:23 /home/mikeqoo123/DumDum/main.go:653
+[6.751ms] [rows:1] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:29:24 /home/mikeqoo123/DumDum/main.go:465
+[2.736ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:29:46 /home/mikeqoo123/DumDum/main.go:465
+[4.630ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:29:52 /home/mikeqoo123/DumDum/main.go:465
+[2.578ms] [rows:8] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:29:55 /home/mikeqoo123/DumDum/main.go:653
+[6.153ms] [rows:1] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:29:56 /home/mikeqoo123/DumDum/main.go:465
+[4.330ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:31:04 /home/mikeqoo123/DumDum/main.go:465
+[4.227ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:31:15 /home/mikeqoo123/DumDum/main.go:653
+[7.593ms] [rows:1] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:31:15 /home/mikeqoo123/DumDum/main.go:465
+[2.462ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:31:39 /home/mikeqoo123/DumDum/main.go:465
+[4.963ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:31:46 /home/mikeqoo123/DumDum/main.go:465
+[2.500ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:31:55 /home/mikeqoo123/DumDum/main.go:653
+[7.363ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:31:56 /home/mikeqoo123/DumDum/main.go:465
+[2.550ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:32:27 /home/mikeqoo123/DumDum/main.go:465
+[4.373ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:32:32 /home/mikeqoo123/DumDum/main.go:653
+[6.549ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:32:33 /home/mikeqoo123/DumDum/main.go:465
+[2.395ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:32:53 /home/mikeqoo123/DumDum/main.go:465
+[4.419ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:32:59 /home/mikeqoo123/DumDum/main.go:653
+[7.582ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:33:00 /home/mikeqoo123/DumDum/main.go:465
+[2.744ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:33:07 /home/mikeqoo123/DumDum/main.go:465
+[4.156ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:33:10 /home/mikeqoo123/DumDum/main.go:653
+[5.682ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:33:11 /home/mikeqoo123/DumDum/main.go:465
+[2.645ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:33:24 /home/mikeqoo123/DumDum/main.go:465
+[4.356ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:33:25 /home/mikeqoo123/DumDum/main.go:465
+[2.550ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:33:28 /home/mikeqoo123/DumDum/main.go:653
+[6.073ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:33:29 /home/mikeqoo123/DumDum/main.go:465
+[2.573ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:45:18 /home/mikeqoo123/DumDum/main.go:465
+[5.489ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:45:22 /home/mikeqoo123/DumDum/main.go:465
+[2.931ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:45:29 /home/mikeqoo123/DumDum/main.go:465
+[8.690ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:06 /home/mikeqoo123/DumDum/main.go:465
+[4.002ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:09 /home/mikeqoo123/DumDum/main.go:465
+[2.678ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:13 /home/mikeqoo123/DumDum/main.go:465
+[2.502ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:17 /home/mikeqoo123/DumDum/main.go:653
+[6.844ms] [rows:0] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:46:17 /home/mikeqoo123/DumDum/main.go:465
+[2.581ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:25 /home/mikeqoo123/DumDum/main.go:465
+[2.461ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:34 /home/mikeqoo123/DumDum/main.go:465
+[4.713ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:37 /home/mikeqoo123/DumDum/main.go:465
+[2.691ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:42 /home/mikeqoo123/DumDum/main.go:653
+[6.300ms] [rows:1] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 02:46:42 /home/mikeqoo123/DumDum/main.go:465
+[2.530ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:46:57 /home/mikeqoo123/DumDum/main.go:465
+[4.444ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:47:23 /home/mikeqoo123/DumDum/main.go:465
+[4.406ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:47:27 /home/mikeqoo123/DumDum/main.go:465
+[2.460ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:47:50 /home/mikeqoo123/DumDum/main.go:465
+[3.969ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:48:03 /home/mikeqoo123/DumDum/main.go:465
+[4.331ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:48:11 /home/mikeqoo123/DumDum/main.go:465
+[2.601ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:50:07 /home/mikeqoo123/DumDum/main.go:465
+[4.141ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:50:49 /home/mikeqoo123/DumDum/main.go:465
+[4.013ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:54:27 /home/mikeqoo123/DumDum/main.go:465
+[5.832ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:59:14 /home/mikeqoo123/DumDum/main.go:465
+[4.555ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:59:25 /home/mikeqoo123/DumDum/main.go:465
+[4.444ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:59:42 /home/mikeqoo123/DumDum/main.go:465
+[5.131ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 02:59:49 /home/mikeqoo123/DumDum/main.go:465
+[2.719ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:06:24 /home/mikeqoo123/DumDum/main.go:465
+[5.216ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:07:04 /home/mikeqoo123/DumDum/main.go:465
+[3.948ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:07:42 /home/mikeqoo123/DumDum/main.go:465
+[4.514ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:08:02 /home/mikeqoo123/DumDum/main.go:465
+[5.430ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:08:14 /home/mikeqoo123/DumDum/main.go:465
+[4.131ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:08:17 /home/mikeqoo123/DumDum/main.go:465
+[2.860ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:09:37 /home/mikeqoo123/DumDum/main.go:465
+[4.697ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:09:40 /home/mikeqoo123/DumDum/main.go:465
+[2.422ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:09:43 /home/mikeqoo123/DumDum/main.go:465
+[4.375ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:10:08 /home/mikeqoo123/DumDum/main.go:465
+[4.107ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:15:28 /home/mikeqoo123/DumDum/main.go:465
+[5.399ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:16:10 /home/mikeqoo123/DumDum/main.go:465
+[5.020ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:18:59 /home/mikeqoo123/DumDum/main.go:465
+[4.641ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:19:50 /home/mikeqoo123/DumDum/main.go:465
+[5.017ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:20:27 /home/mikeqoo123/DumDum/main.go:465
+[4.993ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:21:02 /home/mikeqoo123/DumDum/main.go:465
+[4.951ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:21:04 /home/mikeqoo123/DumDum/main.go:465
+[2.443ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:21:08 /home/mikeqoo123/DumDum/main.go:465
+[2.934ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:21:15 /home/mikeqoo123/DumDum/main.go:465
+[4.163ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:21:20 /home/mikeqoo123/DumDum/main.go:465
+[2.959ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:21:41 /home/mikeqoo123/DumDum/main.go:465
+[5.208ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:21:44 /home/mikeqoo123/DumDum/main.go:465
+[2.839ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:21:54 /home/mikeqoo123/DumDum/main.go:465
+[5.192ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:22:56 /home/mikeqoo123/DumDum/main.go:465
+[4.950ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:23:18 /home/mikeqoo123/DumDum/main.go:465
+[3.718ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:24:14 /home/mikeqoo123/DumDum/main.go:465
+[4.398ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:25:17 /home/mikeqoo123/DumDum/main.go:465
+[4.627ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:25:32 /home/mikeqoo123/DumDum/main.go:465
+[7.191ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:25:35 /home/mikeqoo123/DumDum/main.go:465
+[2.711ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:26:03 /home/mikeqoo123/DumDum/main.go:465
+[4.328ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:26:25 /home/mikeqoo123/DumDum/main.go:465
+[4.705ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:26:26 /home/mikeqoo123/DumDum/main.go:465
+[2.638ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:27:09 /home/mikeqoo123/DumDum/main.go:653
+[8.253ms] [rows:1] DELETE FROM `products` WHERE `products`.`id` = ?
+
+2023/07/05 03:27:10 /home/mikeqoo123/DumDum/main.go:465
+[2.621ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:30:30 /home/mikeqoo123/DumDum/main.go:465
+[4.008ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:30:31 /home/mikeqoo123/DumDum/main.go:465
+[2.449ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:32:43 /home/mikeqoo123/DumDum/main.go:465
+[5.995ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:32:50 /home/mikeqoo123/DumDum/main.go:465
+[2.465ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:35:40 /home/mikeqoo123/DumDum/main.go:465
+[4.929ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 03:35:48 /home/mikeqoo123/DumDum/main.go:465
+[2.723ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 04:07:06 /home/mikeqoo123/DumDum/lib/nici/nici.go:103
+[14.297ms] [rows:145] SELECT * FROM `nici` ORDER BY series desc
+
+2023/07/05 05:16:01 /home/mikeqoo123/DumDum/main.go:465
+[5.384ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 05:17:03 /home/mikeqoo123/DumDum/main.go:465
+[4.478ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 05:18:54 /home/mikeqoo123/DumDum/main.go:465
+[4.735ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 07:58:26 /home/mikeqoo123/DumDum/main.go:465
+[6.867ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 07:59:11 /home/mikeqoo123/DumDum/main.go:465
+[4.680ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 07:59:13 /home/mikeqoo123/DumDum/main.go:465
+[2.556ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 07:59:53 /home/mikeqoo123/DumDum/main.go:465
+[5.369ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:00:02 /home/mikeqoo123/DumDum/main.go:465
+[2.592ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:00:25 /home/mikeqoo123/DumDum/main.go:465
+[7.822ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:01:35 /home/mikeqoo123/DumDum/main.go:465
+[4.220ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:03:55 /home/mikeqoo123/DumDum/main.go:465
+[4.621ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:03:59 /home/mikeqoo123/DumDum/main.go:465
+[2.809ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:07:43 /home/mikeqoo123/DumDum/main.go:465
+[4.701ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:07:57 /home/mikeqoo123/DumDum/main.go:465
+[4.091ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:10:10 /home/mikeqoo123/DumDum/main.go:465
+[4.528ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:10:12 /home/mikeqoo123/DumDum/main.go:465
+[2.727ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:10:15 /home/mikeqoo123/DumDum/main.go:465
+[4.966ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:11:42 /home/mikeqoo123/DumDum/main.go:465
+[4.436ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:13:13 /home/mikeqoo123/DumDum/main.go:465
+[4.450ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:13:15 /home/mikeqoo123/DumDum/main.go:465
+[2.463ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:14:28 /home/mikeqoo123/DumDum/main.go:465
+[4.162ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:14:31 /home/mikeqoo123/DumDum/main.go:465
+[2.531ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:14:46 /home/mikeqoo123/DumDum/main.go:465
+[4.311ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:15:02 /home/mikeqoo123/DumDum/main.go:465
+[4.402ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:15:07 /home/mikeqoo123/DumDum/main.go:465
+[2.496ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:16:03 /home/mikeqoo123/DumDum/main.go:465
+[4.270ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:16:05 /home/mikeqoo123/DumDum/main.go:465
+[2.739ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:16:12 /home/mikeqoo123/DumDum/main.go:465
+[2.549ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:16:14 /home/mikeqoo123/DumDum/main.go:465
+[4.510ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:16:41 /home/mikeqoo123/DumDum/main.go:465
+[4.108ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:16:50 /home/mikeqoo123/DumDum/main.go:465
+[2.773ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:16:52 /home/mikeqoo123/DumDum/main.go:465
+[4.173ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:17:04 /home/mikeqoo123/DumDum/main.go:465
+[3.969ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:18:14 /home/mikeqoo123/DumDum/main.go:465
+[4.932ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:18:17 /home/mikeqoo123/DumDum/main.go:465
+[3.663ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:19:21 /home/mikeqoo123/DumDum/main.go:465
+[4.805ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:19:38 /home/mikeqoo123/DumDum/main.go:465
+[4.110ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:19:50 /home/mikeqoo123/DumDum/main.go:465
+[4.304ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:19:53 /home/mikeqoo123/DumDum/main.go:465
+[2.783ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:20:33 /home/mikeqoo123/DumDum/main.go:465
+[4.284ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:20:37 /home/mikeqoo123/DumDum/main.go:465
+[2.616ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:20:47 /home/mikeqoo123/DumDum/main.go:465
+[4.489ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:20:53 /home/mikeqoo123/DumDum/main.go:465
+[2.457ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 08:34:14 /home/mikeqoo123/DumDum/main.go:465
+[5.325ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:04:49 /home/mikeqoo123/DumDum/main.go:465
+[5.587ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:19:17 /home/mikeqoo123/DumDum/main.go:465
+[5.193ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:20:11 /home/mikeqoo123/DumDum/main.go:465
+[5.103ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:20:39 /home/mikeqoo123/DumDum/main.go:465
+[4.336ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:20:56 /home/mikeqoo123/DumDum/main.go:465
+[3.774ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:20:57 /home/mikeqoo123/DumDum/main.go:465
+[2.581ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:24:12 /home/mikeqoo123/DumDum/main.go:465
+[4.557ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:29:31 /home/mikeqoo123/DumDum/main.go:465
+[5.078ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:31:32 /home/mikeqoo123/DumDum/main.go:465
+[4.788ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:58:02 /home/mikeqoo123/DumDum/main.go:465
+[4.694ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:58:21 /home/mikeqoo123/DumDum/main.go:465
+[6.423ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:59:20 /home/mikeqoo123/DumDum/main.go:465
+[4.523ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 09:59:28 /home/mikeqoo123/DumDum/main.go:465
+[2.576ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 10:00:06 /home/mikeqoo123/DumDum/main.go:465
+[6.351ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/05 10:02:08 /home/mikeqoo123/DumDum/main.go:465
+[4.598ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 01:34:31 /home/mikeqoo123/DumDum/main.go:465
+[10.540ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 01:34:31 /home/mikeqoo123/DumDum/main.go:465
+[2.410ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 01:55:57 /home/mikeqoo123/DumDum/main.go:465
+[4.894ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:00:33 /home/mikeqoo123/DumDum/main.go:465
+[3.861ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:01:38 /home/mikeqoo123/DumDum/main.go:465
+[4.661ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:02:02 /home/mikeqoo123/DumDum/main.go:465
+[4.324ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:02:15 /home/mikeqoo123/DumDum/main.go:465
+[3.964ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:02:41 /home/mikeqoo123/DumDum/main.go:465
+[4.376ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:04:15 /home/mikeqoo123/DumDum/main.go:465
+[4.283ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:04:18 /home/mikeqoo123/DumDum/main.go:465
+[2.526ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:04:38 /home/mikeqoo123/DumDum/main.go:465
+[4.676ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:05:17 /home/mikeqoo123/DumDum/main.go:465
+[3.810ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:05:24 /home/mikeqoo123/DumDum/main.go:465
+[2.631ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:05:43 /home/mikeqoo123/DumDum/main.go:465
+[4.145ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:06:07 /home/mikeqoo123/DumDum/main.go:465
+[4.368ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:06:43 /home/mikeqoo123/DumDum/main.go:465
+[4.106ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:06:59 /home/mikeqoo123/DumDum/main.go:465
+[4.295ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:07:03 /home/mikeqoo123/DumDum/main.go:465
+[2.579ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:07:07 /home/mikeqoo123/DumDum/main.go:465
+[2.376ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:07:34 /home/mikeqoo123/DumDum/main.go:465
+[3.820ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:07:39 /home/mikeqoo123/DumDum/main.go:465
+[2.538ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:07:42 /home/mikeqoo123/DumDum/main.go:465
+[2.394ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:07:44 /home/mikeqoo123/DumDum/main.go:465
+[2.882ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:08:11 /home/mikeqoo123/DumDum/main.go:465
+[4.016ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:08:21 /home/mikeqoo123/DumDum/main.go:465
+[4.472ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:08:25 /home/mikeqoo123/DumDum/main.go:465
+[2.659ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:09:25 /home/mikeqoo123/DumDum/main.go:465
+[4.683ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:09:42 /home/mikeqoo123/DumDum/main.go:465
+[3.708ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:09:46 /home/mikeqoo123/DumDum/main.go:465
+[2.808ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:09:56 /home/mikeqoo123/DumDum/main.go:465
+[4.605ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:11:38 /home/mikeqoo123/DumDum/main.go:465
+[4.251ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:12:27 /home/mikeqoo123/DumDum/main.go:465
+[5.647ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:14:03 /home/mikeqoo123/DumDum/main.go:465
+[4.865ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:14:35 /home/mikeqoo123/DumDum/main.go:465
+[4.566ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:15:06 /home/mikeqoo123/DumDum/main.go:465
+[4.012ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:15:10 /home/mikeqoo123/DumDum/main.go:465
+[2.567ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:15:14 /home/mikeqoo123/DumDum/main.go:465
+[2.488ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:16:15 /home/mikeqoo123/DumDum/main.go:465
+[4.105ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:28:30 /home/mikeqoo123/DumDum/main.go:465
+[4.904ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:28:30 /home/mikeqoo123/DumDum/main.go:465
+[2.877ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:29:11 /home/mikeqoo123/DumDum/main.go:465
+[5.027ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:29:15 /home/mikeqoo123/DumDum/main.go:465
+[2.676ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:29:42 /home/mikeqoo123/DumDum/main.go:465
+[4.100ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:30:24 /home/mikeqoo123/DumDum/main.go:465
+[4.421ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:30:31 /home/mikeqoo123/DumDum/main.go:465
+[2.429ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:30:45 /home/mikeqoo123/DumDum/main.go:465
+[4.510ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:30:55 /home/mikeqoo123/DumDum/main.go:465
+[2.487ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:31:51 /home/mikeqoo123/DumDum/main.go:465
+[3.817ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:32:47 /home/mikeqoo123/DumDum/main.go:465
+[4.800ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:38:21 /home/mikeqoo123/DumDum/main.go:465
+[6.816ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:39:30 /home/mikeqoo123/DumDum/main.go:465
+[4.127ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:42:26 /home/mikeqoo123/DumDum/main.go:465
+[4.378ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:42:29 /home/mikeqoo123/DumDum/main.go:465
+[2.790ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:42:31 /home/mikeqoo123/DumDum/main.go:465
+[2.608ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:42:55 /home/mikeqoo123/DumDum/main.go:465
+[6.026ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:43:25 /home/mikeqoo123/DumDum/main.go:465
+[4.896ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:50:14 /home/mikeqoo123/DumDum/main.go:465
+[5.460ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:50:35 /home/mikeqoo123/DumDum/main.go:465
+[4.842ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:51:03 /home/mikeqoo123/DumDum/main.go:465
+[5.996ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:51:19 /home/mikeqoo123/DumDum/main.go:465
+[4.468ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:51:49 /home/mikeqoo123/DumDum/main.go:465
+[4.362ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:52:20 /home/mikeqoo123/DumDum/main.go:465
+[5.153ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:54:19 /home/mikeqoo123/DumDum/main.go:465
+[4.810ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:57:04 /home/mikeqoo123/DumDum/main.go:465
+[4.371ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:58:48 /home/mikeqoo123/DumDum/main.go:465
+[7.959ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:58:52 /home/mikeqoo123/DumDum/main.go:465
+[3.430ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:59:05 /home/mikeqoo123/DumDum/main.go:465
+[6.134ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 02:59:31 /home/mikeqoo123/DumDum/main.go:465
+[4.853ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 03:35:37 /home/mikeqoo123/DumDum/main.go:465
+[8.462ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:21:27 /home/mikeqoo123/DumDum/main.go:465
+[6.996ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:22:07 /home/mikeqoo123/DumDum/main.go:465
+[5.922ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:22:08 /home/mikeqoo123/DumDum/main.go:465
+[2.470ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:23:14 /home/mikeqoo123/DumDum/main.go:465
+[5.561ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:24:16 /home/mikeqoo123/DumDum/main.go:465
+[6.238ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:25:52 /home/mikeqoo123/DumDum/main.go:465
+[4.700ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:28:01 /home/mikeqoo123/DumDum/main.go:465
+[5.205ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:29:05 /home/mikeqoo123/DumDum/main.go:465
+[4.658ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:30:09 /home/mikeqoo123/DumDum/main.go:465
+[5.767ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:31:35 /home/mikeqoo123/DumDum/main.go:465
+[5.422ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:31:45 /home/mikeqoo123/DumDum/main.go:465
+[3.749ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:32:57 /home/mikeqoo123/DumDum/main.go:465
+[5.816ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:33:10 /home/mikeqoo123/DumDum/main.go:465
+[4.366ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:34:08 /home/mikeqoo123/DumDum/main.go:465
+[5.279ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:34:14 /home/mikeqoo123/DumDum/main.go:465
+[3.395ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:34:22 /home/mikeqoo123/DumDum/main.go:465
+[6.331ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:34:44 /home/mikeqoo123/DumDum/main.go:465
+[4.555ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:37:59 /home/mikeqoo123/DumDum/main.go:465
+[5.811ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:38:28 /home/mikeqoo123/DumDum/main.go:465
+[4.550ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:38:32 /home/mikeqoo123/DumDum/main.go:465
+[2.461ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:41:29 /home/mikeqoo123/DumDum/main.go:465
+[5.964ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:41:29 /home/mikeqoo123/DumDum/main.go:465
+[2.430ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:41:30 /home/mikeqoo123/DumDum/main.go:465
+[2.922ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:41:33 /home/mikeqoo123/DumDum/main.go:465
+[3.317ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:41:40 /home/mikeqoo123/DumDum/main.go:465
+[4.754ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:41:42 /home/mikeqoo123/DumDum/main.go:465
+[2.436ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:42:05 /home/mikeqoo123/DumDum/main.go:465
+[7.127ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:46:37 /home/mikeqoo123/DumDum/main.go:465
+[4.448ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:46:40 /home/mikeqoo123/DumDum/main.go:465
+[2.791ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:46:54 /home/mikeqoo123/DumDum/main.go:465
+[4.300ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:47:40 /home/mikeqoo123/DumDum/main.go:465
+[5.649ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:47:57 /home/mikeqoo123/DumDum/main.go:465
+[4.313ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:48:42 /home/mikeqoo123/DumDum/main.go:465
+[5.664ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:49:13 /home/mikeqoo123/DumDum/main.go:465
+[5.823ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:49:29 /home/mikeqoo123/DumDum/main.go:465
+[5.068ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:49:39 /home/mikeqoo123/DumDum/main.go:465
+[3.967ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:49:40 /home/mikeqoo123/DumDum/main.go:465
+[6.596ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:49:57 /home/mikeqoo123/DumDum/main.go:465
+[4.499ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:50:05 /home/mikeqoo123/DumDum/main.go:465
+[4.040ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:50:09 /home/mikeqoo123/DumDum/main.go:465
+[6.659ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:51:05 /home/mikeqoo123/DumDum/main.go:465
+[6.941ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:51:32 /home/mikeqoo123/DumDum/main.go:465
+[5.911ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:51:42 /home/mikeqoo123/DumDum/main.go:465
+[2.430ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:51:49 /home/mikeqoo123/DumDum/main.go:465
+[5.889ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:51:53 /home/mikeqoo123/DumDum/main.go:465
+[5.410ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:52:46 /home/mikeqoo123/DumDum/main.go:465
+[5.979ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:53:38 /home/mikeqoo123/DumDum/main.go:465
+[4.529ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:53:44 /home/mikeqoo123/DumDum/main.go:465
+[3.611ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:57:45 /home/mikeqoo123/DumDum/main.go:465
+[5.661ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:57:47 /home/mikeqoo123/DumDum/main.go:465
+[3.615ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:58:30 /home/mikeqoo123/DumDum/main.go:465
+[4.922ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:58:35 /home/mikeqoo123/DumDum/main.go:465
+[2.598ms] [rows:4] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 05:58:57 /home/mikeqoo123/DumDum/main.go:516
+[37.354ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 05:58:57 /home/mikeqoo123/DumDum/main.go:558
+[29.273ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/07/06 05:58:58 /home/mikeqoo123/DumDum/main.go:465
+[3.596ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:03:21 /home/mikeqoo123/DumDum/main.go:465
+[5.463ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:03:35 /home/mikeqoo123/DumDum/main.go:465
+[4.554ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:03:59 /home/mikeqoo123/DumDum/main.go:465
+[4.956ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:04:43 /home/mikeqoo123/DumDum/main.go:465
+[5.405ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:05:44 /home/mikeqoo123/DumDum/main.go:465
+[4.998ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:06:02 /home/mikeqoo123/DumDum/main.go:465
+[5.880ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:06:27 /home/mikeqoo123/DumDum/main.go:465
+[5.676ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:06:42 /home/mikeqoo123/DumDum/main.go:465
+[4.584ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:07:00 /home/mikeqoo123/DumDum/main.go:465
+[5.570ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:08:13 /home/mikeqoo123/DumDum/main.go:465
+[6.616ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:08:43 /home/mikeqoo123/DumDum/main.go:465
+[6.263ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:08:45 /home/mikeqoo123/DumDum/main.go:465
+[2.552ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:09:05 /home/mikeqoo123/DumDum/main.go:465
+[4.247ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:09:08 /home/mikeqoo123/DumDum/main.go:465
+[2.857ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:09:13 /home/mikeqoo123/DumDum/main.go:465
+[3.430ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:10:23 /home/mikeqoo123/DumDum/main.go:465
+[6.493ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:10:26 /home/mikeqoo123/DumDum/main.go:465
+[3.045ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:10:36 /home/mikeqoo123/DumDum/main.go:465
+[4.634ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:10:39 /home/mikeqoo123/DumDum/main.go:465
+[3.514ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:11:02 /home/mikeqoo123/DumDum/main.go:465
+[5.253ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:11:28 /home/mikeqoo123/DumDum/main.go:465
+[4.918ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:20:24 /home/mikeqoo123/DumDum/main.go:465
+[6.799ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:21:32 /home/mikeqoo123/DumDum/main.go:465
+[5.460ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:21:40 /home/mikeqoo123/DumDum/main.go:465
+[3.419ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:21:47 /home/mikeqoo123/DumDum/main.go:465
+[4.108ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:24:49 /home/mikeqoo123/DumDum/main.go:465
+[4.722ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:25:19 /home/mikeqoo123/DumDum/main.go:465
+[5.449ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:26:02 /home/mikeqoo123/DumDum/main.go:465
+[5.919ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:26:22 /home/mikeqoo123/DumDum/main.go:465
+[4.392ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:27:30 /home/mikeqoo123/DumDum/main.go:465
+[5.557ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:27:39 /home/mikeqoo123/DumDum/main.go:465
+[2.966ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:27:41 /home/mikeqoo123/DumDum/main.go:465
+[4.601ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:27:43 /home/mikeqoo123/DumDum/main.go:465
+[2.736ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:27:46 /home/mikeqoo123/DumDum/main.go:465
+[2.422ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:28:16 /home/mikeqoo123/DumDum/main.go:465
+[3.969ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:28:31 /home/mikeqoo123/DumDum/main.go:465
+[6.439ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:28:33 /home/mikeqoo123/DumDum/main.go:465
+[3.116ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:28:38 /home/mikeqoo123/DumDum/main.go:465
+[2.652ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:29:37 /home/mikeqoo123/DumDum/main.go:465
+[4.614ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:30:00 /home/mikeqoo123/DumDum/main.go:465
+[6.613ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:45:51 /home/mikeqoo123/DumDum/main.go:465
+[5.657ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:46:58 /home/mikeqoo123/DumDum/main.go:465
+[4.723ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:47:10 /home/mikeqoo123/DumDum/main.go:465
+[12.203ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:47:18 /home/mikeqoo123/DumDum/main.go:465
+[3.286ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:48:11 /home/mikeqoo123/DumDum/main.go:465
+[4.669ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:48:13 /home/mikeqoo123/DumDum/main.go:465
+[2.699ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:48:22 /home/mikeqoo123/DumDum/main.go:465
+[5.460ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:49:18 /home/mikeqoo123/DumDum/main.go:465
+[4.832ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:49:29 /home/mikeqoo123/DumDum/main.go:465
+[4.891ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:49:32 /home/mikeqoo123/DumDum/main.go:465
+[3.075ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:49:41 /home/mikeqoo123/DumDum/main.go:465
+[6.406ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:52:17 /home/mikeqoo123/DumDum/main.go:465
+[4.543ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:52:19 /home/mikeqoo123/DumDum/main.go:465
+[3.330ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:52:31 /home/mikeqoo123/DumDum/main.go:465
+[5.445ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:52:34 /home/mikeqoo123/DumDum/main.go:465
+[3.943ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:52:43 /home/mikeqoo123/DumDum/main.go:465
+[5.133ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:52:57 /home/mikeqoo123/DumDum/main.go:465
+[7.316ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 06:53:16 /home/mikeqoo123/DumDum/main.go:465
+[6.479ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:03:34 /home/mikeqoo123/DumDum/main.go:465
+[6.988ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:03:49 /home/mikeqoo123/DumDum/main.go:465
+[5.036ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:03:57 /home/mikeqoo123/DumDum/main.go:465
+[3.872ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:04:13 /home/mikeqoo123/DumDum/main.go:465
+[7.040ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:04:38 /home/mikeqoo123/DumDum/main.go:465
+[6.781ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:06:23 /home/mikeqoo123/DumDum/main.go:465
+[7.101ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:06:26 /home/mikeqoo123/DumDum/main.go:465
+[4.420ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:06:29 /home/mikeqoo123/DumDum/main.go:465
+[3.806ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:06:33 /home/mikeqoo123/DumDum/main.go:465
+[4.298ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:06:42 /home/mikeqoo123/DumDum/main.go:465
+[5.436ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:06:45 /home/mikeqoo123/DumDum/main.go:465
+[3.294ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:06:47 /home/mikeqoo123/DumDum/main.go:465
+[2.631ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:07:33 /home/mikeqoo123/DumDum/main.go:465
+[6.515ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:08:45 /home/mikeqoo123/DumDum/main.go:465
+[4.113ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:08:57 /home/mikeqoo123/DumDum/main.go:465
+[4.628ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:09:39 /home/mikeqoo123/DumDum/main.go:465
+[4.739ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:10:39 /home/mikeqoo123/DumDum/main.go:465
+[6.474ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:11:01 /home/mikeqoo123/DumDum/main.go:465
+[19.450ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:11:44 /home/mikeqoo123/DumDum/main.go:465
+[4.656ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:11:54 /home/mikeqoo123/DumDum/main.go:465
+[3.771ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:11:58 /home/mikeqoo123/DumDum/main.go:465
+[4.346ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:11:59 /home/mikeqoo123/DumDum/main.go:465
+[4.080ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:12:07 /home/mikeqoo123/DumDum/main.go:465
+[2.630ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:12:11 /home/mikeqoo123/DumDum/main.go:465
+[4.973ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:12:33 /home/mikeqoo123/DumDum/main.go:465
+[6.172ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:12:54 /home/mikeqoo123/DumDum/main.go:465
+[4.274ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:12:58 /home/mikeqoo123/DumDum/main.go:465
+[3.288ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:13:13 /home/mikeqoo123/DumDum/main.go:465
+[4.536ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:14:12 /home/mikeqoo123/DumDum/main.go:465
+[5.616ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:14:28 /home/mikeqoo123/DumDum/main.go:465
+[4.456ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:14:32 /home/mikeqoo123/DumDum/main.go:465
+[4.891ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:14:37 /home/mikeqoo123/DumDum/main.go:465
+[3.648ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:14:56 /home/mikeqoo123/DumDum/main.go:465
+[4.473ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:14:58 /home/mikeqoo123/DumDum/main.go:465
+[2.760ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:15:00 /home/mikeqoo123/DumDum/main.go:465
+[3.335ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:18:45 /home/mikeqoo123/DumDum/main.go:465
+[4.469ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:18:56 /home/mikeqoo123/DumDum/main.go:465
+[5.118ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:19:14 /home/mikeqoo123/DumDum/main.go:465
+[5.900ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:19:19 /home/mikeqoo123/DumDum/main.go:465
+[3.359ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:19:59 /home/mikeqoo123/DumDum/main.go:465
+[4.157ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:20:09 /home/mikeqoo123/DumDum/main.go:465
+[2.414ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:21:05 /home/mikeqoo123/DumDum/main.go:465
+[13.518ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:21:30 /home/mikeqoo123/DumDum/main.go:465
+[3.901ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:21:52 /home/mikeqoo123/DumDum/main.go:465
+[4.259ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:22:25 /home/mikeqoo123/DumDum/main.go:465
+[5.402ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:27:50 /home/mikeqoo123/DumDum/main.go:465
+[4.129ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:30:10 /home/mikeqoo123/DumDum/main.go:465
+[3.764ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:30:13 /home/mikeqoo123/DumDum/main.go:465
+[2.321ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:30:22 /home/mikeqoo123/DumDum/main.go:465
+[3.990ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:30:55 /home/mikeqoo123/DumDum/main.go:465
+[4.581ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:31:15 /home/mikeqoo123/DumDum/main.go:465
+[4.469ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:31:30 /home/mikeqoo123/DumDum/main.go:465
+[4.177ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:31:47 /home/mikeqoo123/DumDum/main.go:465
+[3.749ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:31:56 /home/mikeqoo123/DumDum/main.go:465
+[2.551ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:32:01 /home/mikeqoo123/DumDum/main.go:465
+[3.890ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:33:38 /home/mikeqoo123/DumDum/main.go:465
+[6.464ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:38:28 /home/mikeqoo123/DumDum/main.go:465
+[4.497ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:39:15 /home/mikeqoo123/DumDum/main.go:465
+[4.713ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:40:31 /home/mikeqoo123/DumDum/main.go:465
+[3.886ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:40:42 /home/mikeqoo123/DumDum/main.go:465
+[4.230ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:42:02 /home/mikeqoo123/DumDum/main.go:465
+[4.758ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:42:06 /home/mikeqoo123/DumDum/main.go:465
+[2.767ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:42:21 /home/mikeqoo123/DumDum/main.go:465
+[4.803ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:43:19 /home/mikeqoo123/DumDum/main.go:465
+[4.139ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:44:32 /home/mikeqoo123/DumDum/main.go:465
+[4.926ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:45:23 /home/mikeqoo123/DumDum/main.go:465
+[4.420ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:45:31 /home/mikeqoo123/DumDum/main.go:465
+[2.533ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:47:04 /home/mikeqoo123/DumDum/main.go:465
+[4.624ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:48:53 /home/mikeqoo123/DumDum/main.go:465
+[4.859ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:49:33 /home/mikeqoo123/DumDum/main.go:465
+[4.405ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:49:41 /home/mikeqoo123/DumDum/main.go:465
+[2.801ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:52:01 /home/mikeqoo123/DumDum/main.go:465
+[4.967ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 07:54:33 /home/mikeqoo123/DumDum/main.go:465
+[5.539ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:03:43 /home/mikeqoo123/DumDum/main.go:465
+[5.507ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:04:07 /home/mikeqoo123/DumDum/main.go:465
+[4.092ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:04:35 /home/mikeqoo123/DumDum/main.go:465
+[4.058ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:07:21 /home/mikeqoo123/DumDum/main.go:465
+[3.782ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:08:09 /home/mikeqoo123/DumDum/main.go:465
+[4.153ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:09:09 /home/mikeqoo123/DumDum/main.go:465
+[4.009ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:11:09 /home/mikeqoo123/DumDum/main.go:465
+[4.683ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:57:08 /home/mikeqoo123/DumDum/main.go:465
+[6.315ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:57:57 /home/mikeqoo123/DumDum/main.go:465
+[3.960ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 08:58:02 /home/mikeqoo123/DumDum/main.go:465
+[2.631ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:00:04 /home/mikeqoo123/DumDum/main.go:465
+[4.579ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:03:30 /home/mikeqoo123/DumDum/main.go:465
+[5.213ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:03:33 /home/mikeqoo123/DumDum/main.go:465
+[3.142ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:05:20 /home/mikeqoo123/DumDum/main.go:465
+[4.917ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:06:03 /home/mikeqoo123/DumDum/main.go:465
+[4.844ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:06:16 /home/mikeqoo123/DumDum/main.go:465
+[5.300ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:06:20 /home/mikeqoo123/DumDum/main.go:465
+[2.656ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:07:04 /home/mikeqoo123/DumDum/main.go:465
+[4.648ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:07:17 /home/mikeqoo123/DumDum/main.go:465
+[4.359ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:07:47 /home/mikeqoo123/DumDum/main.go:516
+[8.511ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:08:06 /home/mikeqoo123/DumDum/main.go:465
+[4.386ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:08:10 /home/mikeqoo123/DumDum/main.go:465
+[2.363ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:09:13 /home/mikeqoo123/DumDum/main.go:465
+[5.083ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:09:24 /home/mikeqoo123/DumDum/main.go:516
+[5.521ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:09:34 /home/mikeqoo123/DumDum/main.go:516
+[5.202ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:10:13 /home/mikeqoo123/DumDum/main.go:516
+[5.457ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:10:38 /home/mikeqoo123/DumDum/main.go:516
+[5.868ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:10:43 /home/mikeqoo123/DumDum/main.go:465
+[2.666ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:11:16 /home/mikeqoo123/DumDum/main.go:465
+[4.656ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:11:31 /home/mikeqoo123/DumDum/main.go:516
+[5.852ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:12:42 /home/mikeqoo123/DumDum/main.go:465
+[5.649ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:12:43 /home/mikeqoo123/DumDum/main.go:465
+[2.800ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:12:57 /home/mikeqoo123/DumDum/main.go:516
+[5.781ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:15:17 /home/mikeqoo123/DumDum/main.go:465
+[4.411ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:15:19 /home/mikeqoo123/DumDum/main.go:465
+[2.781ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:15:31 /home/mikeqoo123/DumDum/main.go:516
+[5.151ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:19:20 /home/mikeqoo123/DumDum/main.go:465
+[3.876ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:19:23 /home/mikeqoo123/DumDum/main.go:465
+[2.897ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:19:32 /home/mikeqoo123/DumDum/main.go:516
+[5.288ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:19:46 /home/mikeqoo123/DumDum/main.go:465
+[4.709ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:23:57 /home/mikeqoo123/DumDum/main.go:465
+[4.532ms] [rows:5] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:24:06 /home/mikeqoo123/DumDum/main.go:516
+[3.118ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:24:06 /home/mikeqoo123/DumDum/main.go:558
+[12.299ms] [rows:1] INSERT INTO `products` (`name`,`description`,`price`,`stock`,`sku`,`image_url`,`category`,`is_enabled`) VALUES (?,?,?,?,?,?,?,?)
+
+2023/07/06 09:24:06 /home/mikeqoo123/DumDum/main.go:465
+[2.449ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:24:14 /home/mikeqoo123/DumDum/main.go:465
+[4.852ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:26:25 /home/mikeqoo123/DumDum/main.go:465
+[5.191ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:26:37 /home/mikeqoo123/DumDum/main.go:516
+[5.431ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:26:57 /home/mikeqoo123/DumDum/main.go:465
+[4.030ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:27:01 /home/mikeqoo123/DumDum/main.go:465
+[2.521ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:28:06 /home/mikeqoo123/DumDum/main.go:465
+[3.961ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:29:39 /home/mikeqoo123/DumDum/main.go:465
+[4.062ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:29:43 /home/mikeqoo123/DumDum/main.go:465
+[2.661ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:29:51 /home/mikeqoo123/DumDum/main.go:516
+[4.354ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:37:46 /home/mikeqoo123/DumDum/main.go:465
+[5.562ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:37:50 /home/mikeqoo123/DumDum/main.go:465
+[2.675ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:37:56 /home/mikeqoo123/DumDum/main.go:516
+[3.554ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:39:00 /home/mikeqoo123/DumDum/main.go:465
+[4.476ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:39:13 /home/mikeqoo123/DumDum/main.go:465
+[5.424ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:39:31 /home/mikeqoo123/DumDum/main.go:465
+[4.348ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:39:40 /home/mikeqoo123/DumDum/main.go:516
+[3.244ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:40:47 /home/mikeqoo123/DumDum/main.go:465
+[4.363ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:41:06 /home/mikeqoo123/DumDum/main.go:465
+[4.369ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:41:11 /home/mikeqoo123/DumDum/main.go:516
+[2.956ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:41:53 /home/mikeqoo123/DumDum/main.go:516
+[7.906ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:42:13 /home/mikeqoo123/DumDum/main.go:516
+[5.672ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:42:41 /home/mikeqoo123/DumDum/main.go:516
+[6.138ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:42:55 /home/mikeqoo123/DumDum/main.go:516
+[6.848ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:43:43 /home/mikeqoo123/DumDum/main.go:465
+[4.443ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:43:45 /home/mikeqoo123/DumDum/main.go:465
+[3.059ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:43:52 /home/mikeqoo123/DumDum/main.go:516
+[5.119ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 09:44:59 /home/mikeqoo123/DumDum/main.go:465
+[5.426ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:56:46 /home/mikeqoo123/DumDum/main.go:465
+[5.523ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:57:52 /home/mikeqoo123/DumDum/main.go:465
+[5.328ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:57:58 /home/mikeqoo123/DumDum/main.go:465
+[2.588ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:58:00 /home/mikeqoo123/DumDum/main.go:465
+[2.559ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:59:03 /home/mikeqoo123/DumDum/main.go:465
+[4.872ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 09:59:22 /home/mikeqoo123/DumDum/main.go:465
+[5.739ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:00:18 /home/mikeqoo123/DumDum/main.go:465
+[4.522ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:00:31 /home/mikeqoo123/DumDum/main.go:465
+[3.992ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:01:14 /home/mikeqoo123/DumDum/main.go:465
+[4.277ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:01:38 /home/mikeqoo123/DumDum/main.go:465
+[4.618ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:01:41 /home/mikeqoo123/DumDum/main.go:465
+[2.586ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:01:55 /home/mikeqoo123/DumDum/main.go:516
+[4.878ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:06:23 /home/mikeqoo123/DumDum/main.go:465
+[6.362ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:06:25 /home/mikeqoo123/DumDum/main.go:465
+[2.671ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:07:20 /home/mikeqoo123/DumDum/main.go:465
+[3.798ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:07:26 /home/mikeqoo123/DumDum/main.go:465
+[2.677ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:07:36 /home/mikeqoo123/DumDum/main.go:516
+[4.847ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:13:06 /home/mikeqoo123/DumDum/main.go:516
+[6.068ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:14:17 /home/mikeqoo123/DumDum/main.go:516
+[4.588ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:14:23 /home/mikeqoo123/DumDum/main.go:516
+[3.283ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:14:27 /home/mikeqoo123/DumDum/main.go:516
+[3.168ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:14:44 /home/mikeqoo123/DumDum/main.go:516
+[5.378ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:14:47 /home/mikeqoo123/DumDum/main.go:516
+[3.017ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:16:55 /home/mikeqoo123/DumDum/main.go:465
+[4.204ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/06 10:17:53 /home/mikeqoo123/DumDum/main.go:516
+[4.855ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:18:04 /home/mikeqoo123/DumDum/main.go:516
+[5.543ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/06 10:18:10 /home/mikeqoo123/DumDum/main.go:516
+[3.443ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 01:26:46 /home/mikeqoo123/DumDum/main.go:465
+[16.534ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 01:27:07 /home/mikeqoo123/DumDum/main.go:516
+[9.397ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 01:27:18 /home/mikeqoo123/DumDum/main.go:516
+[4.651ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 01:27:23 /home/mikeqoo123/DumDum/main.go:516
+[3.435ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 03:39:18 /home/mikeqoo123/DumDum/main.go:465
+[4.856ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 03:39:26 /home/mikeqoo123/DumDum/main.go:516
+[3.320ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:17:09 /home/mikeqoo123/DumDum/main.go:465
+[5.104ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:20:06 /home/mikeqoo123/DumDum/main.go:465
+[5.681ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:20:08 /home/mikeqoo123/DumDum/main.go:465
+[2.481ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:20:21 /home/mikeqoo123/DumDum/main.go:465
+[4.596ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:20:26 /home/mikeqoo123/DumDum/main.go:516
+[3.183ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:20:47 /home/mikeqoo123/DumDum/main.go:465
+[5.484ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:20:50 /home/mikeqoo123/DumDum/main.go:465
+[2.635ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:20:57 /home/mikeqoo123/DumDum/main.go:516
+[3.143ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:21:03 /home/mikeqoo123/DumDum/main.go:465
+[3.817ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:21:05 /home/mikeqoo123/DumDum/main.go:465
+[2.959ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:21:19 /home/mikeqoo123/DumDum/main.go:465
+[5.064ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:21:21 /home/mikeqoo123/DumDum/main.go:465
+[2.742ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:21:24 /home/mikeqoo123/DumDum/main.go:516
+[3.277ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:32:25 /home/mikeqoo123/DumDum/main.go:465
+[6.649ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:35:26 /home/mikeqoo123/DumDum/main.go:465
+[4.427ms] [rows:6] SELECT * FROM `products` ORDER BY id desc
+
+2023/07/07 05:36:16 /home/mikeqoo123/DumDum/main.go:516
+[4.505ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:36:50 /home/mikeqoo123/DumDum/main.go:516
+[4.998ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:37:07 /home/mikeqoo123/DumDum/main.go:516
+[5.420ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:37:51 /home/mikeqoo123/DumDum/main.go:516
+[5.620ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:37:57 /home/mikeqoo123/DumDum/main.go:516
+[3.230ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:38:35 /home/mikeqoo123/DumDum/main.go:516
+[5.004ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:39:10 /home/mikeqoo123/DumDum/main.go:516
+[5.286ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:45:09 /home/mikeqoo123/DumDum/main.go:516
+[6.529ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:45:15 /home/mikeqoo123/DumDum/main.go:516
+[3.290ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:45:23 /home/mikeqoo123/DumDum/main.go:516
+[5.124ms] [rows:0] SELECT * FROM `products` WHERE name = ? ORDER BY `products`.`id` LIMIT 1
+
+2023/07/07 05:45:43 /home/mikeqoo123/DumDum/main.go:465
+[4.321ms] [rows:6] SELECT * FROM `products` ORDER BY id desc

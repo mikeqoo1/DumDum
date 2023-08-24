@@ -1,0 +1,1389 @@
+
+2023/07/25 01:13:00 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.661ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/25 01:52:28 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.010ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/25 01:53:32 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.337ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/25 08:30:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[35.537ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/07/28 17:05:37 /home/mikeqoo123/DumDum/lib/nici/nici.go:103
+[105.219ms] [rows:145] SELECT * FROM `nici` ORDER BY series desc
+
+2023/08/04 01:28:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[128.008ms] [rows:0] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 01:28:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[6.064ms] [rows:0] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 01:28:58 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[6.300ms] [rows:0] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 01:29:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[3.963ms] [rows:0] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 01:30:23 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[7.242ms] [rows:1] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 01:30:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:152
+[17.627ms] [rows:2] SELECT * FROM `users` ORDER BY id desc
+
+2023/08/04 01:31:01 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[5.904ms] [rows:0] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 01:31:15 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[7.288ms] [rows:0] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 01:31:32 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[5.712ms] [rows:1] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 01:31:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.395ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 01:43:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[13.066ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:00:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[10.659ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:02:15 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.299ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:02:15 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.999ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:02:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.149ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:02:49 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.004ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:02:58 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.917ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:03:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.740ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:03:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.190ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:05:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.110ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:05:16 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.324ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:09:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.947ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:09:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.244ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:09:34 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.693ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:10:49 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.361ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:11:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.017ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:13:13 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.823ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:15:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.779ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:16:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.959ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:16:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.202ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:18:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.769ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:18:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.081ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:18:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.777ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:18:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.057ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:19:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.319ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:19:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.688ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:19:50 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.793ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:19:50 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.219ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:23:34 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.682ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:23:34 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.890ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:23:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.642ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:23:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.191ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:30:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.452ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:30:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.916ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:30:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.442ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:30:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.190ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:35:21 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[11.267ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:35:21 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.637ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:37:32 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.525ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:37:32 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.139ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:37:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.615ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:37:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.039ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:37:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.409ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:37:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.218ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:43:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.857ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:43:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.574ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:43:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.805ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:43:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.435ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:43:13 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.209ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:43:13 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.027ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:45:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.873ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:45:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.968ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:48:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.406ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:48:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[24.250ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:49:02 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.532ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:49:02 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.775ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 02:54:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.283ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 02:54:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.825ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:05:13 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.682ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:05:13 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[10.243ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:05:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.209ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:05:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.536ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:06:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.378ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:06:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.110ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:06:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.112ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:06:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.340ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:10:19 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[8.199ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:10:19 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[8.282ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:10:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.304ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:10:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.512ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:24:58 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.044ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:24:58 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.929ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:25:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.623ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:25:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[9.870ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:25:11 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.579ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:25:11 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.392ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:26:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.885ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:26:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.093ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:26:27 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.619ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:26:27 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.422ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:29:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.235ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:29:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.610ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:30:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.348ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:30:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.076ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:30:27 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.764ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:30:27 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.842ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:32:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[8.391ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:32:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.720ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 03:32:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.322ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 03:32:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.341ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:13:07 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.340ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:13:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.713ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:14:17 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.694ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:14:17 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.025ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:14:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.402ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:14:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.749ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:15:17 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.593ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:15:17 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.080ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:15:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.931ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:15:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.932ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:17:02 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.872ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:17:02 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.722ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:19:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.260ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:19:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.987ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:19:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.660ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:19:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.984ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:19:41 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.117ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:19:41 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.536ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:20:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.284ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:20:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.274ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:20:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.917ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:20:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.948ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:21:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[8.003ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:21:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.283ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:21:11 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.578ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:21:11 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.151ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:21:13 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.051ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:21:13 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.147ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:21:56 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.486ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:21:56 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.777ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:22:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.595ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:22:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.942ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:22:23 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.465ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:22:23 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.124ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:22:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.934ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:22:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.899ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:23:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.025ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:23:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.698ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:23:07 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.938ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:23:07 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.583ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:24:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.717ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:24:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.905ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:27:22 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.761ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:27:22 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.942ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:27:24 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.705ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:27:24 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.093ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:27:56 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.538ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:27:56 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.366ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:28:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.689ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:28:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.182ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:28:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.833ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:28:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.845ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:28:15 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.394ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:28:15 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.403ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:28:34 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.131ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:28:34 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.893ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:28:51 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.197ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:28:51 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.424ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:28:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.154ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:28:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.676ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:29:28 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[8.080ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:29:28 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.208ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:29:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.164ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:29:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.538ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:30:15 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.876ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:30:15 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.777ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:30:21 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.297ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:30:21 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.326ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:30:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.669ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:30:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.641ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:30:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.971ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:30:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.290ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:33:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.685ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:33:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.182ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:33:52 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.592ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:33:52 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.422ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:37:54 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.302ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:37:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.715ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:38:28 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.171ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:38:28 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.581ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:42:54 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.700ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:42:54 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.276ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:42:56 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.347ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:42:56 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.127ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:43:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.783ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:43:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.229ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:43:22 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.817ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:43:22 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.267ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:43:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.487ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:43:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.454ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:43:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.927ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:43:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.795ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:50:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.274ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:50:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.955ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:51:00 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.017ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:51:00 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.206ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:51:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.112ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:51:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[9.181ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:51:19 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.129ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:51:19 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.288ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:53:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[10.459ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:53:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[8.274ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:53:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.602ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:53:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.282ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:53:41 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.454ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:53:41 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.243ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:57:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.275ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:57:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.851ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 05:57:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.348ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 05:57:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.806ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:04:29 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.523ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:04:29 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.329ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:04:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.556ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:04:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[10.590ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:04:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.833ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:04:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.268ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:06:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.291ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:06:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.668ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:10:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.293ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:10:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.876ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:10:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.138ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:10:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.566ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:10:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.780ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:10:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.421ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:11:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.893ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:11:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.137ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:11:34 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.821ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:11:34 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.010ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:11:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.949ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:11:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.461ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:14:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.242ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:14:06 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.735ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:16:49 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.139ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:16:49 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[10.061ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:17:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.943ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:17:19 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.978ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:17:21 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.716ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:17:22 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.937ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:22:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.439ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:22:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.309ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:22:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.672ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:22:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.287ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:22:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.615ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:22:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.070ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:22:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.689ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:22:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.551ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:27:07 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[8.703ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:27:07 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[10.518ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:27:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.982ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:27:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.387ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:27:23 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[8.326ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:27:23 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[9.825ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:27:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.931ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:27:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.965ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:29:32 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.354ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:29:32 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.597ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:29:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.571ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:29:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.157ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:29:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.721ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:29:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.596ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:29:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.506ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:29:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.924ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:30:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.166ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:30:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.112ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:30:27 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.460ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:30:27 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.397ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:30:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.480ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:30:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.470ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:33:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.261ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:33:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.389ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:33:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.344ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:33:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.600ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:33:40 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.126ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:33:40 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.497ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:36:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.116ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:36:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.553ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:38:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.006ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:38:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.645ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:38:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.120ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:38:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.681ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:41:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.911ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:41:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.723ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:42:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.986ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:42:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.350ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:42:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.679ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:42:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.993ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:42:40 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.684ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:42:40 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.062ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:42:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.173ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:42:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.690ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:44:09 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.463ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:44:09 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.965ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:44:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.880ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:44:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.716ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:44:24 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.776ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:44:24 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.586ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:48:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.603ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:48:49 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.748ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:48:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.031ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:48:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.873ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:49:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.852ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:49:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.896ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:49:52 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.003ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:49:52 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.632ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:49:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.896ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:49:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.139ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:50:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.073ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:50:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.313ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:50:07 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.055ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:50:07 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.484ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:50:14 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.667ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:50:14 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.820ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:50:16 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.474ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:50:16 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.670ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:50:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.030ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:50:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.226ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:50:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.060ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:50:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.691ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:50:24 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.394ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:50:24 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.232ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:52:10 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.791ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:52:10 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.307ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:52:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.245ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:52:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.213ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:52:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.563ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:52:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[8.006ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:53:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.081ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:53:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.931ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:53:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.086ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:53:20 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[9.368ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:54:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.255ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:54:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.382ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:55:16 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.211ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:55:16 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.783ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:57:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.225ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:57:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.960ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:57:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.493ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:57:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.396ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 06:58:00 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.600ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 06:58:00 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.481ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:42:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[23.550ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 07:42:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[23.592ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:48:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.391ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 07:48:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.721ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:49:49 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[19.676ms] [rows:1] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 07:49:50 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.656ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:49:50 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.890ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 07:50:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.026ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 07:50:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.572ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:51:29 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[8.656ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 07:51:29 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[9.292ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:51:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.136ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 07:51:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.434ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:52:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.181ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:54:46 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.598ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:55:23 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.717ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:55:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.658ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:55:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.988ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 07:56:28 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.025ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:56:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.226ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:56:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.021ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 07:56:31 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.432ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 07:56:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.531ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:02:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.986ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:02:54 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.980ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:03:18 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.963ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:03:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.877ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:03:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.976ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:03:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.864ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:11:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.253ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:11:26 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.706ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:13:14 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.857ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:15:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.819ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:15:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.215ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:16:33 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.054ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:16:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.791ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:16:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.162ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:16:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.249ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:16:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.245ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:17:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.496ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:17:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[7.479ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:17:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.558ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:18:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[9.501ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:18:10 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.387ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:18:10 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.212ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:21:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.359ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:21:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.814ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:21:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.541ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:21:56 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.508ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:21:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.770ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:21:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.736ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:23:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.250ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:23:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.672ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:23:53 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.258ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:24:39 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.598ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:24:52 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.297ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:24:52 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.798ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:25:40 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.541ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:25:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.616ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:25:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.783ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:26:58 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.660ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:27:15 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.056ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:27:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.480ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:27:25 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.422ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:27:41 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:112
+[6.634ms] [rows:1] SELECT * FROM `users` WHERE username = ? ORDER BY `users`.`id` LIMIT 1
+
+2023/08/04 08:27:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.506ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:27:42 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.143ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:28:21 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.058ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:28:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.849ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:29:39 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.581ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:29:39 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.449ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:29:48 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.122ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:34:55 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.429ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:35:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.344ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:35:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.283ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:35:08 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.988ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:36:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.738ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:36:45 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[4.669ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:37:40 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.016ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:37:40 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.737ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:37:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.907ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:37:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.290ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:38:37 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.340ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:40:02 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.579ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:40:02 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.118ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:40:47 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.581ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:41:14 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.177ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:42:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[5.655ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:42:30 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[6.205ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:45:16 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.069ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:45:19 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.476ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:45:19 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.592ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:45:49 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.854ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:45:57 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.698ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:46:00 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.780ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:46:09 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.021ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:46:11 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.874ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:46:11 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.885ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:46:44 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.840ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:46:50 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.999ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:46:50 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.623ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:55:03 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.398ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:55:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.722ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:55:05 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.827ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:55:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[6.044ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:55:35 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.256ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:55:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.045ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:55:38 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.853ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:55:39 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[2.377ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:55:39 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.123ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:56:24 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.475ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:56:34 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[2.887ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:56:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[7.561ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:56:36 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[5.622ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:59:02 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[4.651ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:59:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.659ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
+
+2023/08/04 08:59:04 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:292
+[3.293ms] [rows:7] SELECT * FROM `products` ORDER BY id desc
+
+2023/08/04 08:59:12 /home/mikeqoo123/DumDum/lib/shuming/shuming.go:580
+[3.259ms] [rows:4] SELECT `category` FROM `products` GROUP BY `category`
