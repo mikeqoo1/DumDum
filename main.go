@@ -164,20 +164,20 @@ func SearchconcordsEM(c *gin.Context) {
 	})
 }
 
-//	@title						書銘的API
-//	@version					1.0
-//	@description				This is a sample server celler server.
-//	@termsOfService				http://swagger.io/terms/
-//	@contact.name				API Support
-//	@contact.url				http://www.swagger.io/support
-//	@contact.email				support@swagger.io
-//	@license.name				Apache 2.0
-//	@license.url				http://www.apache.org/licenses/LICENSE-2.0.html
-//	@host						127.0.0.1:6620
-//	@BasePath					/shumingyu
-//	@securityDefinitions.basic	BasicAuth
-//	@externalDocs.description	OpenAPI
-//	@externalDocs.url			https://swagger.io/resources/open-api/
+// @title						書銘的API
+// @version					1.0
+// @description				This is a sample server celler server.
+// @termsOfService				http://swagger.io/terms/
+// @contact.name				API Support
+// @contact.url				http://www.swagger.io/support
+// @contact.email				support@swagger.io
+// @license.name				Apache 2.0
+// @license.url				http://www.apache.org/licenses/LICENSE-2.0.html
+// @host						127.0.0.1:6620
+// @BasePath					/shumingyu
+// @securityDefinitions.basic	BasicAuth
+// @externalDocs.description	OpenAPI
+// @externalDocs.url			https://swagger.io/resources/open-api/
 func main() {
 	viper.SetConfigName("config") // 指定文件的名稱
 	viper.AddConfigPath("config") // 配置文件和執行檔目錄
@@ -222,6 +222,9 @@ func main() {
 
 	router.GET("/alice", concord.Alice)
 	router.POST("/alice/love", concord.AliceLove)
+	router.GET("/alice/boys", concord.AliceBoys)
+	router.GET("/alice/newboy", concord.AliceBoy)
+	router.POST("/alice/addboy", concord.SadBoy)
 	niciRouter := router.Group("/nici")
 	{
 		niciRouter.GET("/", nici.Love)           //列出所有
@@ -264,42 +267,42 @@ func main() {
 		shumingyuRouter.GET("/report", shuming.Hireport)
 	}
 
-	if IsGoogle == "NO" {
-		concordsRouter := router.Group("/concords")
-		{
-			concordsRouter.GET("/", concord.Concords)
-			concordsRouter.GET("/EM", concord.ConcordsEM)
-			concordsRouter.GET("/family", concord.ConcordsFamily)
-			concordsRouter.POST("/search", Searchconcords)
-			concordsRouter.POST("/searchEM", SearchconcordsEM)
-		}
-
-		if IsPvc == "YES" {
-			if err := client.Connect("192.168.199.185:7052"); err != nil {
-				fmt.Println("Error connecting TWSE/OTC:", err)
-				return
-			}
-			defer client.Close()
-
-			if err := clientEM.Connect("192.168.199.250:7080"); err != nil {
-				fmt.Println("Error connecting EM:", err)
-				return
-			}
-			defer clientEM.Close()
-
-			message := p.CreateRegisterMsg()
-			client.SendCh <- message
-			go client.SendMessages()
-			go client.ReceiveMessages()
-			go p.ParseMessages(client)
-
-			emmsg := pem.CreateRegisterMsg()
-			clientEM.SendCh <- emmsg
-			go clientEM.SendMessages()
-			go clientEM.ReceiveMessages()
-			go pem.ParseMessages(clientEM)
-		}
+	//if IsGoogle == "NO" {
+	concordsRouter := router.Group("/concords")
+	{
+		concordsRouter.GET("/", concord.Concords)
+		concordsRouter.GET("/EM", concord.ConcordsEM)
+		concordsRouter.GET("/family", concord.ConcordsFamily)
+		concordsRouter.POST("/search", Searchconcords)
+		concordsRouter.POST("/searchEM", SearchconcordsEM)
 	}
+
+	// if IsPvc == "YES" {
+	// 	if err := client.Connect("192.168.199.185:7052"); err != nil {
+	// 		fmt.Println("Error connecting TWSE/OTC:", err)
+	// 		return
+	// 	}
+	// 	defer client.Close()
+
+	// 	if err := clientEM.Connect("192.168.199.250:7080"); err != nil {
+	// 		fmt.Println("Error connecting EM:", err)
+	// 		return
+	// 	}
+	// 	defer clientEM.Close()
+
+	// 	message := p.CreateRegisterMsg()
+	// 	client.SendCh <- message
+	// 	go client.SendMessages()
+	// 	go client.ReceiveMessages()
+	// 	go p.ParseMessages(client)
+
+	// 	emmsg := pem.CreateRegisterMsg()
+	// 	clientEM.SendCh <- emmsg
+	// 	go clientEM.SendMessages()
+	// 	go clientEM.ReceiveMessages()
+	// 	go pem.ParseMessages(clientEM)
+	// }
+	//}
 
 	go router.RunTLS(":443", "./certs/server.crt", "./certs/server.key")
 	err = router.Run(addr)

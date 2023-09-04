@@ -57,3 +57,11 @@ CREATE TABLE IF NOT EXISTS `family` (
   extension VARCHAR(10) NOT NULL COMMENT '分機',
   profileimage VARCHAR(255) NOT NULL COMMENT '大頭貼'
 ) COMMENT='家族資料';
+
+-- 建立獵物資料表
+CREATE TABLE IF NOT EXISTS `boy` (
+  id INT AUTO_INCREMENT PRIMARY KEY NOT NULL COMMENT '編號',
+  name VARCHAR(100) NOT NULL COMMENT '名稱',
+  district VARCHAR(100) NOT NULL COMMENT '地區',
+  occupation VARCHAR(100) NOT NULL COMMENT '職業'
+) COMMENT='海豬獵物公式書';

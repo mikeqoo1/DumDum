@@ -24,11 +24,24 @@ type Family struct {
 	Profileimage  string
 }
 
+type Boy struct {
+	Id         int
+	Name       string
+	District   string
+	Occupation string
+}
+
 func (Family) TableName() string {
 	return "family"
 }
 
+func (Boy) TableName() string {
+	return "boy"
+}
+
 var familyobj []Family
+
+var boysobj []Boy
 
 // StrPad
 // input string 原字串
@@ -124,6 +137,8 @@ func ConcordsFamily(c *gin.Context) {
 	})
 }
 
+/*海豬區*/
+
 func Alice(c *gin.Context) {
 	title := "海豬問券"
 	c.HTML(http.StatusOK, "alice.html", gin.H{
@@ -213,4 +228,42 @@ func AliceLove(c *gin.Context) {
 			"msg": "你不適合海豬 滾八",
 		})
 	}
+}
+
+func AliceBoys(c *gin.Context) {
+	title := "海豬男的公式書"
+	results := tidb.Globalconn.Find(&boysobj)
+	c.HTML(http.StatusOK, "aliceboys.html", gin.H{
+		"title":  title,
+		"record": results.RowsAffected,
+		"data":   boysobj,
+	})
+}
+
+func AliceBoy(c *gin.Context) {
+	title := "增加海豬男的公式書"
+	c.HTML(http.StatusOK, "alicenewboy.html", gin.H{
+		"title": title,
+	})
+}
+
+func SadBoy(c *gin.Context) {
+	name := c.PostForm("name")
+	district := c.PostForm("district")
+	occupation := c.PostForm("occupation")
+
+	sadboy := Boy{
+		Name:       name,
+		District:   district,
+		Occupation: occupation,
+	}
+	tidb.Globalconn.Save(&sadboy)
+
+	title := "海豬男的公式書"
+	results := tidb.Globalconn.Find(&boysobj)
+	c.HTML(http.StatusOK, "aliceboys.html", gin.H{
+		"title":  title,
+		"record": results.RowsAffected,
+		"data":   boysobj,
+	})
 }
