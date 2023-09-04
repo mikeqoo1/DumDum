@@ -9,6 +9,7 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
 )
 
 type Family struct {
@@ -251,19 +252,43 @@ func SadBoy(c *gin.Context) {
 	name := c.PostForm("name")
 	district := c.PostForm("district")
 	occupation := c.PostForm("occupation")
-
 	sadboy := Boy{
 		Name:       name,
 		District:   district,
 		Occupation: occupation,
 	}
-	tidb.Globalconn.Save(&sadboy)
 
-	title := "海豬男的公式書"
-	results := tidb.Globalconn.Find(&boysobj)
-	c.HTML(http.StatusOK, "aliceboys.html", gin.H{
-		"title":  title,
-		"record": results.RowsAffected,
-		"data":   boysobj,
+	if strings.Contains(name, "林") || strings.Contains(name, "奎") || strings.Contains(name, "翰") ||
+		strings.Contains(name, "龍") || strings.Contains(name, "恐") || strings.Contains(name, "揆") ||
+		strings.Contains(name, "和") || strings.Contains(name, "汗") || strings.Contains(name, "漢") ||
+		strings.Contains(name, "魁") || strings.Contains(name, "淋") || strings.Contains(name, "籠") {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"原因": "臭海豬 還想搞阿 下去拉",
+		})
+		return
+	}
+
+	if name == "" || district == "" || occupation == "" {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"狀態": "新增失敗",
+			"原因": "欄位不得為空",
+		})
+		return
+	} else {
+		var sqlstr string
+		var results *gorm.DB
+		sqlstr = "name = ?"
+		results = tidb.Globalconn.Where(sqlstr, name).Find(&boysobj)
+		if results.RowsAffected > 0 {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"狀態": "新增失敗",
+				"原因": "名稱已經存在了",
+			})
+			return
+		}
+	}
+	tidb.Globalconn.Save(&sadboy)
+	c.JSON(http.StatusOK, gin.H{
+		"狀態": "新增成功",
 	})
 }
