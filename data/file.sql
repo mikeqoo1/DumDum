@@ -65,3 +65,18 @@ CREATE TABLE IF NOT EXISTS `boy` (
   district VARCHAR(100) NOT NULL COMMENT '地區',
   occupation VARCHAR(100) NOT NULL COMMENT '職業'
 ) COMMENT='海豬獵物公式書';
+
+-- 建立社團資料表
+CREATE TABLE IF NOT EXISTS `societies` (
+  name VARCHAR(100) NOT NULL COMMENT '社團名稱',
+  money VARCHAR(100) NOT NULL COMMENT '社團經費',
+  PRIMARY KEY(`name`)
+) COMMENT='社團資料';
+
+-- 建立社團成員資料表
+CREATE TABLE IF NOT EXISTS `societies_user` (
+  user VARCHAR(100) NOT NULL COMMENT '姓名',
+  societiesname VARCHAR(100) NOT NULL COMMENT '參加的社團',
+  identity VARCHAR(100) NOT NULL COMMENT '社團身份',
+  PRIMARY KEY(`user`)
+) COMMENT='團員資料';

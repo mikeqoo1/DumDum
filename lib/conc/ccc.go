@@ -32,6 +32,17 @@ type Boy struct {
 	Occupation string
 }
 
+type Societies struct {
+	Name  string
+	Money string
+}
+
+type SocietiesUser struct {
+	User          string
+	Societiesname string
+	Identity      string
+}
+
 func (Family) TableName() string {
 	return "family"
 }
@@ -40,9 +51,20 @@ func (Boy) TableName() string {
 	return "boy"
 }
 
+func (Societies) TableName() string {
+	return "societies"
+}
+
+func (SocietiesUser) TableName() string {
+	return "societies_user"
+}
+
 var familyobj []Family
 
 var boysobj []Boy
+
+var Societiesobj []Societies
+var Societiesuserobj []SocietiesUser
 
 // StrPad
 // input string 原字串
@@ -135,6 +157,17 @@ func ConcordsFamily(c *gin.Context) {
 		"title":  title,
 		"record": results.RowsAffected,
 		"data":   familyobj,
+	})
+}
+
+func GetSocietiesAll(c *gin.Context) {
+	tidb.Globalconn.Find(&Societiesobj)
+	tidb.Globalconn.Find(&Societiesuserobj)
+	title := "社團資料"
+	c.HTML(http.StatusOK, "societies.html", gin.H{
+		"title": title,
+		"data":  Societiesobj,
+		"data2": Societiesuserobj,
 	})
 }
 
