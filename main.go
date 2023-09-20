@@ -275,6 +275,7 @@ func main() {
 		concordsRouter.GET("/family", concord.ConcordsFamily)
 		concordsRouter.POST("/search", Searchconcords)
 		concordsRouter.POST("/searchEM", SearchconcordsEM)
+		concordsRouter.GET("/societies", concord.GetSocietiesAll)
 	}
 
 	// if IsPvc == "YES" {
