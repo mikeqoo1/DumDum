@@ -276,6 +276,7 @@ func main() {
 		concordsRouter.POST("/search", Searchconcords)
 		concordsRouter.POST("/searchEM", SearchconcordsEM)
 		concordsRouter.GET("/societies", concord.GetSocietiesAll)
+		concordsRouter.GET("/moneylist", concord.GetSocietiesMoney)
 	}
 
 	// if IsPvc == "YES" {

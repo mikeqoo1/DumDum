@@ -15,7 +15,7 @@
     <title>{{.title}}</title>
 </head>
 
-<body class="page2">
+<body class="ig">
     <div class="row">
         <a href="https://github.com/mikeqoo1"><img src="/static/img/mygit-removebg.jpg" class="rounded float-start"></a>
     </div>
@@ -26,35 +26,21 @@
         <script>
             var a = {{.data }}
             console.log(a)
-            str = "<thead><tr><th scope=\"col\">社團名稱</th><th scope=\"col\">社團經費</th></tr></thead><tbody>";
+            str = "<thead><tr><th scope=\"col\">活動日期</th><th scope=\"col\">活動名稱</th><th scope=\"col\">活動經費</th><th scope=\"col\">活動人數</th><th scope=\"col\">人數細節</th></tr></thead><tbody>";
             for (var i = 0; i < a.length; i++) {
                 str += "<tr>";
-                str += "<th scope=\"row\">" + a[i].Name + "</th>"
+                str += "<th scope=\"row\">" + a[i].Data_date + "</th>"
+                str += "<th scope=\"row\">" + a[i].Eventname + "</th>"
                 str += "<th scope=\"row\">" + a[i].Money + "</th>"
+                str += "<th scope=\"row\">" + a[i].Person + "</th>"
+                str += "<th scope=\"row\">" + a[i].People + "</th>"
                 str += "</tr>";
             }
             str += "</tbody>";
             document.getElementById("data").innerHTML = str;
         </script>
     </table>
-    <h3><a class="link-info" href="/concords/moneylist">社團活動紀錄</a></h3>
 
-    <table class="table" id="data2">
-        <script>
-            var a = {{.data2 }}
-            console.log(a)
-            str = "<thead><tr><th scope=\"col\">姓名</th><th scope=\"col\">參加社團</th><th scope=\"col\">社團身份</th></tr></thead><tbody>";
-            for (var i = 0; i < a.length; i++) {
-                str += "<tr>";
-                str += "<th scope=\"row\">" + a[i].User + "</th>"
-                str += "<th scope=\"row\">" + a[i].Societiesname + "</th>"
-                str += "<th scope=\"row\">" + a[i].Identity + "</th>"
-                str += "</tr>";
-            }
-            str += "</tbody>";
-            document.getElementById("data2").innerHTML = str;
-        </script>
-    </table>
 </body>
 
 </html>

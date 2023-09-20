@@ -80,3 +80,13 @@ CREATE TABLE IF NOT EXISTS `societies_user` (
   identity VARCHAR(100) NOT NULL COMMENT '社團身份',
   PRIMARY KEY(`user`)
 ) COMMENT='團員資料';
+
+-- 建立社團資料表
+CREATE TABLE IF NOT EXISTS `societies_event` (
+  id INT AUTO_INCREMENT PRIMARY KEY NOT NULL COMMENT '活動編號',
+  data_date date NOT NULL,
+  eventname VARCHAR(100) NOT NULL COMMENT '活動名稱',
+  money VARCHAR(100) NOT NULL COMMENT '活動經費',
+  person VARCHAR(10) NOT NULL COMMENT '參與人數',
+  people TEXT NOT NULL COMMENT '參與的人有誰'
+) COMMENT='社團紀錄';

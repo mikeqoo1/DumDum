@@ -36,11 +36,17 @@ type Societies struct {
 	Name  string
 	Money string
 }
-
 type SocietiesUser struct {
 	User          string
 	Societiesname string
 	Identity      string
+}
+type SocietiesEvent struct {
+	Data_date string
+	Eventname string
+	Money     string
+	Person    string
+	People    string
 }
 
 func (Family) TableName() string {
@@ -54,9 +60,11 @@ func (Boy) TableName() string {
 func (Societies) TableName() string {
 	return "societies"
 }
-
 func (SocietiesUser) TableName() string {
 	return "societies_user"
+}
+func (SocietiesEvent) TableName() string {
+	return "societies_event"
 }
 
 var familyobj []Family
@@ -65,6 +73,7 @@ var boysobj []Boy
 
 var Societiesobj []Societies
 var Societiesuserobj []SocietiesUser
+var Societieseventobj []SocietiesEvent
 
 // StrPad
 // input string 原字串
@@ -168,6 +177,15 @@ func GetSocietiesAll(c *gin.Context) {
 		"title": title,
 		"data":  Societiesobj,
 		"data2": Societiesuserobj,
+	})
+}
+
+func GetSocietiesMoney(c *gin.Context) {
+	tidb.Globalconn.Find(&Societieseventobj)
+	title := "社團紀錄"
+	c.HTML(http.StatusOK, "societiesmoney.html", gin.H{
+		"title": title,
+		"data":  Societieseventobj,
 	})
 }
 
