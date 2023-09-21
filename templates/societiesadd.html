@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="bookmark" href="/static/favicon.ico" />
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <title>{{.title}}</title>
+</head>
+
+<body class="page5">
+    <div class="text-center">
+        <h1><a href="/" class="link-info">回首頁</a></h1><br>
+        <form name="form0" id="form0" action="/concords/newsocietiesuser" method="POST" enctype="multipart/form-data">
+            輸入名稱:<input type="text" name="user" id="user" /><br>
+            <input class="form-control" list="societiesnamelist" placeholder="選取社團" name="societiesname" type="text">
+            <datalist id="societiesnamelist">
+                <option value="桌遊社">
+                <option value="運動休閒社">
+                <option value="運動休閒社,桌遊社">
+            </datalist>
+            <input class="form-control" list="identitylist" placeholder="選取身份" name="identity" type="text">
+            <datalist id="identitylist">
+                <option value="社員">
+                <option value="社長">
+                <option value="總幹事">
+                <option value="社員,社員">
+                <option value="社員,社長">
+                <option value="社員,總幹事">
+                <option value="社長,社長">
+                <option value="社長,社員">
+                <option value="社長,總幹事">
+                <option value="總幹事,總幹事">
+                <option value="總幹事,社長">
+                <option value="總幹事,社員">
+            </datalist>
+            輸入核准代碼:<input type="text" name="password" id="password" /><br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
+</html>

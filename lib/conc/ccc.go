@@ -36,11 +36,17 @@ type Societies struct {
 	Name  string
 	Money string
 }
-
 type SocietiesUser struct {
 	User          string
 	Societiesname string
 	Identity      string
+}
+type SocietiesEvent struct {
+	Data_date string
+	Eventname string
+	Money     string
+	Person    string
+	People    string
 }
 
 func (Family) TableName() string {
@@ -54,9 +60,11 @@ func (Boy) TableName() string {
 func (Societies) TableName() string {
 	return "societies"
 }
-
 func (SocietiesUser) TableName() string {
 	return "societies_user"
+}
+func (SocietiesEvent) TableName() string {
+	return "societies_event"
 }
 
 var familyobj []Family
@@ -65,6 +73,7 @@ var boysobj []Boy
 
 var Societiesobj []Societies
 var Societiesuserobj []SocietiesUser
+var Societieseventobj []SocietiesEvent
 
 // StrPad
 // input string 原字串
@@ -168,6 +177,108 @@ func GetSocietiesAll(c *gin.Context) {
 		"title": title,
 		"data":  Societiesobj,
 		"data2": Societiesuserobj,
+	})
+}
+
+func GetSocietiesMoney(c *gin.Context) {
+	tidb.Globalconn.Find(&Societieseventobj)
+	title := "社團紀錄"
+	c.HTML(http.StatusOK, "societiesmoney.html", gin.H{
+		"title": title,
+		"data":  Societieseventobj,
+	})
+}
+
+func GetUserPage(c *gin.Context) {
+	title := "新增社團成員"
+	c.HTML(http.StatusOK, "societiesadd.html", gin.H{
+		"title": title,
+	})
+}
+
+func GetEventPage(c *gin.Context) {
+	title := "新增社團活動"
+	c.HTML(http.StatusOK, "societiesadd2.html", gin.H{
+		"title": title,
+	})
+}
+
+func AddSocietiesUser(c *gin.Context) {
+	uesr := c.PostForm("user")
+	societiesname := c.PostForm("societiesname")
+	identity := c.PostForm("identity")
+	password := c.PostForm("password")
+	if password != "dj/3xj/6yjo41;4!" { //dj/3xj/6yjo41;4! 恐龍最棒!
+		c.JSON(http.StatusBadRequest, gin.H{
+			"狀態": "新增失敗",
+			"原因": "代碼失敗",
+		})
+		return
+	}
+	新社員 := SocietiesUser{
+		User:          uesr,
+		Societiesname: societiesname,
+		Identity:      identity,
+	}
+	//fmt.Println(新社員)
+
+	if uesr == "" || societiesname == "" || identity == "" {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"狀態": "新增失敗",
+			"原因": "欄位不得為空",
+		})
+		return
+	} else {
+		var sqlstr string
+		var results *gorm.DB
+		sqlstr = "user = ?"
+		results = tidb.Globalconn.Where(sqlstr, uesr).Find(&Societiesuserobj)
+		if results.RowsAffected > 0 {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"狀態": "新增失敗",
+				"原因": "名稱已經存在了",
+			})
+			return
+		}
+	}
+	tidb.Globalconn.Create(&新社員)
+	c.JSON(http.StatusOK, gin.H{
+		"狀態": "新增社員成功",
+	})
+}
+
+func AddSocietiesEvent(c *gin.Context) {
+	date := c.PostForm("date")
+	eventname := c.PostForm("eventname")
+	money := c.PostForm("money")
+	person := c.PostForm("person")
+	people := c.PostForm("people")
+	password := c.PostForm("password")
+	if password != "dj/3xj/6yjo41;4!" { //dj/3xj/6yjo41;4! 恐龍最棒!
+		c.JSON(http.StatusBadRequest, gin.H{
+			"狀態": "新增失敗",
+			"原因": "代碼失敗",
+		})
+		return
+	}
+	新活動 := SocietiesEvent{
+		Data_date: date,
+		Eventname: eventname,
+		Money:     money,
+		Person:    person,
+		People:    people,
+	}
+
+	if date == "" || eventname == "" || money == "" || person == "" || people == "" {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"狀態": "新增失敗",
+			"原因": "欄位不得為空",
+		})
+		return
+	}
+	tidb.Globalconn.Create(&新活動)
+	c.JSON(http.StatusOK, gin.H{
+		"狀態": "新增活動成功",
 	})
 }
 
