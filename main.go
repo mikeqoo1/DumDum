@@ -281,6 +281,10 @@ func main() {
 		concordsRouter.GET("/addevent", concord.GetEventPage)
 		concordsRouter.POST("/newsocietiesuser", concord.AddSocietiesUser)
 		concordsRouter.POST("/newsocietiesevent", concord.AddSocietiesEvent)
+
+		concordsRouter.GET("/orderhome", concord.OrderHome)
+		concordsRouter.GET("/neworder", concord.GetOrderPage)
+		concordsRouter.POST("/order", concord.Order)
 	}
 
 	// if IsPvc == "YES" {

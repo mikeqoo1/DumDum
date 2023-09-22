@@ -282,6 +282,16 @@ func AddSocietiesEvent(c *gin.Context) {
 	})
 }
 
+func OrderHome(c *gin.Context) {
+	c.HTML(http.StatusOK, "orderhome.html", gin.H{})
+}
+
+func GetOrderPage(c *gin.Context) {
+	c.HTML(http.StatusOK, "orderpage.html", gin.H{})
+}
+
+func Order(c *gin.Context) {}
+
 /*海豬區*/
 
 func Alice(c *gin.Context) {

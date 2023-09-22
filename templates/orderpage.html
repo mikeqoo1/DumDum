@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="bookmark" href="/static/favicon.ico" />
+    <title>{{.title}}</title>
+</head>
+
+<body class="page2">
+    <div class="row">
+        <a href="https://github.com/mikeqoo1"><img src="/static/img/mygit-removebg.jpg" class="rounded float-start"></a>
+    </div>
+    <div class="text-center">
+        <h1><a class="link-info" href="/">回首頁</a></h1>
+    </div>
+
+    <form class="form-horizontal" action="/concords/order" method="POST" role="form">
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">訂餐人</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" placeholder="請輸入名字">
+            </div>
+        </div>
+        <label for="name">早餐選項</label>
+        <div class="radio">
+            <label>
+                <input type="radio" name="radio1" id="breakfast1" value="breakfast75"> 凱琳75元隨選
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="radio1" id="breakfast2" value="breakfast49"> 全家49元隨選
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="radio1" id="breakfast3" value="breakfast65"> 小七65元隨選
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="radio1" id="breakfast4" value="breakfast30"> 雅加達切邊厚片隨選
+            </label>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit">送出</button>
+            </div>
+        </div>
+        <!-- <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdG0nX0PItUtYfFnVBRbqYa4yrKtoUbC8koaEnUu-eHvhigsg/viewform?embedded=true"
+        width="640" height="1481" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe> -->
+</body>
+
+</html>
